@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+}
+img{
+    max-width: 498px;
+    width: 100%;
+}
+h1{
+    padding: 8px;
+    font-size: 2em;
+}
