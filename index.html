@@ -233,8 +233,8 @@
                     <p>Feito no Visual Studio Code</p>
                     <p><a href="https://www.devmedia.com.br/orm-object-relational-mapper/19056" target="_blank">ORM</a>
                         para a conexão com o banco de dados relacional</p> <br> <br>
-                    
-                        <p style="color: red;">Em desenvolvimento</p>
+
+                    <p style="color: red;">Em desenvolvimento</p>
                 </div>
             </div>
         </div>
@@ -248,49 +248,31 @@
 
         <div class="contatosContainer">
             <p>Caso tenha interesse no meu trabalho, pode entrar em contato :)</p> <br>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="41d0ed4f-e2f1-40af-8e7c-9c6aac6f73f8">
+
+
                 <label style="text-align: center;"><strong>Me contate</strong></label> <br><br>
-                <label>Digite seu nome</label> <br>
-                <input type="text" placeholder="Digite seu nome"> <br> <br>
-                <label>Digite seu email</label> <br>
-                <input type="email" placeholder="Digite seu e-mail"> <br> <br>
-                <label>Digite sua mensagem</label> <br>
-                <input type="text" placeholder="Mensagem" class="formMessage"> <br> <br>
-                <input type="submit">
+
+                <label>
+                    Nome <br> 
+                    <input type="text" name="name" placeholder="Digite seu nome" required> 
+                </label> <br>
+                
+                <label>
+                    Email <br> 
+                    <input type="email"  name="email" placeholder="Digite seu e-mail" required>
+                </label> <br>
+                <label>
+                    Mensagem <br> 
+                    <textarea name="message" placeholder="Sua mensagem" required></textarea> 
+                </label> <br>
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <br> 
+                <button type="submit" class="submitBtn">Enviar</button>
             </form>
             <style>
-                .formMessage {
-                    line-height: 50px;
-                    padding-top: 10px;
-                    padding-bottom: 0;
-                    box-sizing: border-box;
-                    height: 100px;
-                }
-
-                form {
-                    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
-                    border-radius: 12px;
-                    font-family: sans-serif;
-                    color: var(--cor-preta);
-                    border: 1px solid var(--cor-preta);
-                    padding: 1rem;
-                    width: max-content;
-                    margin: auto;
-
-                    input {
-                        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
-                        border: 0;
-                        outline: 0;
-                        border-radius: 4px;
-                        padding: 0.5rem;
-                    }
-
-                    label {
-
-                        text-align: left;
-                        display: block;
-                    }
-                }
+              
             </style>
             <div class="contatosLinks">
                 <a href="https://github.com/lucasns06" target="_blank">

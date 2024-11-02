@@ -177,7 +177,6 @@ nav a:hover {
 
 }
 
-
 .homeImg {
     animation: floating 4s infinite ease-in-out;
     border-radius: 100%;
@@ -644,7 +643,43 @@ nav a:hover {
     display: flex;
     justify-content: center;
 }
+.formMessage {
+    line-height: 50px;
+    padding-top: 10px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    height: 100px;
+}
 
+form {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 12px;
+    font-family: sans-serif;
+    color: var(--cor-preta);
+    border: 1px solid var(--cor-preta);
+    padding: 1rem;
+    width: max-content;
+    margin: auto;
+}
+form label {
+
+    text-align: left;
+    display: block;
+}
+form input, .submitBtn, textarea {
+    width: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+form textarea{
+    height: 80px;
+}
+.submitBtn{
+    cursor: pointer;
+}
 .contatosContainer a {
     transition: transform 0.2s;
 }
