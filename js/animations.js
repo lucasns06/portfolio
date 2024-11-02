@@ -6,19 +6,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
     gsap.from(".textWriting", { duration: 5, text: "" })
 
     gsap.registerPlugin(ScrollTrigger)
-
+    
     texts.forEach(Anima => {
-        gsap.to(Anima, {
-            scrollTrigger: {
-                trigger: Anima,
-                toggleActions: "restart none none none"
-            },
-            opacity: 1,
-            y: -40,
-            duration: 2
-        });
-    })
-   
+        gsap.fromTo(
+            Anima,
+            { y: 100, opacity: 0 }, // Estado inicial
+            {
+                y: 0,
+                opacity: 1,
+                duration: 0.5,
+                scrollTrigger: {
+                    trigger: Anima,
+                    toggleActions: "restart none none none"
+                }
+            }
+        );
+    });
+    
     gsap.to(textHome, {
         scrollTrigger: {
             trigger: textHome,

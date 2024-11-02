@@ -89,12 +89,14 @@ const mudarSlideBtn = document.querySelector('.mudarSlide');
 let isMoved = false;
 
 mudarSlideBtn.onclick = function mudarSlide() {
-    const container = document.querySelector('.container');
-
+    const container = document.querySelector('.container')
+    const carrossel = document.querySelector('.carrossel')
+    const tamanhoCarrossel = carrossel.offsetWidth;
+    
     if (isMoved) {
         container.style.transform = 'translateX(0)'; // volta para o slide inicial
     } else {
-        container.style.transform = 'translateX(-1280px)'; // move para o próximo slide
+        container.style.transform = `translateX(-${tamanhoCarrossel}px)`; // move para o próximo slide
     }
 
     isMoved = !isMoved; // alterna o estado
@@ -108,11 +110,11 @@ mudarSlideTcc.onclick = function () {
     siteTela.classList.toggle('show')
 
     if (siteTela.classList.contains('show')) {
-        document.getElementById('slideTccChangeId').innerText = "Aplicativo"
+        document.getElementById('slideTccChangeId').innerText = "Site"
         appTela.classList.remove('show');
 
     } else {
-        document.getElementById('slideTccChangeId').innerText = "Site"
+        document.getElementById('slideTccChangeId').innerText = "Aplicativo"
         appTela.classList.add('show');
     }
 }

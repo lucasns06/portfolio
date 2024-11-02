@@ -48,9 +48,11 @@
     -webkit-text-fill-color: var(--cor-branco);
     background: var(--cor-preta);
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 body {
     background: var(--cor-branco-secundaria);
 }
@@ -105,6 +107,7 @@ header {
 
 a,
 p,
+li,
 h1 {
     font-family: sans-serif;
     font-weight: bold;
@@ -166,7 +169,7 @@ nav a:hover {
 }
 
 .home {
-    height: 100vh;
+    height: var(--tamanho-secao);
     display: flex;
     margin: auto;
     align-items: center;
@@ -218,7 +221,7 @@ nav a:hover {
 .sobre {
     align-content: center;
     height: var(--tamanho-secao);
-    background: var(--cor-teste2);  
+    background: var(--cor-teste2);
     padding-bottom: 8rem;
     text-align: center;
 }
@@ -495,9 +498,8 @@ nav a:hover {
 
 .carrossel {
     border-radius: 24px;
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.23);
+    /* box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.23); */
     width: 1280px;
-    height: 720px;
     overflow: hidden;
     margin: auto;
     opacity: 0;
@@ -509,62 +511,89 @@ nav a:hover {
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
 }
-.slide, .tccImagem, .tccTexto{
+
+.slide,
+.tccImagem,
+.tccTexto {
     background: var(--cor-teste);
 }
+
 .slide {
     background-size: cover;
     width: 1280px;
-    height: 720px;
     flex-shrink: 0;
 }
-.tccConteudo{
-    height: inherit;
+
+.tccConteudo {
+    /* height: inherit; */
     display: flex;
     padding: 3rem;
 }
-.tccTexto{
-    width: 640px;
+.API{
+    padding: 4rem;
+}
+.apiUl{
+    text-align: left;
+}
+.slideTccTitulo {
+    padding-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.tccTexto {
+    width: calc(50%);
     height: 100%;
     text-align: left;
 
 }
-.tccTexto p{
+
+.tccTexto p {
     font-weight: 400;
     font-size: 1.5rem;
 }
-.tccImagem{
-    width: 640px;
-    height: 100%;
+
+.tccImagem {
+    margin-left: auto;
+    margin-right: auto;
 }
-.slideTcc{
+
+.slideTcc {
     display: flex;
     justify-content: center;
 }
-.appTela, .siteTela{
+
+.appTela,
+.siteTela {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.116);
 }
-.appTela{
+
+.appTela {
     width: 250px;
     display: none;
-    
+
 }
-.siteTela{
+
+.siteTela {
     display: none;
-    width: 550px;
-    position: absolute;
+    width: 460px
 }
-.appTela:hover, .siteTela:hover{
+
+.appTela:hover,
+.siteTela:hover {
     scale: 1.1;
 }
-.show{
+
+.show {
     transition: all 250ms ease;
     display: block;
 }
-.tccTextoBotoes{
+
+.tccTextoBotoes {
     text-align: center;
 }
-.slideTccChange{
+
+.slideTccChange {
     width: 80px;
     cursor: pointer;
     margin: auto;
@@ -572,11 +601,12 @@ nav a:hover {
     outline: 0;
     border-radius: 4px;
     border: 0;
-    box-shadow: 0px 0px 8px var(--cor-preta);
+    /* box-shadow: 0px 0px 8px var(--cor-preta); */
     background: var(--cor-preta);
     color: var(--cor-branco);
 }
-.githubBtn{
+
+.githubBtn {
     width: max-content;
     cursor: pointer;
     margin: auto;
@@ -584,11 +614,12 @@ nav a:hover {
     outline: 0;
     border-radius: 4px;
     border: 0;
-    box-shadow: 0px 0px 8px var(--cor-preta);
+    /* box-shadow: 0px 0px 8px var(--cor-preta); */
     background: var(--cor-preta);
     color: var(--cor-branco);
 }
-.changeSlideBtn{
+
+.changeSlideBtn {
     width: max-content;
     cursor: pointer;
     margin: auto;
@@ -596,15 +627,17 @@ nav a:hover {
     outline: 0;
     border-radius: 4px;
     border: 0;
-    box-shadow: 0px 0px 8px var(--cor-destaque);
+    /* box-shadow: 0px 0px 8px var(--cor-destaque); */
     background: var(--cor-destaque);
     color: white;
 }
+
 .contatos {
     padding-top: 40px;
     height: var(--tamanho-secao);
     text-align: center;
 }
+
 .contatosLinks {
     padding: 3rem;
     gap: 2rem;
@@ -639,10 +672,12 @@ footer p {
 .textAnim {
     opacity: 0;
 }
+
 .textAnim2 {
     opacity: 0;
     transform: translateY(40px);
 }
+
 /*Seção da responsividade*/
 @media (max-width: 1600px) {
 
@@ -671,7 +706,66 @@ footer p {
     }
 }
 
+@media (max-width: 1400px) {
+    .carrossel {
+        width: 1000px;
+    }
+
+    .carrossel .container {
+        width: 2000px;
+    }
+
+    .slide {
+        width: 1000px;
+    }
+
+    .projetos {
+        height: max-content;
+    }
+
+    .tccTexto {
+        text-align: center;
+        width: inherit;
+    }
+
+    .tccTexto {
+        width: calc(50%);
+    }
+}
+
 @media (max-width: 1024px) {
+    .API{
+        padding: 2rem;
+    }
+    .home {
+        height: 768px;
+        padding-top: 8rem;
+    }
+
+    .tccTexto {
+        width: 100%;
+    }
+
+    .tccImagem {
+        padding-bottom: 3rem;
+    }
+
+    .carrossel {
+        width: 750px;
+    }
+
+    .carrossel .container {
+        width: 1500px;
+    }
+
+    .slide {
+        width: 750px;
+    }
+
+    .tccConteudo {
+        flex-direction: column;
+    }
+
     .home {
         flex-direction: column;
     }
@@ -711,6 +805,72 @@ footer p {
     .homeImg {
         max-width: 250px;
     }
+
+    .carrossel {
+        width: 500px;
+    }
+
+    .carrossel .container {
+        width: 1000px;
+    }
+
+    .slide {
+        width: 500px;
+    }
+
+    .siteTela {
+        width: 420px;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .habilidades {
+        height: max-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 580px) {
+    .API ul{
+        list-style-type: none;
+    }
+    .API{
+        padding: 12px;
+    }
+    .carrossel {
+        width: 300px;
+    }
+
+    .carrossel .container {
+        width: 600px;
+    }
+
+    .slide {
+        width: 300px;
+    }
+
+    .slideTccTitulo {
+        font-size: 2rem;
+    }
+
+    .tccTexto p {
+        font-size: 1rem;
+    }
+
+    .tccConteudo {
+        padding: 1rem;
+    }
+
+    .appTela {
+        width: 150px;
+    }
+
+    .siteTela {
+        width: 260px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -745,14 +905,11 @@ footer p {
         display: none;
     }
 
-    .home {
-        padding-top: 8rem;
-    }
-
     .homeImg {
         max-width: 200px;
     }
 }
+
 @media (max-height: 400px) {
     .modal p {
         font-size: 0.5rem;
