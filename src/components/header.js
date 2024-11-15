@@ -18,11 +18,11 @@ const Header = () => {
         setIsDarkTheme(prevState => !prevState); // Alterna entre true/false
     };
 
-    window.onclick = function (event) {
-        if (!subMenu.contains(event.target) && !menu.contains(event.target)) {
-            subMenu.style.display = 'none';
-        }
-    }
+    // window.onclick = function (event) {
+    //     if (!subMenu.contains(event.target) && !menu.contains(event.target)) {
+    //         subMenu.style.display = 'none';
+    //     }
+    // }
 
     // Efeito de alteração de tema
     useEffect(() => {
