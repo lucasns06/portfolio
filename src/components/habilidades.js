@@ -8,7 +8,7 @@ import javascriptImg from '../img/hab/javascript.png';
 import javaImg from '../img/hab/java.png';
 import cSharpImg from '../img/hab/cSharp.png';
 import sqlImg from '../img/hab/sql.png';
-
+import reactImg from '../img/hab/react.png';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -114,6 +114,14 @@ const Habilidades = () => {
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
                 <div className="modal modal-4">
+                    <h1>React</h1>
+                    <img src={reactImg} alt="React" />
+                    <p>React é uma biblioteca JavaScript para construção de interfaces de usuário.</p><br />
+                    <a href="https://react.dev/"
+                        target="_blank" rel="noopener noreferrer">react</a> <br /><br />
+                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
+                </div>
+                <div className="modal modal-5">
                     <h1>JAVA</h1>
                     <img src={javaImg} alt="Java" />
                     <p>Java é uma linguagem de programação amplamente usada para codificar <br />
@@ -123,7 +131,7 @@ const Habilidades = () => {
                     <a href="https://aws.amazon.com/pt/what-is/java/" target="_blank" rel="noopener noreferrer">Amazon Web Services</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
-                <div className="modal modal-5">
+                <div className="modal modal-6">
                     <h1>C#</h1>
                     <img src={cSharpImg} alt="C#" />
                     <p>A linguagem C# é a linguagem mais popular para a plataforma .NET, um ambiente <br />
@@ -134,7 +142,7 @@ const Habilidades = () => {
                         target="_blank" rel="noopener noreferrer">Microsoft</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
-                <div className="modal modal-6">
+                <div className="modal modal-7">
                     <h1>SQL</h1>
                     <img src={sqlImg} alt="SQL" />
                     <p>O SQL, ou Structured Query Language, é uma linguagem de programação padrão usada <br />
@@ -143,6 +151,7 @@ const Habilidades = () => {
                         target="_blank" rel="noopener noreferrer">fm2s</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
+
             </div>
             <div className="habilidadesContainer">
                 <div className="habilidadesItem hab-1" onClick={() => abrirModal(1)}>
@@ -161,16 +170,21 @@ const Habilidades = () => {
                     <p>Básico</p>
                 </div>
                 <div className="habilidadesItem hab-4" onClick={() => abrirModal(4)}>
+                    <img src={reactImg} alt="React" />
+                    <p>React</p>
+                    <p>Básico</p>
+                </div>
+                <div className="habilidadesItem hab-5" onClick={() => abrirModal(5)}>
                     <img src={javaImg} alt="Java" />
                     <p>Java</p>
                     <p>Básico</p>
                 </div>
-                <div className="habilidadesItem hab-5" onClick={() => abrirModal(5)}>
+                <div className="habilidadesItem hab-6" onClick={() => abrirModal(6)}>
                     <img src={cSharpImg} alt="C#" />
                     <p>C#</p>
                     <p>Básico</p>
                 </div>
-                <div className="habilidadesItem hab-6" onClick={() => abrirModal(6)}>
+                <div className="habilidadesItem hab-7" onClick={() => abrirModal(7)}>
                     <img src={sqlImg} alt="SQL" />
                     <p>SQL</p>
                     <p>Básico</p>

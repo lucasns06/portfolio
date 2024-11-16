@@ -200,6 +200,7 @@ nav a:hover {
   height: 222px;
   color: var(--cor-cinza);
   font-size: 1.5rem;
+
 }
 
 @keyframes floating {
@@ -233,7 +234,7 @@ nav a:hover {
 .sobreContainer {
   background: var(--cor-branco-secundaria);
   display: flex;
-  padding: 3rem;
+  padding: 2rem;
   text-align: left;
   max-width: 1024px;
   margin: auto;
@@ -255,7 +256,7 @@ nav a:hover {
 
 .sobreContainer-texto p:first-child {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.3em;
 }
 
 .sobreContainer img {
@@ -493,7 +494,6 @@ nav a:hover {
   align-content: center;
   height: var(--tamanho-secao);
 }
-
 .carrossel {
   border-radius: 24px;
   /* box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.23); */
@@ -501,6 +501,7 @@ nav a:hover {
   overflow: hidden;
   margin: auto;
   opacity: 0;
+  box-sizing: border-box;
 }
 
 .carrossel .container {
@@ -528,13 +529,20 @@ nav a:hover {
   padding: 3rem;
 }
 .API{
-  padding: 4rem;
+  padding: 2rem;
+}
+.API a{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.API img{
+  width: 100px;
 }
 .apiUl{
   text-align: left;
 }
-.slideTccTitulo {
-  padding-top: 1.5rem;
+.slideTitulo {
   text-transform: uppercase;
   font-size: 2.5rem;
 }
@@ -586,7 +594,9 @@ nav a:hover {
   transition: all 250ms ease;
   display: block;
 }
-
+.TCC{
+  padding: 2rem;
+}
 .tccTextoBotoes {
   text-align: center;
 }
@@ -628,6 +638,7 @@ nav a:hover {
   /* box-shadow: 0px 0px 8px var(--cor-destaque); */
   background: var(--cor-destaque);
   color: white;
+  transform: translateY(-27px);
 }
 
 .contatos {
@@ -682,7 +693,9 @@ form textarea{
 .contatosContainer a {
   transition: transform 0.2s;
 }
-
+.contatosContainer p{
+  padding: 10px 10px;
+}
 .contatosContainer svg:hover {
   transform: translateY(-10px);
 }
@@ -741,6 +754,9 @@ footer p {
 }
 
 @media (max-width: 1400px) {
+  .changeSlideBtn{
+    transform: translateY(-40px);
+  }
   .carrossel {
       width: 1000px;
   }
@@ -768,6 +784,9 @@ footer p {
 }
 
 @media (max-width: 1024px) {
+  .TCC{
+    padding: 2rem;
+  }
   .API{
       padding: 2rem;
   }
@@ -785,15 +804,18 @@ footer p {
   }
 
   .carrossel {
-      width: 750px;
+      width: calc(100vw - 2rem); 
+      margin: 0 1rem;
   }
 
   .carrossel .container {
-      width: 1500px;
+      width: calc(200vw - 2rem);
+      
   }
 
   .slide {
-      width: 750px;
+      width: calc(100vw - 2rem);
+      
   }
 
   .tccConteudo {
@@ -803,7 +825,10 @@ footer p {
   .home {
       flex-direction: column;
   }
-
+  .textWriting{
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .sobreContainer {
       flex-direction: column;
       align-items: center;
@@ -832,24 +857,12 @@ footer p {
 }
 
 @media (max-width: 800px) {
-  .logo {
+  .footer1 {
       display: none;
   }
 
   .homeImg {
       max-width: 250px;
-  }
-
-  .carrossel {
-      width: 500px;
-  }
-
-  .carrossel .container {
-      width: 1000px;
-  }
-
-  .slide {
-      width: 500px;
   }
 
   .siteTela {
@@ -873,17 +886,6 @@ footer p {
   }
   .API{
       padding: 12px;
-  }
-  .carrossel {
-      width: 300px;
-  }
-
-  .carrossel .container {
-      width: 600px;
-  }
-
-  .slide {
-      width: 300px;
   }
 
   .slideTccTitulo {

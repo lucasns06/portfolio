@@ -8,7 +8,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const Sobre = () => {
     useLayoutEffect(() => {
         const texts = document.querySelectorAll('.textAnim')
-        const textHome = document.querySelector('.textAnim2')
         gsap.registerPlugin(ScrollTrigger)
 
         texts.forEach(Anima => {
@@ -42,7 +41,7 @@ const Sobre = () => {
 
     return (
         <div className="sobre" id="sobreId">
-            <p className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></p>
+            <p className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></p> <br/> <br/>
             <div className="sobreContainer">
                 <div className="sobreContainer-texto">
                     <p className="textWriting2"></p>
