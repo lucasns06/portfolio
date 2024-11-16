@@ -15,66 +15,74 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 const Habilidades = () => {
     const texts = document.querySelectorAll('.textAnim');
     gsap.registerPlugin(ScrollTrigger);
-  
+
     useLayoutEffect(() => {
-      texts.forEach(Anima => {
-        gsap.fromTo(
-          Anima,
-          { y: 100, opacity: 0 }, 
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            scrollTrigger: {
-              trigger: Anima,
-              toggleActions: "restart none none none"
-            }
-          }
-        );
-      });
-  
-     
-      const habilidadesContainer = document.querySelector('.habilidadesContainer');
-      if (habilidadesContainer) {
-        gsap.to(habilidadesContainer, {
-          scrollTrigger: {
-            trigger: habilidadesContainer,
-            toggleActions: "restart none none none"
-          },
-          opacity: 1,
-          duration: 2
+        texts.forEach(Anima => {
+            gsap.fromTo(
+                Anima,
+                { y: 100, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.5,
+                    scrollTrigger: {
+                        trigger: Anima,
+                        toggleActions: "restart none none none"
+                    }
+                }
+            );
         });
-      }
-    }, []); 
-  
-    const abrirModal = (num) => {
-      const modais = document.querySelector('.modais');
-      const modal = document.querySelector(`.modal-${num}`);
-  
-      modais.style.display = 'block';
-      modal.style.display = 'block';
-  
-      gsap.fromTo(modal,
-        { scale: 0.5, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
-      );
-    };
-  
-    const closeModal = () => {
-      const modais = document.querySelector('.modais');
-      const modal = document.querySelectorAll('.modal');
-      modais.style.display = 'none';
-      modal.forEach((evento) => {
-        evento.style.display = 'none';
-      });
-    };
-  
-    useLayoutEffect(() => {
-   
-      const modais = document.querySelector('.modais');
-      modais.style.display = 'none';
+
+
+        const habilidadesContainer = document.querySelector('.habilidadesContainer');
+        if (habilidadesContainer) {
+            gsap.to(habilidadesContainer, {
+                scrollTrigger: {
+                    trigger: habilidadesContainer,
+                    toggleActions: "restart none none none"
+                },
+                opacity: 1,
+                duration: 2
+            });
+        }
+
     }, []);
-  
+
+    const fecharTodosModais = () => {
+        const modais = document.querySelectorAll('.modal');
+        modais.forEach(modal => {
+            modal.style.display = 'none';
+        });
+    };
+    const abrirModal = (num) => {
+        fecharTodosModais();
+        const modais = document.querySelector('.modais');
+        const modal = document.querySelector(`.modal-${num}`);
+
+        modais.style.display = 'block';
+        modal.style.display = 'block';
+
+        gsap.fromTo(modal,
+            { scale: 0.5, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
+        );
+    };
+
+    const closeModal = () => {
+        const modais = document.querySelector('.modais');
+        const modal = document.querySelectorAll('.modal');
+        modais.style.display = 'none';
+        modal.forEach((evento) => {
+            evento.style.display = 'none';
+        });
+    };
+
+    useLayoutEffect(() => {
+
+        const modais = document.querySelector('.modais');
+        modais.style.display = 'none';
+    }, []);
+
 
     return (
         <div className="habilidades" id="habilidadesId">
