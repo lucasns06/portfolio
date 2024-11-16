@@ -494,6 +494,16 @@ nav a:hover {
   align-content: center;
   height: var(--tamanho-secao);
 }
+.projetosLinks{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+.projetosLinks a:hover svg{
+  transform: translateY(-5px);
+  transition: transform 100ms ease;
+}
 .carrossel {
   border-radius: 24px;
   /* box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.23); */
@@ -643,7 +653,7 @@ nav a:hover {
 
 .contatos {
   padding-top: 40px;
-  height: var(--tamanho-secao);
+  /* height: max-content; */
   text-align: center;
 }
 
@@ -962,5 +972,12 @@ footer p {
       margin-left: 0;
       margin-right: 0;
 
+  }
+  .projetosLinks{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .changeSlideBtn{
+    transform: translateX(0);
   }
 }
