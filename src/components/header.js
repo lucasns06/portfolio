@@ -68,15 +68,11 @@ const Header = () => {
 
     return (
         <header>
-            <div className="logo">
-                <div className="logoImg" style={{ marginRight: '4px' }}></div>
-                <p>Lucasns<span className="span">06</span></p>
-            </div>
             <nav>
-                <a href="#homeId">Inicio</a>
-                <a href="#sobreId">Sobre</a>
-                <a href="#habilidadesId">Habilidades</a>
-                <a href="#projetosId">Projetos</a>
+                <a href="#homeId" className='aHeader'>Inicio</a>
+                <a href="#sobreId"className='aHeader' >Sobre</a>
+                <a href="#habilidadesId" className='aHeader'>Habilidades</a>
+                <a href="#projetosId" className='aHeader'>Projetos</a>
                 <a href="#contatosId" className="contactBtn">Contato</a>
                 <img
                     src={themeImgSrc}

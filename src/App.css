@@ -123,12 +123,30 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-
+.aHeader{
+  position: relative;
+}
+.aHeader::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -14px; 
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid var(--cor-destaque); 
+  transform: translateY(-50%); 
+  transition: transform 0.2s;
+}
 nav a:hover {
   color: var(--cor-destaque);
   transition: color 0.2s;
 }
-
+.aHeader:hover::after{
+  transform: translateY(5px);
+  transition: transform 250ms ease;
+}
 .imgTheme {
   width: 38px;
   position: fixed;
@@ -587,7 +605,7 @@ nav a:hover {
 .appTela {
   width: 250px;
   display: none;
-
+  border-radius: 22px;
 }
 
 .siteTela {
@@ -610,7 +628,9 @@ nav a:hover {
 .tccTextoBotoes {
   text-align: center;
 }
-
+.tccTextoBotoes  a{
+  margin-right: 10px;
+}
 .slideTccChange {
   width: 80px;
   cursor: pointer;
@@ -625,9 +645,10 @@ nav a:hover {
 }
 
 .githubBtn {
+
   width: max-content;
   cursor: pointer;
-  margin: auto;
+  /* margin: auto; */
   padding: 6px;
   outline: 0;
   border-radius: 4px;
@@ -636,7 +657,9 @@ nav a:hover {
   background: var(--cor-preta);
   color: var(--cor-branco);
 }
-
+.versiteBtn{
+  background: var(--cor-destaque);
+}
 .changeSlideBtn {
   width: max-content;
   cursor: pointer;

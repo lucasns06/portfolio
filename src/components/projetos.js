@@ -77,6 +77,9 @@ const Projetos = () => {
                                     <a href="https://github.com/lucasns06/ComuniTec" target="_blank" rel="noopener noreferrer">
                                         <button className="githubBtn">Github</button>
                                     </a>
+                                    <a href="https://lucasns06.github.io/ComuniTec/" target="_blank" rel="noopener noreferrer">
+                                        <button className="githubBtn versiteBtn">Entrar no site</button>
+                                    </a>
                                     <br /><br />
                                     <p>Comunica (aplicativo)</p>
                                     <p style={{ color: 'red' }}>Em desenvolvimento</p>
@@ -86,7 +89,7 @@ const Projetos = () => {
                                 <button className="slideTccChange" id="slideTccChangeId">Aplicativo</button> <br /><br />
                                 <div className="slideTcc">
                                     <img src={telaApp} alt="AppTela" className="appTela show" />
-                                    <img src={telaSite} alt="siteTela" className="siteTela" />
+                                    <a href="https://lucasns06.github.io/ComuniTec/" target="_blank" rel="noopener noreferrer"><img src={telaSite} alt="siteTela" className="siteTela" /></a>
                                 </div>
                             </div>
                         </div>
