@@ -18,8 +18,8 @@ function App() {
       <Header />
       <Home />
       <Sobre />
-      <Habilidades />
       <Projetos />
+      <Habilidades />
       <Contatos />
       <Footer />
     </div>

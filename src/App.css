@@ -123,30 +123,35 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-.aHeader{
+
+.aHeader {
   position: relative;
 }
-.aHeader::after{
+
+.aHeader::after {
   content: '';
   position: absolute;
   top: 50%;
-  right: -14px; 
+  right: -14px;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid var(--cor-destaque); 
-  transform: translateY(-50%); 
+  border-top: 10px solid var(--cor-destaque);
+  transform: translateY(-50%);
   transition: transform 0.2s;
 }
+
 nav a:hover {
   color: var(--cor-destaque);
   transition: color 0.2s;
 }
-.aHeader:hover::after{
+
+.aHeader:hover::after {
   transform: translateY(5px);
   transition: transform 250ms ease;
 }
+
 .imgTheme {
   width: 38px;
   position: fixed;
@@ -161,11 +166,11 @@ nav a:hover {
 
 @keyframes themeEntry {
   from {
-      right: 0%
+    right: 0%
   }
 
   to {
-      right: 5%
+    right: 5%
   }
 }
 
@@ -223,15 +228,15 @@ nav a:hover {
 
 @keyframes floating {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 
   50% {
-      transform: translateY(-1.5rem);
+    transform: translateY(-1.5rem);
   }
 
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -268,7 +273,7 @@ nav a:hover {
   gap: 2rem;
 
   p {
-      font-weight: normal;
+    font-weight: normal;
   }
 }
 
@@ -298,17 +303,17 @@ nav a:hover {
   height: 90%;
   border-radius: 100%;
   background: linear-gradient(90deg,
-          rgba(255, 0, 0, 1) 0%,
-          rgba(255, 154, 0, 1) 10%,
-          rgba(208, 222, 33, 1) 20%,
-          rgba(79, 220, 74, 1) 30%,
-          rgba(63, 218, 216, 1) 40%,
-          rgba(47, 201, 226, 1) 50%,
-          rgba(28, 127, 238, 1) 60%,
-          rgba(95, 21, 242, 1) 70%,
-          rgba(186, 12, 248, 1) 80%,
-          rgba(251, 7, 217, 1) 90%,
-          rgba(255, 0, 0, 1) 100%);
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%);
   top: 5%;
   left: 5%;
   z-index: -1;
@@ -317,57 +322,57 @@ nav a:hover {
 
 @keyframes neon {
   from {
-      rotate: 360deg
+    rotate: 360deg
   }
 
   to {
-      rotate: 0deg;
+    rotate: 0deg;
   }
 }
 
 @keyframes shadowAnima {
   0% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 
   10% {
-      box-shadow: 0px 0px 0.438rem white;
+    box-shadow: 0px 0px 0.438rem white;
   }
 
   20% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 
   30% {
-      box-shadow: 0px 0px 0.438rem white;
+    box-shadow: 0px 0px 0.438rem white;
   }
 
   40% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 
   50% {
-      box-shadow: 0px 0px 0.438rem white;
+    box-shadow: 0px 0px 0.438rem white;
   }
 
   60% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 
   70% {
-      box-shadow: 0px 0px 0.438rem white;
+    box-shadow: 0px 0px 0.438rem white;
   }
 
   80% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 
   90% {
-      box-shadow: 0px 0px 0.438rem white;
+    box-shadow: 0px 0px 0.438rem white;
   }
 
   100% {
-      box-shadow: 0px 0px 0.438rem blue;
+    box-shadow: 0px 0px 0.438rem blue;
   }
 }
 
@@ -375,6 +380,7 @@ nav a:hover {
   height: var(--tamanho-secao);
   align-content: center;
   text-align: center;
+  background: var(--cor-teste2);
 }
 
 .textAnim {
@@ -507,21 +513,23 @@ nav a:hover {
 }
 
 .projetos {
-  background: var(--cor-teste2);
   text-align: center;
   align-content: center;
   height: var(--tamanho-secao);
 }
-.projetosLinks{
+
+.projetosLinks {
   display: flex;
   align-items: center;
   gap: 2rem;
   justify-content: center;
 }
-.projetosLinks a:hover svg{
+
+.projetosLinks a:hover svg {
   transform: translateY(-5px);
   transition: transform 100ms ease;
 }
+
 .carrossel {
   border-radius: 24px;
   /* box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.23); */
@@ -556,20 +564,25 @@ nav a:hover {
   display: flex;
   padding: 3rem;
 }
-.API{
+
+.API {
   padding: 2rem;
 }
-.API a{
+
+.API a {
   justify-content: center;
   display: flex;
   align-items: center;
 }
-.API img{
+
+.API img {
   width: 100px;
 }
-.apiUl{
+
+.apiUl {
   text-align: left;
 }
+
 .slideTitulo {
   text-transform: uppercase;
   font-size: 2.5rem;
@@ -622,15 +635,19 @@ nav a:hover {
   transition: all 250ms ease;
   display: block;
 }
-.TCC{
+
+.TCC {
   padding: 2rem;
 }
+
 .tccTextoBotoes {
   text-align: center;
 }
-.tccTextoBotoes  a{
+
+.tccTextoBotoes a {
   margin-right: 10px;
 }
+
 .slideTccChange {
   width: 80px;
   cursor: pointer;
@@ -657,9 +674,11 @@ nav a:hover {
   background: var(--cor-preta);
   color: var(--cor-branco);
 }
-.versiteBtn{
+
+.versiteBtn {
   background: var(--cor-destaque);
 }
+
 .changeSlideBtn {
   width: max-content;
   cursor: pointer;
@@ -686,6 +705,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
 }
+
 .formMessage {
   line-height: 50px;
   padding-top: 10px;
@@ -699,17 +719,22 @@ form {
   border-radius: 12px;
   font-family: sans-serif;
   color: var(--cor-preta);
-  border: 1px solid var(--cor-preta);
-  padding: 1rem;
+  border-top: 4px solid var(--cor-destaque);
+  padding: 2rem;
   width: max-content;
   margin: auto;
+  background: var(--cor-teste);
 }
+
 form label {
 
   text-align: left;
   display: block;
 }
-form input, .submitBtn, textarea {
+
+form input,
+.submitBtn,
+textarea {
   width: 100%;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
   border: 0;
@@ -717,20 +742,24 @@ form input, .submitBtn, textarea {
   border-radius: 4px;
   padding: 0.5rem;
 }
-form textarea{
+
+form textarea {
   height: 80px;
 }
-.submitBtn{
+
+.submitBtn {
   cursor: pointer;
 }
-.contatosContainer a {
-  transition: transform 0.2s;
+.submitBtn:hover{
+  background: rgb(255, 255, 255);
 }
-.contatosContainer p{
+.contatosContainer p {
   padding: 10px 10px;
 }
+
 .contatosContainer svg:hover {
-  transform: translateY(-10px);
+  transition: all 0.2s;
+  transform: scale(1.4);
 }
 
 footer {
@@ -762,245 +791,254 @@ footer p {
 @media (max-width: 1600px) {
 
   .habilidadesItem p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .habilidadesItem p:last-child {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   header {
-      padding: 0.8rem;
+    padding: 0.8rem;
   }
 
   .nomeHome {
-      font-size: 2.0rem;
+    font-size: 2.0rem;
   }
 
   .home-texto p:last-child {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .QuemSouP {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 1400px) {
-  .changeSlideBtn{
+  .changeSlideBtn {
     transform: translateY(-40px);
   }
+
   .carrossel {
-      width: 1000px;
+    width: 1000px;
   }
 
   .carrossel .container {
-      width: 2000px;
+    width: 2000px;
   }
 
   .slide {
-      width: 1000px;
+    width: 1000px;
   }
 
   .projetos {
-      height: max-content;
+    height: max-content;
   }
 
   .tccTexto {
-      text-align: center;
-      width: inherit;
+    text-align: center;
+    width: inherit;
   }
 
   .tccTexto {
-      width: calc(50%);
+    width: calc(50%);
   }
 }
 
 @media (max-width: 1024px) {
-  .TCC{
+  .TCC {
     padding: 2rem;
   }
-  .API{
-      padding: 2rem;
+
+  .API {
+    padding: 2rem;
   }
+
   .home {
-      height: 768px;
-      padding-top: 8rem;
+    height: 768px;
+    padding-top: 8rem;
   }
 
   .tccTexto {
-      width: 100%;
+    width: 100%;
   }
 
   .tccImagem {
-      padding-bottom: 3rem;
+    padding-bottom: 3rem;
   }
 
   .carrossel {
-      width: calc(100vw - 2rem); 
-      margin: 0 1rem;
+    width: calc(100vw - 2rem);
+    margin: 0 1rem;
   }
 
   .carrossel .container {
-      width: calc(200vw - 2rem);
-      
+    width: calc(200vw - 2rem);
+
   }
 
   .slide {
-      width: calc(100vw - 2rem);
-      
+    width: calc(100vw - 2rem);
+
   }
 
   .tccConteudo {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .home {
-      flex-direction: column;
+    flex-direction: column;
   }
-  .textWriting{
+
+  .textWriting {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .sobreContainer {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sobreContainerImg {
-      margin-top: 2.5rem;
+    margin-top: 2.5rem;
   }
 
   .sobreContainer img {
-      max-width: 200px;
+    max-width: 200px;
   }
 
   .home-texto {
-      text-align: center;
-      margin: 0;
+    text-align: center;
+    margin: 0;
   }
 
   .nomeHome {
-      max-width: none;
+    max-width: none;
   }
 
   .homeImg {
-      max-width: 300px;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 800px) {
   .footer1 {
-      display: none;
+    display: none;
   }
 
   .homeImg {
-      max-width: 250px;
+    max-width: 250px;
   }
 
   .siteTela {
-      width: 420px;
+    width: 420px;
   }
 }
 
 @media (max-width: 760px) {
 
   .habilidades {
-      height: max-content;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+    height: max-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
 }
 
 @media (max-width: 580px) {
-  .API ul{
-      list-style-type: none;
+  .API ul {
+    list-style-type: none;
   }
-  .API{
-      padding: 12px;
+
+  .API {
+    padding: 12px;
   }
 
   .slideTccTitulo {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .tccTexto p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .tccConteudo {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .appTela {
-      width: 150px;
+    width: 150px;
   }
 
   .siteTela {
-      width: 260px;
+    width: 260px;
   }
 }
 
 @media (max-width: 690px) {
   .imgTheme {
-      position: static;
+    position: static;
   }
 
   .menu {
-      align-items: center;
-      display: block;
+    align-items: center;
+    display: block;
   }
 
   .sub-menu {
-      text-align: center;
-      gap: 1rem;
-      position: relative;
-      width: max-content;
-      padding: 1rem;
-      border-radius: 1rem;
-      background: var(--cor-branco);
-      left: -180%;
-      top: 120%;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    width: max-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--cor-teste);
+    left: -180%;
+    top: 120%;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.295);
   }
 
   .sub-menu a {
-      display: block;
-      font-size: 1rem;
+    display: block;
+    font-size: 1rem;
 
   }
 
   header nav a {
-      display: none;
+    display: none;
   }
 
   .homeImg {
-      max-width: 200px;
+    max-width: 200px;
   }
 }
 
 @media (max-height: 400px) {
   .modal p {
-      font-size: 0.5rem;
+    font-size: 0.5rem;
   }
 
   .modal {
-      top: 0;
+    top: 0;
   }
 }
 
 @media (max-width: 435px) {
   .habilidadesContainer {
 
-      margin-left: 0;
-      margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 
   }
-  .projetosLinks{
+
+  .projetosLinks {
     flex-direction: column;
     gap: 1rem;
   }
-  .changeSlideBtn{
+
+  .changeSlideBtn {
     transform: translateX(0);
   }
 }

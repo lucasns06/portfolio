@@ -71,8 +71,8 @@ const Header = () => {
             <nav>
                 <a href="#homeId" className='aHeader'>Inicio</a>
                 <a href="#sobreId"className='aHeader' >Sobre</a>
-                <a href="#habilidadesId" className='aHeader'>Habilidades</a>
                 <a href="#projetosId" className='aHeader'>Projetos</a>
+                <a href="#habilidadesId" className='aHeader'>Habilidades</a>
                 <a href="#contatosId" className="contactBtn">Contato</a>
                 <img
                     src={themeImgSrc}
@@ -84,8 +84,8 @@ const Header = () => {
                     <div className="sub-menu" style={{ display: isMenuVisible ? 'grid' : 'none' }}>
                         <a href="#homeId">Inicio</a>
                         <a href="#sobreId">Sobre</a>
-                        <a href="#habilidadesId">Habilidades</a>
                         <a href="#projetosId">Projetos</a>
+                        <a href="#habilidadesId">Habilidades</a>
                         <a href="#contatosId" className="contactBtn">Contato</a>
                     </div>
                 </div>

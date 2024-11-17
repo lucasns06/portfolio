@@ -41,15 +41,16 @@ const Sobre = () => {
 
     return (
         <div className="sobre" id="sobreId">
-            <p className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></p> <br/> <br/>
+            <p className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></p> <br /> <br />
             <div className="sobreContainer">
                 <div className="sobreContainer-texto">
                     <p className="textWriting2"></p>
-                    <p>Sou Lucas, estudante de Desenvolvimento de Sistemas em Guarulhos, SP. Desde cedo, sempre fui
-                    fascinado por tecnologia.
-                    Tenho 18 anos, gosto de desenhar e também faço Técnico em Administração. <br/> <br/>
-                    Estou em busca de oportunidades.</p>
+                    <p>Desde jovem, sempre fui apaixonado por
+                        desenho e tecnologia. Em 2024, iniciei
+                        o curso de Técnico em Desenvolvimento de Sistemas, e foi no front-end que me identifiquei de forma plena com o que faço. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
+                    <a href='#projetosId'>Ver projetos</a>
                 </div>
+
                 <div className="sobreContainerImg">
                     <img src={perfilFoto} alt="Perfil" />
                 </div>
