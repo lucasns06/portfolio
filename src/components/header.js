@@ -1,23 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef  } from 'react';
 import darkLogo from '../img/dark.svg';
 import lightLogo from '../img/light.svg';
 import gsap from 'gsap';
 
 const Header = () => {
-    const savedTheme  = localStorage.getItem("isDarkTheme") === "true";
-    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme ); // Estado para controlar o tema
+    const savedTheme = localStorage.getItem("isDarkTheme") === "true";
+    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme); // Estado para controlar o tema
     const [themeImgSrc, setThemeImgSrc] = useState(savedTheme ? lightLogo : darkLogo); // Inicializa com o tema escuro
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     const imagem = document.querySelector('.imgTheme');
-    const menu = document.querySelector('.menu');
-    const subMenu = document.querySelector('.sub-menu');
+    const closedPath = 'M4 6H20M4 12H20M4 18H20';
+    const openPath = 'M6 6L18 18M6 18L18 6';
+    const menuSvgRef = useRef(null);
+    const subMenuRef = useRef(null);
 
+    const toggleMenu = () => {
+        setIsMenuVisible(!isMenuVisible)
+    };
 
-    // Função para alternar entre os temas
     const toggleTheme = () => {
         setIsDarkTheme(prevState => !prevState); // Alterna entre true/false
     };
+
+    useEffect(() =>{
+        if (menuSvgRef.current) {
+            gsap.to(menuSvgRef.current, {
+                attr: { d: isMenuVisible ? openPath : closedPath },
+                duration: 0.5,
+                ease: "power4.inOut",
+            });
+        }
+        if (subMenuRef.current){
+            subMenuRef.current.style.display = isMenuVisible ? 'grid' : 'none' 
+        }
+        if (subMenuRef.current) {
+
+            if (isMenuVisible) {
+                const height = subMenuRef.current.scrollHeight;
+                gsap.to(subMenuRef.current, {
+                    height: height, 
+                    duration: 0.5,
+                    ease: "power4.inOut",
+                });
+            } else {
+                gsap.to(subMenuRef.current, {
+                    height: 0,
+                    duration: 0.3,
+                    ease: "power4.inOut",
+                });
+            }
+        }
+
+    }, [isMenuVisible])
 
     // Efeito de alteração de tema
     useEffect(() => {
@@ -66,7 +101,7 @@ const Header = () => {
         <header>
             <nav>
                 <a href="#homeId" className='aHeader'>Inicio</a>
-                <a href="#sobreId"className='aHeader' >Sobre</a>
+                <a href="#sobreId" className='aHeader' >Sobre</a>
                 <a href="#projetosId" className='aHeader'>Projetos</a>
                 <a href="#habilidadesId" className='aHeader'>Habilidades</a>
                 <a href="#contatosId" className="contactBtn">Contato</a>
@@ -76,8 +111,11 @@ const Header = () => {
                     alt={isDarkTheme ? 'Tema Claro' : 'Tema Escuro'}
                     onClick={toggleTheme}
                 />
-                <div className="logoImg menu" onClick={() => setIsMenuVisible(!isMenuVisible)}>
-                    <div className="sub-menu" style={{ display: isMenuVisible ? 'grid' : 'none' }}>
+                <div className="menu" onClick={toggleMenu}>
+                    <svg viewBox="4 4 16 16" fill="var(--cor-preta)" xmlns="http://www.w3.org/2000/svg" className='menuSvg'>
+                        <path ref={menuSvgRef} d={closedPath} stroke="var(--cor-preta)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <div ref={subMenuRef} className="sub-menu">
                         <a href="#homeId">Inicio</a>
                         <a href="#sobreId">Sobre</a>
                         <a href="#projetosId">Projetos</a>

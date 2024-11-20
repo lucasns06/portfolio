@@ -165,12 +165,12 @@ const Habilidades = () => {
                 <div className="habilidadesItem hab-1" onClick={() => abrirModal(1)}>
                     <img src={htmlImg} alt="HTML" />
                     <p>HTML</p>
-                    <p>Intermediário</p>
+                    <p>Avançado</p>
                 </div>
                 <div className="habilidadesItem hab-2" onClick={() => abrirModal(2)}>
                     <img src={cssImg} alt="CSS" />
                     <p>CSS</p>
-                    <p>Intermediário</p>
+                    <p>Avançado</p>
                 </div>
                 <div className="habilidadesItem hab-3" onClick={() => abrirModal(3)}>
                     <img src={javascriptImg} alt="JavaScript" />
