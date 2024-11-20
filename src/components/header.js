@@ -4,11 +4,12 @@ import lightLogo from '../img/light.svg';
 import gsap from 'gsap';
 
 const Header = () => {
-    const [isDarkTheme, setIsDarkTheme] = useState(false); // Estado para controlar o tema
-    const [themeImgSrc, setThemeImgSrc] = useState(darkLogo); // Inicializa com o tema escuro
+    const savedTheme  = localStorage.getItem("isDarkTheme") === "true";
+    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme ); // Estado para controlar o tema
+    const [themeImgSrc, setThemeImgSrc] = useState(savedTheme ? lightLogo : darkLogo); // Inicializa com o tema escuro
     const [isMenuVisible, setIsMenuVisible] = useState(false);
-    const imagem = document.querySelector('.imgTheme');
 
+    const imagem = document.querySelector('.imgTheme');
     const menu = document.querySelector('.menu');
     const subMenu = document.querySelector('.sub-menu');
 
@@ -18,14 +19,9 @@ const Header = () => {
         setIsDarkTheme(prevState => !prevState); // Alterna entre true/false
     };
 
-    // window.onclick = function (event) {
-    //     if (!subMenu.contains(event.target) && !menu.contains(event.target)) {
-    //         subMenu.style.display = 'none';
-    //     }
-    // }
-
     // Efeito de alteração de tema
     useEffect(() => {
+        localStorage.setItem("isDarkTheme", isDarkTheme)
         const body = document.body;
         if (isDarkTheme) {
             body.classList.add('dark-theme');
