@@ -41,14 +41,14 @@ const Sobre = () => {
 
     return (
         <div className="sobre" id="sobreId">
-            <p className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></p> <br /> <br />
+            <h1 className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></h1> <br /> <br />
             <div className="sobreContainer">
                 <div className="sobreContainer-texto">
                     <p className="textWriting2"></p>
                     <p>Desde jovem, sempre fui apaixonado por
                         desenho e tecnologia. Em 2024, iniciei
                         o curso de Técnico em Desenvolvimento de Sistemas, e foi no front-end que me identifiquei de forma plena com o que faço. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
-                    <a href='#projetosId'>Ver projetos</a>
+                    <a href='#projetosId' className="verProjetosBtn">Ver Projetos</a>
                 </div>
 
                 <div className="sobreContainerImg">

@@ -5,7 +5,7 @@ const Contatos = () => {
 
     return (
         <div className="contatos" id="contatosId">
-            <p className="span textAnim">Contatos</p> <br /><br />
+            <h1 className="span textAnim">Contatos</h1> <br /><br />
 
             <div className="contatosContainer">
                 <p>Caso tenha interesse no meu trabalho, pode entrar em contato :)</p> <br />

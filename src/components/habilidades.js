@@ -86,15 +86,19 @@ const Habilidades = () => {
 
     return (
         <div className="habilidades" id="habilidadesId">
-            <p className="MinhasHab textAnim">Minhas <span className="span">habilidades</span></p><br /><br />
+            <h1 className="MinhasHab textAnim">Minhas <span className="span">habilidades</span></h1><br />
+            <h2>Clique nos modais para saber mais.</h2> <br /><br />
             <div className="modais">
                 <div className="modal modal-1">
                     <h1>HTML</h1>
                     <img src={htmlImg} alt="HTML" />
                     <div className="modal-text">
-                        <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web. </p>
-                        <p>O HTML usa "Marcação" para anotar texto, imagem e outros conteúdos para <br /> exibição em um
-                            navegador da Web. </p><br /><br />
+                        <ul className="modalUL">
+                            <li>Semântica</li>
+                            <li>Formulários</li>
+                            <li>Tabelas</li>
+                            <li>Videos e Audios</li>
+                        </ul><br /><br />
                         <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br />
                         <br />
                     </div>
@@ -103,10 +107,12 @@ const Habilidades = () => {
                 <div className="modal modal-2">
                     <h1>CSS</h1>
                     <img src={cssImg} alt="CSS" />
-                    <p>CSS (Cascading Style Sheets ou Folhas de Estilo em Cascata) é uma linguagem de <br />
-                        estilo usada para descrever a apresentação de um documento escrito em HTML ou <br />
-                        em XML (incluindo várias linguagens em XML como SVG, MathML ou XHTML). O CSS <br />
-                        descreve como elementos são mostrados na tela, no papel, na fala ou em outras mídias.</p><br /><br />
+                    <ul className="modalUL">
+                            <li>Seletores</li>
+                            <li>Responsividade</li>
+                            <li>Animações</li>
+                            <li>Variáveis</li>
+                        </ul><br /><br />
                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>

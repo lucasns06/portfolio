@@ -24,15 +24,16 @@ const Header = () => {
     };
 
     useEffect(() =>{
+        if (subMenuRef.current){
+            subMenuRef.current.style.display = isMenuVisible ? 'grid' : 'none' 
+        }
+        
         if (menuSvgRef.current) {
             gsap.to(menuSvgRef.current, {
                 attr: { d: isMenuVisible ? openPath : closedPath },
                 duration: 0.5,
                 ease: "power4.inOut",
             });
-        }
-        if (subMenuRef.current){
-            subMenuRef.current.style.display = isMenuVisible ? 'grid' : 'none' 
         }
         if (subMenuRef.current) {
 

@@ -34,10 +34,8 @@ const Projetos = () => {
                 siteTela.classList.toggle('show');
 
                 if (siteTela.classList.contains('show')) {
-                    document.getElementById('slideTccChangeId').innerText = "Site";
                     appTela.classList.remove('show');
                 } else {
-                    document.getElementById('slideTccChangeId').innerText = "Aplicativo";
                     appTela.classList.add('show');
                 }
             };
@@ -57,11 +55,11 @@ const Projetos = () => {
 
     return (
         <div className="projetos" id="projetosId">
-            <p className="textAnim">Meus <span className="span">projetos</span></p> <br /> <br />
+            <h1 className="textAnim">Meus <span className="span">projetos</span></h1> <br /> <br />
             <div className="carrossel">
                 <div className="container">
                     <div className="slide TCC">
-                        <p className="slideTitulo">trabalho de conclusão de curso</p>
+                        <h1 className="slideTitulo">trabalho de conclusão de curso</h1>
                         <div className="tccConteudo">
                             <div className="tccTexto">
                                 <p>Durante o meu TCC, desenvolvi um aplicativo voltado para facilitar a comunicação de pessoas neurodivergentes não verbais. <br />
@@ -86,7 +84,7 @@ const Projetos = () => {
                                 </div>
                             </div>
                             <div className="tccImagem">
-                                <button className="slideTccChange" id="slideTccChangeId">Aplicativo</button> <br /><br />
+                                <button className="slideTccChange" id="slideTccChangeId">Mudar</button> <br /><br />
                                 <div className="slideTcc">
                                     <img src={telaApp} alt="AppTela" className="appTela show" />
                                     <a href="https://lucasns06.github.io/ComuniTec/" target="_blank" rel="noopener noreferrer"><img src={telaSite} alt="siteTela" className="siteTela" /></a>
@@ -95,17 +93,17 @@ const Projetos = () => {
                         </div>
                     </div>
                     <div className="slide API">
-                        <p className="slideTitulo">Planejamento de estudos API</p> <br />
+                        <h1 className="slideTitulo">Planejamento de estudos API</h1> <br />
                         <img src={studyImg} alt="studyImg" />
                         <p>A API de Planejamento de Estudos foi projetado para auxiliar no gerenciamento de tarefas. <br />Desenvolvido para organizar e acompanhar o progresso dos estudos de forma estruturada, com funcionalidades como criação e categorização de tarefas, organização de projetos e notificações.</p> <br /><br /><br /><br />
-                        <h1>Funcionalidades</h1> <br />
+                        <h1 className="slideTitulo">Funcionalidades</h1> <br />
 
                         <ul className="apiUl">
                             <li>Gerenciamento de Tarefas e Categorias: Estruturação de tarefas com data e prioridade, agrupadas em categorias.</li> <br />
                             <li>Notificações Personalizadas: Envio de alertas e lembretes para garantir que o usuário não esqueça a atividade.</li> <br />
                             <li>Cadastro e Perfil de Usuário: Armazena informações básicas do usuário, ajudando na personalização do estudo.</li>
                         </ul> <br /><br /><br /><br />
-                        <h1>Informações</h1> <br />
+                        <h1 className="slideTitulo">Informações</h1> <br />
                         <p>Feito no Visual Studio Code</p>
                         <p>Entity Framework Core,    para a conexão com o banco de dados relacional</p> <br /><br />
                         <div className="projetosLinks">
