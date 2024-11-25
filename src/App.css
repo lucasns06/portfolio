@@ -264,6 +264,7 @@ nav a:hover {
   margin: auto;
   box-shadow: var(--cor-gif);
   border-radius: 24px;
+  align-items: center;
 }
 
 .sobreContainer-texto {
@@ -272,7 +273,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
+  flex: 1;
   p {
     font-weight: normal;
   }
@@ -284,7 +285,6 @@ nav a:hover {
 }
 
 .sobreContainer img {
-
   border-radius: 100%;
   max-width: 384px;
   height: 100%;
@@ -294,16 +294,20 @@ nav a:hover {
   margin-left: 36px;
   z-index: 0;
   position: relative;
+  padding: 4px;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
 .sobreContainerImg::before {
-  filter: blur(20px);
+  top: -3px;
+  left: 0px;
   content: '';
   position: absolute;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
       rgba(255, 0, 0, 1) 0%,
       rgba(255, 154, 0, 1) 10%,
       rgba(208, 222, 33, 1) 20%,
@@ -314,11 +318,13 @@ nav a:hover {
       rgba(95, 21, 242, 1) 70%,
       rgba(186, 12, 248, 1) 80%,
       rgba(251, 7, 217, 1) 90%,
-      rgba(255, 0, 0, 1) 100%);
-  top: 5%;
-  left: 5%;
+      rgba(255, 0, 0, 1) 100%); */
+      background: linear-gradient(90deg,
+      rgb(238, 255, 0) 20%,
+      var(--cor-branco)  40%,
+      var(--cor-branco) 100%);
   z-index: -1;
-  animation: neon 3s infinite linear;
+  animation: neon 1s infinite linear;
 }
 
 @keyframes neon {
