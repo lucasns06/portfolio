@@ -320,7 +320,7 @@ nav a:hover {
       rgba(251, 7, 217, 1) 90%,
       rgba(255, 0, 0, 1) 100%); */
       background: linear-gradient(90deg,
-      rgb(238, 255, 0) 20%,
+      rgb(0, 38, 255) 20%,
       var(--cor-branco)  40%,
       var(--cor-branco) 100%);
   z-index: -1;
@@ -631,7 +631,6 @@ nav a:hover {
 .appTela {
   width: 250px;
   display: none;
-  border-radius: 22px;
 }
 
 .siteTela {
@@ -890,7 +889,7 @@ footer p {
 
   .carrossel {
     width: calc(100vw - 2rem);
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
   }
 
   .carrossel .container {

@@ -62,13 +62,14 @@ const Projetos = () => {
                         <h1 className="slideTitulo">trabalho de conclusão de curso</h1>
                         <div className="tccConteudo">
                             <div className="tccTexto">
-                                <p>Durante o meu TCC, desenvolvi um aplicativo voltado para facilitar a comunicação de pessoas neurodivergentes não verbais. <br />
-                                    Esse projeto incluiu a criação de funcionalidades como biblioteca de palavras, síntese de fala e uma interface acessível, com foco em proporcionar uma experiência intuitiva e personalizada para os usuários.</p> <br />
-                                <p>E também um site, simples e intuitivo, da minha "empresa" ComuniTec, com o aplicativo Comunica.</p>
-                                <br />
-                                <p>Aplicativo: Desenvolvimento no 3º Módulo</p>
-                                <p>Site: <span style={{ color: 'green' }}>Concluído</span></p>
-                                <br /><br />
+                                <p>No meu TCC, estou desenvolvendo um aplicativo voltado para facilitar a comunicação de pessoas neurodivergentes não verbais.  <br />
+                                <strong>Comunica</strong> <br />
+                                    O aplicativo consiste em usar a comunicação por troca de imagens.
+                                    Além disso, inclui funcionalidades como a verbalização de texto em voz, 
+                                    ampliando seu alcance para outros públicos com necessidades comunicativas diversas.
+                                </p> <br />
+                                <p>Além do aplicativo, também desenvolvi um site simples e intuitivo para representar minha "empresa", chamada ComuniTec.</p>
+                                <br /> <br />
 
                                 <div className="tccTextoBotoes">
                                     <p>ComuniTec (site)</p>
@@ -80,7 +81,7 @@ const Projetos = () => {
                                     </a>
                                     <br /><br />
                                     <p>Comunica (aplicativo)</p>
-                                    <p style={{ color: 'red' }}>Em desenvolvimento</p>
+                                    <p style={{ color: 'red' }}>Em desenvolvimento, React Native</p>
                                 </div>
                             </div>
                             <div className="tccImagem">
@@ -95,12 +96,11 @@ const Projetos = () => {
                     <div className="slide API">
                         <h1 className="slideTitulo">Planejamento de estudos API</h1> <br />
                         <img src={studyImg} alt="studyImg" />
-                        <p>A API de Planejamento de Estudos foi projetado para auxiliar no gerenciamento de tarefas. <br />Desenvolvido para organizar e acompanhar o progresso dos estudos de forma estruturada, com funcionalidades como criação e categorização de tarefas, organização de projetos e notificações.</p> <br /><br /><br /><br />
+                        <p>A API de Planejamento de Estudos foi projetado para auxiliar no gerenciamento de tarefas. <br />Desenvolvido para organizar e acompanhar o progresso dos estudos de forma estruturada, com funcionalidades como criação e categorização de tarefas, organização de projetos.</p> <br /><br /><br /><br />
                         <h1 className="slideTitulo">Funcionalidades</h1> <br />
 
                         <ul className="apiUl">
                             <li>Gerenciamento de Tarefas e Categorias: Estruturação de tarefas com data e prioridade, agrupadas em categorias.</li> <br />
-                            <li>Notificações Personalizadas: Envio de alertas e lembretes para garantir que o usuário não esqueça a atividade.</li> <br />
                             <li>Cadastro e Perfil de Usuário: Armazena informações básicas do usuário, ajudando na personalização do estudo.</li>
                         </ul> <br /><br /><br /><br />
                         <h1 className="slideTitulo">Informações</h1> <br />

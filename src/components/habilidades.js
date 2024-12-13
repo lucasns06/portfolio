@@ -119,10 +119,13 @@ const Habilidades = () => {
                 <div className="modal modal-3">
                     <h1>JAVASCRIPT</h1>
                     <img src={javascriptImg} alt="JavaScript" />
-                    <p>JavaScript® (às vezes abreviado para JS) é uma linguagem leve, interpretada e <br />
-                        baseada em objetos com funções de primeira classe, mais conhecida como a <br />
-                        linguagem de script para páginas Web, mas usada também em vários outros <br />
-                        ambientes sem browser, tais como node.js, Apache CouchDB e Adobe Acrobat.</p><br /><br />
+                    <p>
+                        Variáveis <br />
+                        Funções <br />
+                        Tipos de dados <br />
+                        DOM
+                        
+                    </p><br /><br />
                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br />
                     <br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
@@ -130,22 +133,44 @@ const Habilidades = () => {
                 <div className="modal modal-4">
                     <h1>React</h1>
                     <img src={reactImg} alt="React" />
-                    <p>React é uma biblioteca JavaScript para construção de interfaces de usuário.</p><br />
+                    <p>
+                        Hooks Básicos <br />
+                        Componentes <br />
+                        Rotas
+                    </p><br />
                     <a href="https://react.dev/"
-                        target="_blank" rel="noopener noreferrer">react</a> <br /><br />
+                        target="_blank" rel="noopener noreferrer">React</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
                 <div className="modal modal-5">
-                    <h1>JAVA</h1>
-                    <img src={javaImg} alt="Java" />
-                    <p>Java é uma linguagem de programação amplamente usada para codificar <br />
-                        aplicações Web. <br />
-                        Java é uma linguagem multiplataforma, orientada a objetos e centrada <br />
-                        em rede que pode ser usada como uma plataforma em si.</p><br /><br />
-                    <a href="https://aws.amazon.com/pt/what-is/java/" target="_blank" rel="noopener noreferrer">Amazon Web Services</a> <br /><br />
+                    <h1>React Native</h1>
+                    <img src={reactImg} alt="React" />
+                    <p>
+                        Hooks Básicos <br />
+                        Componentes <br />
+                        StyleSheet
+                    </p><br />
+                    <a href="https://reactnative.dev/"
+                        target="_blank" rel="noopener noreferrer">React Native</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
                 <div className="modal modal-6">
+                    <h1>JAVA</h1>
+                    <img src={javaImg} alt="Java" />
+                    <p>
+                        Classe, atributo e objeto <br />
+                        Enumeração <br />
+                        Herança <br />
+                        Construtores <br />
+                        Modificadores de acesso <br />
+                        Polimorfismo <br />
+                        Interfaces <br />
+                        Classe Abstrata e métodos abstratos 
+                    </p><br /><br />
+                    <a href="https://aws.amazon.com/pt/what-is/java/" target="_blank" rel="noopener noreferrer">Amazon Web Services</a> <br /><br />
+                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
+                </div>
+                <div className="modal modal-7">
                     <h1>C#</h1>
                     <img src={cSharpImg} alt="C#" />
                     <p>A linguagem C# é a linguagem mais popular para a plataforma .NET, um ambiente <br />
@@ -156,7 +181,7 @@ const Habilidades = () => {
                         target="_blank" rel="noopener noreferrer">Microsoft</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
                 </div>
-                <div className="modal modal-7">
+                <div className="modal modal-8">
                     <h1>SQL</h1>
                     <img src={sqlImg} alt="SQL" />
                     <p>O SQL, ou Structured Query Language, é uma linguagem de programação padrão usada <br />
@@ -189,16 +214,21 @@ const Habilidades = () => {
                     <p>Básico</p>
                 </div>
                 <div className="habilidadesItem hab-5" onClick={() => abrirModal(5)}>
+                    <img src={reactImg} alt="React" />
+                    <p>React Native</p>
+                    <p>Básico</p>
+                </div>
+                <div className="habilidadesItem hab-6" onClick={() => abrirModal(6)}>
                     <img src={javaImg} alt="Java" />
                     <p>Java</p>
                     <p>Básico</p>
                 </div>
-                <div className="habilidadesItem hab-6" onClick={() => abrirModal(6)}>
+                <div className="habilidadesItem hab-7" onClick={() => abrirModal(7)}>
                     <img src={cSharpImg} alt="C#" />
                     <p>C#</p>
                     <p>Básico</p>
                 </div>
-                <div className="habilidadesItem hab-7" onClick={() => abrirModal(7)}>
+                <div className="habilidadesItem hab-8" onClick={() => abrirModal(8)}>
                     <img src={sqlImg} alt="SQL" />
                     <p>SQL</p>
                     <p>Básico</p>
