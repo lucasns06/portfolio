@@ -14,6 +14,7 @@ const Header = () => {
     const openPath = 'M6 6L18 18M6 18L18 6';
     const menuSvgRef = useRef(null);
     const subMenuRef = useRef(null);
+    const imgTheme = useRef(null);
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible)
@@ -22,7 +23,15 @@ const Header = () => {
     const toggleTheme = () => {
         setIsDarkTheme(prevState => !prevState); // Alterna entre true/false
     };
-
+    useEffect(() => {
+        if (imgTheme.current) {
+            imgTheme.current.classList.add('themeEntry');
+            const timer = setTimeout(() => {
+                imgTheme.current.classList.remove('themeEntry');
+            }, 1000); // Tempo correspondente à duração da animação no CSS
+            return () => clearTimeout(timer);
+        }
+    }, []);
     useEffect(() =>{
         if (subMenuRef.current){
             subMenuRef.current.style.display = isMenuVisible ? 'grid' : 'none' 
@@ -106,7 +115,7 @@ const Header = () => {
                 <a href="#projetosId" className='aHeader'>Projetos</a>
                 <a href="#habilidadesId" className='aHeader'>Habilidades</a>
                 <a href="#contatosId" className="contactBtn">Contato</a>
-                <img
+                <img ref={imgTheme}
                     src={themeImgSrc}
                     className="imgTheme"
                     alt={isDarkTheme ? 'Tema Claro' : 'Tema Escuro'}

@@ -170,7 +170,6 @@ nav a:hover {
   padding: 4px;
   border-radius: 8px;
   transition: background 200ms ease;
-  animation: themeEntry 1s ease-in;
 }
 
 @keyframes themeEntry {
@@ -181,6 +180,9 @@ nav a:hover {
   to {
     right: 5%
   }
+}
+.themeEntry {
+  animation: themeEntry 500ms ease-in;
 }
 
 .imgTheme:hover {
