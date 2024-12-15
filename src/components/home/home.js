@@ -12,7 +12,7 @@ const Home = () => {
         const textHome = document.querySelector('.textAnim2')
         gsap.registerPlugin(TextPlugin);
 
-        gsap.to(".textWriting", { duration: 4, text: "Sou Desenvolvedor Front End e Designer. Moro em São Paulo, apaixonado por tecnologia e programação." }); 
+        gsap.to(".textWriting", { duration: 4, text: "Sou Desenvolvedor Full Stack. Moro em São Paulo, apaixonado por tecnologia e programação." }); 
         gsap.registerPlugin(ScrollTrigger)
     
         gsap.to(textHome, {
