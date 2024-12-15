@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.419e6653.css",
-    "main.js": "/static/js/main.7187f860.js",
+    "main.js": "/static/js/main.dc0e384b.js",
     "static/js/453.cb4c4840.chunk.js": "/static/js/453.cb4c4840.chunk.js",
     "static/media/User Interface.gif": "/static/media/User Interface.2dfddf22f08ac0276634.gif",
     "static/media/ComunicaTela.png": "/static/media/ComunicaTela.5153f8e3866e818482be.png",
@@ -12,11 +12,11 @@
     "static/media/dark.svg": "/static/media/dark.220ef350d692e54547e2f0eca451024b.svg",
     "index.html": "/index.html",
     "main.419e6653.css.map": "/static/css/main.419e6653.css.map",
-    "main.7187f860.js.map": "/static/js/main.7187f860.js.map",
+    "main.dc0e384b.js.map": "/static/js/main.dc0e384b.js.map",
     "453.cb4c4840.chunk.js.map": "/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.419e6653.css",
-    "static/js/main.7187f860.js"
+    "static/js/main.dc0e384b.js"
   ]
 }
