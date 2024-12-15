@@ -1,0 +1,288 @@
+.mover {
+    transform: translateX(-1280px);
+    transition: all 0.5s ease;
+}
+
+.projetos {
+    text-align: center;
+    align-content: center;
+    height: var(--tamanho-secao);
+}
+
+.projetosLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.projetosLinks a:hover svg {
+    transform: translateY(-5px);
+    transition: transform 100ms ease;
+}
+
+.carrossel {
+    border-radius: 24px;
+    width: 1280px;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.carrossel .container {
+    width: 2400px;
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide,
+.tccImagem,
+.tccTexto {
+    background: var(--cor-teste);
+}
+
+.slide {
+    background-size: cover;
+    width: 1280px;
+    flex-shrink: 0;
+}
+
+.tccConteudo {
+    display: flex;
+    padding: 3rem;
+}
+
+.API {
+    padding: 2rem;
+}
+
+.API a {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.API img {
+    width: 100px;
+}
+
+.apiUl {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.slideTitulo {
+    text-transform: uppercase;
+    font-size: 1.5em;
+
+}
+
+.API p {
+    font-size: 1.5em;
+}
+
+.tccTexto {
+    width: calc(50%);
+    height: 100%;
+    text-align: left;
+
+}
+
+.tccTexto p {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.tccImagem {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideTcc {
+    display: flex;
+    justify-content: center;
+}
+
+.appTela,
+.siteTela {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.116);
+}
+
+.appTela {
+    width: 250px;
+    display: none;
+}
+
+.siteTela {
+    display: none;
+    width: 460px
+}
+
+.appTela:hover,
+.siteTela:hover {
+    scale: 1.1;
+}
+
+.show {
+    transition: all 250ms ease;
+    display: block;
+}
+
+.TCC {
+    padding: 2rem;
+}
+
+.tccTextoBotoes {
+    text-align: center;
+}
+
+.tccTextoBotoes a {
+    margin-right: 10px;
+}
+
+.slideTccChange {
+    width: 80px;
+    cursor: pointer;
+    margin: auto;
+    padding: 6px;
+    outline: 0;
+    border-radius: 4px;
+    border: 0;
+    background: var(--cor-preta);
+    color: var(--cor-branco);
+}
+
+.githubBtn {
+
+    width: max-content;
+    cursor: pointer;
+    padding: 6px;
+    outline: 0;
+    border-radius: 4px;
+    border: 0;
+    background: var(--cor-preta);
+    color: var(--cor-branco);
+}
+
+.versiteBtn {
+    background: var(--cor-destaque);
+}
+
+.changeSlideBtn {
+    width: max-content;
+    cursor: pointer;
+    margin: auto;
+    padding: 6px;
+    outline: 0;
+    border-radius: 4px;
+    border: 0;
+    background: var(--cor-destaque);
+    color: white;
+}
+
+.verProjetosBtn {
+    width: max-content;
+    cursor: pointer;
+    margin: auto;
+    padding: 6px;
+    outline: 0;
+    border-radius: 4px;
+    border: 0;
+    background: var(--cor-destaque);
+    color: white;
+}
+
+@media (max-width: 1400px) {
+    .carrossel {
+        width: 1000px;
+    }
+
+    .carrossel .container {
+        width: 2000px;
+    }
+
+    .slide {
+        width: 1000px;
+    }
+
+    .projetos {
+        height: max-content;
+    }
+
+    .tccTexto {
+        text-align: center;
+        width: inherit;
+    }
+
+    .tccTexto {
+        width: calc(50%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .TCC {
+        padding: 2rem;
+    }
+    .API {
+        padding: 2rem;
+    }
+    .tccTexto {
+        width: 100%;
+    }
+    .tccImagem {
+        padding-bottom: 3rem;
+    }
+    .carrossel {
+        width: calc(100vw - 2rem);
+    }
+    .carrossel .container {
+        width: calc(200vw - 2rem);
+
+    }
+    .slide {
+        width: calc(100vw - 2rem);
+
+    }
+    .tccConteudo {
+        flex-direction: column;
+    }
+}
+@media (max-width: 800px) {
+    .siteTela {
+        width: 420px;
+    }
+}
+@media (max-width: 580px) {
+    .API ul {
+        list-style-type: none;
+    }
+    .API {
+        padding: 12px;
+    }
+    .slideTccTitulo {
+        font-size: 2rem;
+    }
+    .tccTexto p {
+        font-size: 1.5rem;
+    }
+    .tccConteudo {
+        padding: 1rem;
+    }
+    .appTela {
+        width: 150px;
+    }
+    .siteTela {
+        width: 260px;
+    }
+}
+@media (max-width: 435px){
+    .projetosLinks {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .changeSlideBtn {
+        transform: translateX(0);
+      }
+}

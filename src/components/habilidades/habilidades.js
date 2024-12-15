@@ -1,14 +1,14 @@
 import { useLayoutEffect } from "react";
-
 import React from "react";
-
-import htmlImg from '../img/hab/html.png';
-import cssImg from '../img/hab/css.png';
-import javascriptImg from '../img/hab/javascript.png';
-import javaImg from '../img/hab/java.png';
-import cSharpImg from '../img/hab/cSharp.png';
-import sqlImg from '../img/hab/sql.png';
-import reactImg from '../img/hab/react.png';
+import './habilidades.css';
+import '../../App.css';
+import htmlImg from '../../img/hab/html.png';
+import cssImg from '../../img/hab/css.png';
+import javascriptImg from '../../img/hab/javascript.png';
+import javaImg from '../../img/hab/java.png';
+import cSharpImg from '../../img/hab/cSharp.png';
+import sqlImg from '../../img/hab/sql.png';
+import reactImg from '../../img/hab/react.png';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 

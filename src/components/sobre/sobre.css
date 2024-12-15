@@ -1,0 +1,110 @@
+.sobre {
+    align-content: center;
+    height: var(--tamanho-secao);
+    background: var(--cor-teste2);
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.QuemSouP {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.sobreContainer {
+    background: var(--cor-branco-secundaria);
+    display: flex;
+    padding: 2rem;
+    text-align: left;
+    max-width: 1024px;
+    margin: auto;
+    box-shadow: var(--cor-gif);
+    border-radius: 24px;
+    align-items: center;
+}
+
+.sobreContainer-texto {
+
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+
+    p {
+        font-weight: normal;
+    }
+}
+
+.sobreContainer-texto p:first-child {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.sobreContainer img {
+    border-radius: 100%;
+    max-width: 384px;
+    height: 100%;
+}
+
+.sobreContainerImg {
+    margin-left: 36px;
+    z-index: 0;
+    position: relative;
+    padding: 4px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.sobreContainerImg::before {
+    top: -3px;
+    left: 0px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: linear-gradient(90deg,
+            rgb(0, 38, 255) 20%,
+            var(--cor-branco) 40%,
+            var(--cor-branco) 100%);
+    z-index: -1;
+    animation: neon 1s infinite linear;
+}
+
+@keyframes neon {
+    from {
+        rotate: 360deg
+    }
+
+    to {
+        rotate: 0deg;
+    }
+}
+
+@media (max-width: 1600px){
+    .QuemSouP {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 1024px) {
+      .sobreContainerImg{
+        margin-left: 0;
+      }
+      .sobreContainer {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .sobreContainerImg {
+        margin-top: 2.5rem;
+      }
+    
+      .sobreContainer img {
+        max-width: 200px;
+      }
+      .sobreContainerImg{
+        margin-left: 0;
+      }
+  }

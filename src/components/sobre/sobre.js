@@ -1,10 +1,11 @@
 import { useLayoutEffect } from "react";
 import React from 'react';
-import perfilFoto from '../img/perfil.jfif'
+import perfilFoto from '../../img/perfil.jfif'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import { animation } from '../js/animations'
-
+import './sobre.css';
+import '../../App.css';
 const Sobre = () => {
     useLayoutEffect(() => {
         const texts = document.querySelectorAll('.textAnim')

@@ -1,0 +1,175 @@
+.habilidades {
+    height: var(--tamanho-secao);
+    align-content: center;
+    text-align: center;
+    background: var(--cor-teste2);
+}
+
+.textAnim {
+    opacity: 0;
+    font-size: 3rem;
+}
+
+.habilidadesContainer {
+    opacity: 0;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    justify-content: center;
+
+}
+
+.habilidadesItem {
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--habCard-shadow);
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    height: min-content;
+    transition: scale 0.2s;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.habilidadesItem::after {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    width: 200px;
+    height: 130px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #4D54FF;
+    transition: height 0.4s ease;
+}
+
+.habilidadesItem:hover::after {
+    height: 160px;
+}
+
+.habilidadesItem:hover {
+    scale: 1.1;
+}
+
+.habilidadesItem p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.habilidadesItem p:last-child {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.habilidadesItem img {
+    max-width: 64px;
+}
+
+.modais {
+    display: none;
+    position: fixed;
+    z-index: 11;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.452);
+}
+
+.modal p {
+    font-size: 1rem;
+}
+
+.modal {
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    z-index: 12;
+    max-width: max-content;
+    margin: auto;
+    background: var(--cor-branco-secundaria);
+}
+
+.modal img {
+    width: 100px;
+}
+
+.modal-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.modal-1,
+.modal-2,
+.modal-3,
+.modal-4,
+.modal-5,
+.modal-6 {
+    display: none;
+}
+
+.modalUL {
+    text-align: left;
+}
+
+.closeModal {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgb(233, 78, 78);
+    color: white;
+    border: 0;
+    border-radius: 12px;
+    outline: 0;
+    padding: 8px;
+    background: rgb(233, 78, 78);
+}
+
+@media (max-width: 1600px) {
+
+    .habilidadesItem p {
+        font-size: 1rem;
+    }
+
+    .habilidadesItem p:last-child {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .habilidades {
+        height: max-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-height: 400px) {
+    .modal p {
+        font-size: 0.5rem;
+    }
+
+    .modal {
+        top: 0;
+    }
+}
+
+@media (max-width: 435px) {
+    .habilidadesContainer {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

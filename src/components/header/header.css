@@ -1,0 +1,152 @@
+header {
+    align-items: center;
+    background: var(--cor-branco-secundaria);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+    display: flex;
+    padding: 1.2rem;
+    font-size: 18px;
+    box-shadow: 0px 0px 8px #00000000;
+}
+
+.menu {
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.menu svg {
+    width: 100%;
+    height: 100%;
+}
+
+.sub-menu {
+    justify-items: center;
+    display: none;
+    overflow: hidden;
+}
+
+.sub-menu.show {
+    display: grid;
+}
+
+.contactBtn {
+    border-radius: 12px;
+    padding: 8px;
+    color: white;
+    background: var(--cor-destaque);
+    box-shadow: 0px 0px 15px rgba(0, 81, 255, 0.664);
+}
+
+.contactBtn:hover {
+    color: white;
+    background: #686dff;
+    transition: all 0.2s ease;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aHeader {
+    position: relative;
+}
+
+.aHeader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--cor-destaque);
+    transform: translateY(-50%);
+    transition: transform 0.2s;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+    transition: color 0.2s;
+}
+
+.aHeader:hover::after {
+    transform: translateY(5px);
+    transition: transform 250ms ease;
+}
+
+.imgTheme {
+    width: 38px;
+    position: fixed;
+    cursor: pointer;
+    top: 50%;
+    right: 5%;
+    padding: 4px;
+    border-radius: 8px;
+    transition: background 200ms ease;
+}
+
+@keyframes themeEntry {
+    from {
+        right: 0%
+    }
+
+    to {
+        right: 5%
+    }
+}
+
+.themeEntry {
+    animation: themeEntry 500ms ease-in;
+}
+
+.imgTheme:hover {
+    background: rgba(0, 0, 0, 0.166);
+}
+
+@media (max-width: 1600px) {
+    header {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 690px) {
+    .imgTheme {
+        position: static;
+    }
+
+    .menu {
+        align-items: center;
+        display: block;
+    }
+
+    .sub-menu {
+        text-align: center;
+        gap: 1rem;
+        position: relative;
+        width: max-content;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: var(--cor-teste);
+        left: -140%;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.295);
+    }
+
+    .sub-menu a {
+        display: block;
+        font-size: 1rem;
+
+    }
+
+    header nav a {
+        display: none;
+    }
+}

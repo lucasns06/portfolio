@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
-import telaApp from "../img/ComunicaTela.png";
-import telaSite from "../img/site.png";
-import studyImg from "../img/study.png";
-
+import telaApp from "../../img/ComunicaTela.png";
+import telaSite from "../../img/site.png";
+import studyImg from "../../img/study.png";
+import './projetos.css';
+import '../../App.css';
 const Projetos = () => {
     const [isMoved, setIsMoved] = useState(false);
 

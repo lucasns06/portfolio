@@ -1,11 +1,11 @@
 import './App.css';
-import Header from './components/header';
-import Home from './components/home';
-import Sobre from './components/sobre';
-import Habilidades from './components/habilidades';
-import Projetos from './components/projetos';
-import Contatos from './components/contatos';
-import Footer from './components/footer';
+import Header from './components/header/header';
+import Home from './components/home/home';
+import Sobre from './components/sobre/sobre';
+import Habilidades from './components/habilidades/habilidades';
+import Projetos from './components/projetos/projetos';
+import Contatos from './components/contato/contatos';
+import Footer from './components/footer/footer';
 function App() {
   
   const body = document.body;

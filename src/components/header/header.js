@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef  } from 'react';
-import darkLogo from '../img/dark.svg';
-import lightLogo from '../img/light.svg';
+import darkLogo from '../../img/dark.svg';
+import lightLogo from '../../img/light.svg';
 import gsap from 'gsap';
 
+import './header.css';
+import '../../App.css';
 const Header = () => {
     const savedTheme = localStorage.getItem("isDarkTheme") === "true";
     const [isDarkTheme, setIsDarkTheme] = useState(savedTheme); // Estado para controlar o tema

@@ -1,0 +1,45 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 5px;
+}
+
+.logo p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footerNav a,
+.footerCredits a {
+    font-weight: 400;
+}
+
+.footerNav h1,
+.footerCredits h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+footer {
+    padding: 4rem;
+    background: var(--cor-footer);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    color: var(--cor-preta);
+}
+
+.footerImg {
+    border-radius: 100%;
+    width: 42px;
+}
+
+@media (max-width: 800px) {
+    .footer1 {
+        display: none;
+    }
+}

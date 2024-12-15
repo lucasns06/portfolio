@@ -1,10 +1,11 @@
 import { useLayoutEffect } from "react";
 import React from "react";
-import homeImage from '../img/User Interface.gif';
+import homeImage from '../../img/User Interface.gif';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from "gsap/TextPlugin";
-
+import './home.css'
+import '../../App.css';
 const Home = () => {
 
     useLayoutEffect(() => {
