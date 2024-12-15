@@ -97,13 +97,13 @@ const Projetos = () => {
                     <div className="slide API">
                         <h1 className="slideTitulo">Planejamento de estudos API</h1> <br />
                         <img src={studyImg} alt="studyImg" />
-                        <p>A API de Planejamento de Estudos foi projetado para auxiliar no gerenciamento de tarefas. <br />Desenvolvido para organizar e acompanhar o progresso dos estudos de forma estruturada, com funcionalidades como criação e categorização de tarefas, organização de projetos.</p> <br /><br /><br /><br />
+                        <p>A API de Planejamento de Estudos foi projetado para auxiliar no gerenciamento de tarefas. <br />Desenvolvido para organizar e acompanhar o progresso dos estudos de forma estruturada, com funcionalidades como criação e categorização de tarefas, organização de projetos.</p>
+                         <br /><br />
                         <h1 className="slideTitulo">Funcionalidades</h1> <br />
-
                         <ul className="apiUl">
-                            <li>Gerenciamento de Tarefas e Categorias: Estruturação de tarefas com data e prioridade, agrupadas em categorias.</li> <br />
+                            <li>Gerenciamento de Tarefas e Categorias: Estruturação de tarefas com data e prioridade, agrupadas em categorias.</li> 
                             <li>Cadastro e Perfil de Usuário: Armazena informações básicas do usuário, ajudando na personalização do estudo.</li>
-                        </ul> <br /><br /><br /><br />
+                        </ul> <br /><br />
                         <h1 className="slideTitulo">Informações</h1> <br />
                         <p>Feito no Visual Studio Code</p>
                         <p>Entity Framework Core,    para a conexão com o banco de dados relacional</p> <br /><br />

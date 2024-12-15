@@ -24,7 +24,9 @@
   font-size: 3rem;
   max-width: max-content;
 }
-
+.nomeHome p{
+  font-size: 24px;
+}
 .textWriting {
   font-weight: normal;
   height: 222px;
@@ -49,10 +51,10 @@
 
 @media (max-width: 1600px) {
   .nomeHome {
-    font-size: 2.0rem;
+    font-size: 40px;
   }
 
-  .home-texto p:last-child {
+  .textWriting{
     font-size: 1.5rem;
   }
 }

@@ -48,7 +48,7 @@ const Sobre = () => {
                     <p className="textWriting2"></p>
                     <p>Desde jovem, sempre fui apaixonado por
                         desenho e tecnologia. Em 2024, iniciei
-                        o curso de Técnico em Desenvolvimento de Sistemas, e foi no front-end que me identifiquei de forma plena com o que faço. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
+                        o curso de Técnico em Desenvolvimento de Sistemas. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
                     <a href='#projetosId' className="verProjetosBtn">Ver Projetos</a>
                 </div>
 
