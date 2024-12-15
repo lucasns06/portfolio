@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react";
 import React from 'react';
-import perfilFoto from '../../img/perfil.jfif'
+import perfilFoto from '../../img/perfil.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import { animation } from '../js/animations'
