@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import './contatos.css';
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Contatos = () => {
-
+    useLayoutEffect (() =>{
+        const contatos = document.querySelectorAll('.contatosLinks a')
+        gsap.registerPlugin(ScrollTrigger)
+        
+        contatos.forEach( animaContato =>{
+            gsap.fromTo(animaContato, {
+                scale: 0,
+            },{
+                scale: 1,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: animaContato,
+                    start: 'bottom bottom',
+                    toggleActions: "restart none none none"
+                }
+            })
+        })
+    },[])
 
     return (
         <div className="contatos" id="contatosId">

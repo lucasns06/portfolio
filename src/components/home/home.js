@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef } from "react";
 import React from "react";
 import homeImage from '../../img/User Interface.gif';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from "gsap/TextPlugin";
 import './home.css'
 import '../../App.css';
@@ -15,7 +14,6 @@ const Home = () => {
         gsap.registerPlugin(TextPlugin);
 
         gsap.to(".textWriting", { duration: 4, text: "Sou um estudante de Desenvolvimento de Sistemas e estou procurando uma oportunidade de trabalho e aprendizado." });
-        gsap.registerPlugin(ScrollTrigger)
 
         gsap.fromTo(textHome, {
             opacity: 0,
@@ -38,7 +36,6 @@ const Home = () => {
         });
         
     }, []);
-
 
     return (
         <div className="home" id="homeId">
