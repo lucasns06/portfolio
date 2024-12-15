@@ -1,8 +1,7 @@
 .sobre {
     align-content: center;
-    height: var(--tamanho-secao);
     background: var(--cor-teste2);
-    padding-bottom: 8rem;
+    padding: 8rem 0 8rem 0;
     text-align: center;
 }
 

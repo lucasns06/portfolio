@@ -13,6 +13,7 @@ header {
     box-shadow: 0px 0px 8px #00000000;
 }
 
+
 .menu {
     display: none;
     width: 32px;
@@ -57,8 +58,13 @@ nav {
 
 .aHeader {
     position: relative;
+    font-size: 20px;
 }
-
+.logo-name{
+    font-family: 'Pacifico';
+    font-weight: 400;
+    font-size: 28px;
+}
 .aHeader::after {
     content: '';
     position: absolute;
@@ -115,6 +121,12 @@ nav a:hover {
 @media (max-width: 1600px) {
     header {
         padding: 0.8rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .logo-name{
+        display: none;
     }
 }
 

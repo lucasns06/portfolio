@@ -111,6 +111,7 @@ const Header = () => {
 
     return (
         <header>
+            <a href="#" className='logo-name'>Lucas Nascimento</a>
             <nav>
                 <a href="#homeId" className='aHeader'>Inicio</a>
                 <a href="#sobreId" className='aHeader' >Sobre</a>

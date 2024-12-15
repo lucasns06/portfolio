@@ -6,7 +6,7 @@
 .projetos {
     text-align: center;
     align-content: center;
-    height: var(--tamanho-secao);
+    padding: 64px 0 64px 0;
 }
 
 .projetosLinks {
