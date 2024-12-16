@@ -49,7 +49,7 @@ const Sobre = () => {
                     <p>Desde jovem, sempre fui apaixonado por
                         desenho e tecnologia. Em 2024, iniciei
                         o curso de Técnico em Desenvolvimento de Sistemas. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
-                    <a href='#projetosId' className="verProjetosBtn">Ver Projetos</a>
+                    <a href='#projetosId' className="verProjetosBtn sombra">Ver Projetos</a>
                 </div>
 
                 <div className="sobreContainerImg">

@@ -168,6 +168,7 @@
 
 .versiteBtn {
     background: var(--cor-destaque);
+    color: white;
 }
 
 .changeSlideBtn {

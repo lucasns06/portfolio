@@ -10,9 +10,14 @@ header {
     display: flex;
     padding: 1.2rem;
     font-size: 18px;
-    box-shadow: 0px 0px 8px #00000000;
 }
 
+.sombra {
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(122, 129, 255, 0.25);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(122, 129, 255, 0.25);
+    box-shadow: 0px 10px 25px 0px rgba(122, 129, 255, 0.25);
+    transition: all 1s;
+}
 
 .menu {
     display: none;
@@ -60,11 +65,13 @@ nav {
     position: relative;
     font-size: 20px;
 }
-.logo-name{
+
+.logo-name {
     font-family: 'Pacifico';
     font-weight: 400;
     font-size: 28px;
 }
+
 .aHeader::after {
     content: '';
     position: absolute;
@@ -125,7 +132,7 @@ nav a:hover {
 }
 
 @media (max-width: 850px) {
-    .logo-name{
+    .logo-name {
         display: none;
     }
 }

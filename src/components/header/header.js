@@ -90,14 +90,13 @@ const Header = () => {
         }
     }, [isDarkTheme]); // O efeito será disparado sempre que isDarkTheme mudar
 
-    // Evento de scroll para mudar o boxShadow do header
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+                header.classList.add('sombra')
             } else {
-                header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0)";
+                header.classList.remove('sombra')
             }
         };
 

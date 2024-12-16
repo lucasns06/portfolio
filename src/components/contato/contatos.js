@@ -8,7 +8,7 @@ const Contatos = () => {
         const contatos = document.querySelectorAll('.contatosLinks a')
         gsap.registerPlugin(ScrollTrigger)
         
-        contatos.forEach( animaContato =>{
+        contatos.forEach(animaContato =>{
             gsap.fromTo(animaContato, {
                 scale: 0,
             },{
@@ -21,6 +21,7 @@ const Contatos = () => {
                 }
             })
         })
+
     },[])
 
     return (
