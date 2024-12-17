@@ -6,7 +6,7 @@
 .projetos {
     text-align: center;
     align-content: center;
-    padding: 64px 0 64px 0;
+    min-height: 100vh;
 }
 
 .projetosLinks {
@@ -55,7 +55,7 @@
 }
 
 .API {
-    padding: 2rem;
+    padding: 0px 16px;
 }
 
 .API a {
@@ -82,7 +82,9 @@
 .API p {
     font-size: 1.5em;
 }
-
+.API ul {
+    list-style-type: none;
+}
 .tccTexto {
     width: calc(50%);
     height: 100%;
@@ -131,7 +133,7 @@
 }
 
 .TCC {
-    padding: 2rem;
+    padding: 0px 16px;
 }
 
 .tccTextoBotoes {
@@ -223,12 +225,6 @@
 }
 
 @media (max-width: 1024px) {
-    .TCC {
-        padding: 2rem;
-    }
-    .API {
-        padding: 2rem;
-    }
     .tccTexto {
         width: 100%;
     }
@@ -256,9 +252,7 @@
     }
 }
 @media (max-width: 580px) {
-    .API ul {
-        list-style-type: none;
-    }
+    
     .API {
         padding: 12px;
     }

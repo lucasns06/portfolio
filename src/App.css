@@ -24,7 +24,7 @@
   --cor-destaque: #4D54FF;
   --cor-footer: #d8d9e1;
   --cor-teste: rgb(255, 255, 255);
-  --cor-teste2: rgba(0, 0, 0, 0.03);
+  --cor-teste2: rgb(232, 234, 241);
   --tamanho-secao: 1024px;
 }
 
@@ -79,6 +79,7 @@ a {
 
 .textAnim {
   opacity: 0;
+  font: 700 max(36px,4vw) /max(48px,5vw) sans-serif;
 }
 
 .textAnim2 {

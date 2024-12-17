@@ -1,14 +1,11 @@
 .habilidades {
-    height: var(--tamanho-secao);
+    min-height: 100vh;
     align-content: center;
     text-align: center;
     background: var(--cor-teste2);
+    border-radius: 20vw;
 }
 
-.textAnim {
-    opacity: 0;
-    font-size: 3rem;
-}
 
 .habilidadesContainer {
     opacity: 0;
@@ -150,7 +147,6 @@
 @media (max-width: 760px) {
 
     .habilidades {
-        height: max-content;
         padding-top: 2rem;
         padding-bottom: 2rem;
     }

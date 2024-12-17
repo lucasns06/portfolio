@@ -1,13 +1,14 @@
 .sobre {
     align-content: center;
     background: var(--cor-teste2);
-    padding: 8rem 0 8rem 0;
+    padding: 0 16px;
     text-align: center;
+    border-radius: 20vw;
+    min-height: 100vh;
 }
 
 .QuemSouP {
     text-align: center;
-    font-size: 3rem;
 }
 
 
@@ -24,7 +25,6 @@
 }
 
 .sobreContainer-texto {
-
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -82,11 +82,6 @@
     }
 }
 
-@media (max-width: 1600px){
-    .QuemSouP {
-      font-size: 2rem;
-    }
-  }
   @media (max-width: 1024px) {
       .sobreContainerImg{
         margin-left: 0;
