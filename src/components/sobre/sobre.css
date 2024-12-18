@@ -19,7 +19,9 @@
     text-align: left;
     max-width: 1024px;
     margin: auto;
-    box-shadow: var(--cor-gif);
+    -webkit-box-shadow: var( --header-shadow);
+    -moz-box-shadow: var( --header-shadow);
+    box-shadow: var( --header-shadow);
     border-radius: 24px;
     align-items: center;
 }

@@ -26,6 +26,7 @@
   --cor-teste: rgb(255, 255, 255);
   --cor-teste2: rgb(232, 234, 241);
   --tamanho-secao: 1024px;
+  --header-shadow: 0px 10px 25px 0px rgba(122, 175, 255, 0.40);
 }
 
 .dark-theme {
@@ -39,6 +40,7 @@
   --cor-footer: #060608;
   --cor-teste: #09090b;
   --cor-teste2: rgba(255, 255, 255, 0.03);
+  --header-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.45);
 }
 
 .span {

@@ -112,6 +112,7 @@ const Habilidades = () => {
                             <li>Responsividade</li>
                             <li>Animações</li>
                             <li>Variáveis</li>
+                            <li>Pseudo-Elementos</li>
                         </ul><br /><br />
                     <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br /><br />
                     <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>

@@ -88,8 +88,8 @@ const Header = () => {
                 )
 
         }
-    }, [isDarkTheme]); // O efeito será disparado sempre que isDarkTheme mudar
-
+    }, [isDarkTheme]); 
+    
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('header');
