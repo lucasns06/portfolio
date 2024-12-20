@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Contatos = () => {
-    useLayoutEffect( () =>{
+    useLayoutEffect(() => {
         const contatos = document.querySelector('.links img')
         const hiddenHello = document.querySelector('.hiddenHello')
         if (contatos && hiddenHello) {
@@ -20,7 +20,7 @@ const Contatos = () => {
             };
         }
     }, [])
-    
+
     useLayoutEffect(() => {
         const contatos = document.querySelectorAll('.contatosLinks a')
         gsap.registerPlugin(ScrollTrigger)
@@ -80,26 +80,21 @@ const Contatos = () => {
                     </div>
                 </div>
 
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="41d0ed4f-e2f1-40af-8e7c-9c6aac6f73f8" />
-
+                <form action="https://formsubmit.co/5b254861ce71b39762bbb42459cb54f1" method="POST">
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://lucasns06.github.io/obrigado" />
+                    
                     <label style={{ textAlign: 'center' }}><strong>Me mande um email</strong></label> <br /><br />
 
-                    <label>
-                        Nome<br />
-                        <input type="text" name="name" placeholder="Digite seu nome" required />
-                    </label> <br />
+                    <label>Nome</label>
+                    <input type="text" name="name" placeholder="Digite seu nome" required /> <br /><br />
 
-                    <label>
-                        Email <br />
-                        <input type="email" name="email" placeholder="Digite seu e-mail" required />
-                    </label> <br />
-                    <label>
-                        Mensagem <br />
-                        <textarea name="message" placeholder="Sua mensagem" required></textarea>
-                    </label><br />
-                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
-                    <br />
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required /> <br /><br />
+                    
+                    <label>Mensagem</label>
+                    <textarea name="message" placeholder="Digite sua mensagem" rows="5" required></textarea> <br /><br />
+                    
                     <button type="submit" className="submitBtn">Enviar</button>
                 </form>
             </div>
