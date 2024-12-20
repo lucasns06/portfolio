@@ -1,13 +1,23 @@
-.home {
+.homeMain{
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1024px;  
   margin: auto;
+}
+.homeMain > p{
+  margin-top: 20px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.home {
+  display: flex;
   align-items: center;
-  max-width: 1024px;
 }
 
 .homeImg {
-  animation: floating 4s infinite ease-in-out;
+  /* animation: floating 4s infinite ease-in-out; */
   border-radius: 100%;
   box-shadow: var(--cor-gif);
   max-width: 500px;
@@ -29,7 +39,6 @@
 }
 .textWriting {
   font-weight: normal;
-  height: 222px;
   color: var(--cor-cinza);
   font-size: 1.5rem;
 
