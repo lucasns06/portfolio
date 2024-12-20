@@ -82,7 +82,7 @@ const Contatos = () => {
 
                 <form action="https://formsubmit.co/5b254861ce71b39762bbb42459cb54f1" method="POST">
                     <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="https://lucasns06.github.io/obrigado" />
+                    <input type="hidden" name="_next" value="https://lucasns06.github.io/#/obrigado" />
                     
                     <label style={{ textAlign: 'center' }}><strong>Me mande um email</strong></label> <br /><br />
 

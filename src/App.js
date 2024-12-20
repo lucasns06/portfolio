@@ -7,7 +7,7 @@ import Projetos from './components/projetos/projetos';
 import Contatos from './components/contato/contatos';
 import Footer from './components/footer/footer';
 import Obrigado from './components/obrigado/obrigado';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 export default function App() {
 
   const body = document.body;
@@ -16,7 +16,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={
           <div className="App">
@@ -31,6 +31,6 @@ export default function App() {
         </Route>
         <Route path="obrigado" element={<Obrigado />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
