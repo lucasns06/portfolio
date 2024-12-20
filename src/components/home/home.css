@@ -17,9 +17,7 @@
 }
 
 .homeImg {
-  /* animation: floating 4s infinite ease-in-out; */
   border-radius: 100%;
-  box-shadow: var(--cor-gif);
   max-width: 500px;
   width: 100%;
 }

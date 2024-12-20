@@ -37,30 +37,30 @@ const Home = () => {
                 opacity: 1,
                 duration: 4
             });
-            gsap.fromTo(homeP, {
-                opacity: 0,
-            }, {
-                opacity: 1,
-                duration: 2,
-                scrollTrigger: {
-                        trigger: homeP,
-                        start: 'top 50%',
-                }
-            })
-            
+        gsap.fromTo(homeP, {
+            opacity: 0,
+        }, {
+            opacity: 1,
+            duration: 2,
+            scrollTrigger: {
+                trigger: homeP,
+                start: 'top 50%',
+            }
+        })
+
     }, []);
 
     return (
         <div className="homeMain" id="homeId">
             <div className="home">
-                <img src={homeImage} className="homeImg" alt="HomeImg" />
+                <img src={homeImage} className="homeImg sombra" alt="HomeImg" />
                 <div className="home-texto">
                     <h1 className="nomeHome textAnim2">Olá, eu sou <span className="span">Lucas</span> <br />
                         <p className="animTextHome">Desenvolvedor de Software</p>
                     </h1>
                     <p className="textWriting"></p>
                 </div>
-            </div> 
+            </div>
             <p>“A persistência é o caminho do êxito” <strong>--Charles Chaplin</strong></p>
         </div>
     );
