@@ -7,8 +7,22 @@ import Projetos from './components/projetos/projetos';
 import Contatos from './components/contato/contatos';
 import Footer from './components/footer/footer';
 import Obrigado from './components/obrigado/obrigado';
-import { HashRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import React, { useEffect } from 'react'; 
 export default function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+
+    if (location.state && location.state.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const body = document.body;
   function theme() {
@@ -16,7 +30,7 @@ export default function App() {
   }
 
   return (
-    <HashRouter>
+    
       <Routes>
         <Route path="/" element={
           <div className="App">
@@ -31,6 +45,5 @@ export default function App() {
         </Route>
         <Route path="obrigado" element={<Obrigado />} />
       </Routes>
-    </HashRouter>
   );
 }

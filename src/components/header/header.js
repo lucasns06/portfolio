@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef  } from 'react';
 import darkLogo from '../../img/dark.svg';
 import lightLogo from '../../img/light.svg';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 import './header.css';
 import '../../App.css';
@@ -112,11 +113,11 @@ const Header = () => {
         <header>
             <a href="#" className='logo-name'>Lucas Nascimento</a>
             <nav>
-                <a href="#homeId" className='aHeader'>Inicio</a>
-                <a href="#sobreId" className='aHeader' >Sobre</a>
-                <a href="#projetosId" className='aHeader'>Projetos</a>
-                <a href="#habilidadesId" className='aHeader'>Habilidades</a>
-                <a href="#contatosId" className="contactBtn">Contato</a>
+                <Link to="/" state={{ scrollTo: 'homeId' }} className='aHeader'>Inicio</Link>
+                <Link to="/" state={{ scrollTo: 'sobreId' }} className='aHeader'>Sobre</Link>
+                <Link to="/" state={{ scrollTo: 'projetosId' }} className='aHeader'>Projetos</Link>
+                <Link to="/" state={{ scrollTo: 'habilidadesId' }} className='aHeader'>Habilidades</Link>
+                <Link to="/" state={{ scrollTo: 'contatosId' }} className='contactBtn'>Contato</Link>
                 <img ref={imgTheme}
                     src={themeImgSrc}
                     className="imgTheme"
