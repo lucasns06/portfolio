@@ -20,7 +20,6 @@
 .habilidadesItem {
     overflow: hidden;
     position: relative;
-    box-shadow: var(--habCard-shadow);
     background: white;
     border-radius: 1.5rem;
     padding: 1rem;
@@ -32,7 +31,7 @@
 
 .habilidadesItem::after {
     z-index: -1;
-    top: 0;
+    top: 0px;
     left: 0;
     position: absolute;
     content: '';
@@ -40,12 +39,13 @@
     height: 130px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    background: #4D54FF;
+    background: #19212f;
     transition: height 0.4s ease;
+    padding: 4px;
 }
 
 .habilidadesItem:hover::after {
-    height: 160px;
+    height: 145px;
 }
 
 .habilidadesItem:hover {
@@ -68,58 +68,22 @@
 .habilidadesItem img {
     max-width: 64px;
 }
-
-.modais {
-    display: none;
-    position: fixed;
-    z-index: 11;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.452);
+.modal{
+    text-align: center;
+    background: white;
+    padding: 32px;
+    
 }
-
-.modal p {
-    font-size: 1rem;
-}
-
-.modal {
-    padding: 2rem;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 1rem;
-    z-index: 12;
-    max-width: max-content;
+.modal img{
+    width: 100px;   
     margin: auto;
-    background: var(--cor-branco-secundaria);
 }
-
-.modal img {
-    width: 100px;
+.modal li, .modal p, .modal h2{
+    color: black;
 }
-
-.modal-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
+.modal li{
+   text-align: left;
 }
-
-.modal-1,
-.modal-2,
-.modal-3,
-.modal-4,
-.modal-5,
-.modal-6 {
-    display: none;
-}
-
-.modalUL {
-    text-align: left;
-}
-
 .closeModal {
     cursor: pointer;
     box-shadow: 0px 0px 10px 0px rgb(233, 78, 78);

@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import React from "react";
 import './habilidades.css';
 import '../../App.css';
@@ -6,11 +6,12 @@ import htmlImg from '../../img/hab/html.png';
 import cssImg from '../../img/hab/css.png';
 import javascriptImg from '../../img/hab/javascript.png';
 import javaImg from '../../img/hab/java.png';
-import cSharpImg from '../../img/hab/cSharp.png';
+import netImg from '../../img/hab/dotnet.png';
 import sqlImg from '../../img/hab/sql.png';
 import reactImg from '../../img/hab/react.png';
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Modal from 'react-modal';
 
 const Habilidades = () => {
     const texts = document.querySelectorAll('.textAnim');
@@ -33,7 +34,6 @@ const Habilidades = () => {
             );
         });
 
-
         const habilidadesContainer = document.querySelector('.habilidadesContainer');
         if (habilidadesContainer) {
             gsap.to(habilidadesContainer, {
@@ -45,197 +45,221 @@ const Habilidades = () => {
                 duration: 2
             });
         }
-
     }, []);
 
-    const fecharTodosModais = () => {
-        const modais = document.querySelectorAll('.modal');
-        modais.forEach(modal => {
-            modal.style.display = 'none';
-        });
+    const habItem = [
+        {
+            id: 0,
+            image: htmlImg,
+            titulo: 'HTML',
+            texto: "Avançado",
+            desc: [
+                {
+                   li: 'Semântica'
+                },
+                {
+                    li: 'Formulários'
+                },
+                {
+                    li: 'Tabelas'
+                },
+                {
+                    li: 'Videos e Audios'
+                },
+                
+            ]
+        },
+        {
+            id: 1,
+            image: cssImg,
+            titulo: 'CSS',
+            texto: 'Avançado',
+            desc: [
+                {
+                   li: 'Seletores'
+                },
+                {
+                    li: 'Responsividade'
+                },
+                {
+                    li: 'Animações'
+                },
+                {
+                    li: 'Variáveis'
+                },
+                {
+                    li: 'Pseudo-Elementos'
+                },
+            ]
+        },
+        {
+            id: 2,
+            image: javascriptImg,
+            titulo: 'JavaScript',
+            texto: 'Básico',
+            desc: [
+                {
+                   li: 'Variáveis'
+                },
+                {
+                    li: 'Funções'
+                },
+                {
+                    li: 'Tipos de dados'
+                },
+                {
+                    li: 'DOM'
+                },
+            ]
+        },
+        {
+            id: 3,
+            image: reactImg,
+            titulo: 'React',
+            texto: 'Básico',
+            desc: [
+                {
+                   li: 'Hooks Básicos'
+                },
+                {
+                    li: 'Componentes'
+                },
+                {
+                    li: 'Rotas'
+                },
+                {
+                    li: 'Modais'
+                },
+            ]           
+        },
+        {
+            id: 4,
+            image: reactImg,
+            titulo: 'React Native',
+            texto: 'Básico',
+            desc: [
+                {
+                   li: 'StyleSheet'
+                },
+                {
+                    li: 'Componentes Nativos'
+                },
+                {
+                    li: 'React Navigation'
+                },
+            ]           
+        },
+        {
+            id: 5,
+            image: javaImg,
+            titulo: 'Java',
+            texto: 'Básico',
+            desc: [
+                { li: 'Classe, atributo e objeto' },
+                { li: 'Enumeração' },
+                { li: 'Herança' },
+                { li: 'Construtores' },
+                { li: 'Modificadores de acesso' },
+                { li: 'Polimorfismo' },
+                { li: 'Interfaces' },
+                { li: 'Classe Abstrata e métodos abstratos' }
+            ]           
+        },
+        {
+            id: 6,
+            image: sqlImg,
+            titulo: 'SQL',
+            texto: 'Básico',
+            desc: [
+                { li: 'Data Manipulation Language' },
+                { li: 'Filtragem de Dados (WHERE, LIKE, BETWEEN, IN)' },
+                { li: 'Funções de Agregação (COUNT, AVG, SUM, MAX, MIN)' },
+                { li: 'Joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN)' },
+                { li: 'SubQuery' },
+                { li: 'Ordenação e Agrupamento de Dados (ORDER BY, GROUP BY)' },
+                { li: 'Relacionamentos entre Tabelas (Chaves Primárias e Estrangeiras)' },
+            ]           
+        },
+        {
+            id: 7,
+            image: netImg,
+            titulo: 'ASP NET',
+            texto: 'Básico',
+            desc: [
+                { li: 'API Restful' },
+                { li: 'Aplicativos Web' },
+            ]           
+        }
+    ];
+
+    const modalEstilo = {
+        content: {
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            maxWidth: 'max-content',
+            width: '90%',
+            height: 'max-content',
+            bgcolor: 'black',
+            borderRadius: 10,
+            boxShadow: 24,
+            margin: 0,
+            padding: 0
+        },
+        overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            zIndex: 12,
+        }
     };
-    const abrirModal = (num) => {
-        fecharTodosModais();
-        const modais = document.querySelector('.modais');
-        const modal = document.querySelector(`.modal-${num}`);
 
-        modais.style.display = 'block';
-        modal.style.display = 'block';
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
 
-        gsap.fromTo(modal,
-            { scale: 0.5, opacity: 0 },
-            { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }
-        );
-    };
+    function openModal(item) {
+        setSelectedItem(item);
+        setIsOpen(true);
+    }
 
-    const closeModal = () => {
-        const modais = document.querySelector('.modais');
-        const modal = document.querySelectorAll('.modal');
-        modais.style.display = 'none';
-        modal.forEach((evento) => {
-            evento.style.display = 'none';
-        });
-    };
-
-    useLayoutEffect(() => {
-
-        const modais = document.querySelector('.modais');
-        modais.style.display = 'none';
-    }, []);
-
-
+    function closeModal() {
+        setIsOpen(false);
+        setSelectedItem(null);
+    }
     return (
         <div className="habilidades" id="habilidadesId">
             <h1 className="MinhasHab textAnim">Minhas <span className="span">habilidades</span></h1><br />
             <h2>Clique nos modais para saber mais.</h2> <br /><br />
-            <div className="modais">
-                <div className="modal modal-1">
-                    <h1>HTML</h1>
-                    <img src={htmlImg} alt="HTML" />
-                    <div className="modal-text">
-                        <ul className="modalUL">
-                            <li>Semântica</li>
-                            <li>Formulários</li>
-                            <li>Tabelas</li>
-                            <li>Videos e Audios</li>
-                        </ul><br /><br />
-                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br />
-                        <br />
-                    </div>
-                    <button className="closeModal" onClick={closeModal}>FECHAR</button>
-                </div>
-                <div className="modal modal-2">
-                    <h1>CSS</h1>
-                    <img src={cssImg} alt="CSS" />
-                    <ul className="modalUL">
-                            <li>Seletores</li>
-                            <li>Responsividade</li>
-                            <li>Animações</li>
-                            <li>Variáveis</li>
-                            <li>Pseudo-Elementos</li>
-                        </ul><br /><br />
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-3">
-                    <h1>JAVASCRIPT</h1>
-                    <img src={javascriptImg} alt="JavaScript" />
-                    <p>
-                        Variáveis <br />
-                        Funções <br />
-                        Tipos de dados <br />
-                        DOM
-                        
-                    </p><br /><br />
-                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN Web Docs</a> <br />
-                    <br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-4">
-                    <h1>React</h1>
-                    <img src={reactImg} alt="React" />
-                    <p>
-                        Hooks Básicos <br />
-                        Componentes <br />
-                        Rotas
-                    </p><br />
-                    <a href="https://react.dev/"
-                        target="_blank" rel="noopener noreferrer">React</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-5">
-                    <h1>React Native</h1>
-                    <img src={reactImg} alt="React" />
-                    <p>
-                        Hooks Básicos <br />
-                        Componentes <br />
-                        StyleSheet
-                    </p><br />
-                    <a href="https://reactnative.dev/"
-                        target="_blank" rel="noopener noreferrer">React Native</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-6">
-                    <h1>JAVA</h1>
-                    <img src={javaImg} alt="Java" />
-                    <p>
-                        Classe, atributo e objeto <br />
-                        Enumeração <br />
-                        Herança <br />
-                        Construtores <br />
-                        Modificadores de acesso <br />
-                        Polimorfismo <br />
-                        Interfaces <br />
-                        Classe Abstrata e métodos abstratos 
-                    </p><br /><br />
-                    <a href="https://aws.amazon.com/pt/what-is/java/" target="_blank" rel="noopener noreferrer">Amazon Web Services</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-7">
-                    <h1>C#</h1>
-                    <img src={cSharpImg} alt="C#" />
-                    <p>A linguagem C# é a linguagem mais popular para a plataforma .NET, um ambiente <br />
-                        de desenvolvimento gratuito, multiplataforma e de código aberto. Os programas <br />
-                        C# podem ser executados em muitos dispositivos diferentes, desde dispositivos <br />
-                        de Internet das Coisas (IoT) até a nuvem e todos os outros lugares.</p><br />
-                    <a href="https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/overview"
-                        target="_blank" rel="noopener noreferrer">Microsoft</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
-                <div className="modal modal-8">
-                    <h1>SQL</h1>
-                    <img src={sqlImg} alt="SQL" />
-                    <p>O SQL, ou Structured Query Language, é uma linguagem de programação padrão usada <br />
-                        para trabalhar com bancos de dados relacionais</p><br />
-                    <a href="https://www.fm2s.com.br/blog/sql#:~:text=O%20que%20%C3%A9%20SQL?,dados%20em%20diferentes%20contextos%20profissionais."
-                        target="_blank" rel="noopener noreferrer">fm2s</a> <br /><br />
-                    <button className="closeModal" onClick={() => closeModal()}>FECHAR</button>
-                </div>
 
-            </div>
             <div className="habilidadesContainer">
-                <div className="habilidadesItem hab-1" onClick={() => abrirModal(1)}>
-                    <img src={htmlImg} alt="HTML" />
-                    <p>HTML</p>
-                    <p>Avançado</p>
-                </div>
-                <div className="habilidadesItem hab-2" onClick={() => abrirModal(2)}>
-                    <img src={cssImg} alt="CSS" />
-                    <p>CSS</p>
-                    <p>Avançado</p>
-                </div>
-                <div className="habilidadesItem hab-3" onClick={() => abrirModal(3)}>
-                    <img src={javascriptImg} alt="JavaScript" />
-                    <p>JavaScript</p>
-                    <p>Básico</p>
-                </div>
-                <div className="habilidadesItem hab-4" onClick={() => abrirModal(4)}>
-                    <img src={reactImg} alt="React" />
-                    <p>React</p>
-                    <p>Básico</p>
-                </div>
-                <div className="habilidadesItem hab-5" onClick={() => abrirModal(5)}>
-                    <img src={reactImg} alt="React" />
-                    <p>React Native</p>
-                    <p>Básico</p>
-                </div>
-                <div className="habilidadesItem hab-6" onClick={() => abrirModal(6)}>
-                    <img src={javaImg} alt="Java" />
-                    <p>Java</p>
-                    <p>Básico</p>
-                </div>
-                <div className="habilidadesItem hab-7" onClick={() => abrirModal(7)}>
-                    <img src={cSharpImg} alt="C#" />
-                    <p>C#</p>
-                    <p>Básico</p>
-                </div>
-                <div className="habilidadesItem hab-8" onClick={() => abrirModal(8)}>
-                    <img src={sqlImg} alt="SQL" />
-                    <p>SQL</p>
-                    <p>Básico</p>
-                </div>
+                {habItem.map((item) => (
+                    <div className="habilidadesItem sombra" onClick={() => openModal(item)} key={item.id}>
+                        <img src={item.image} alt={item.titulo} />
+                        <p>{item.titulo}</p>
+                        <p>{item.texto}</p>
+                    </div>
+                ))}
             </div>
+
+            {selectedItem &&  (
+                <Modal  
+                    isOpen={modalIsOpen}
+                    onRequestClose={closeModal}
+                    style={modalEstilo}
+                    ariaHideApp={false} >
+                    <div className="modal" >
+                        <h2>{selectedItem.titulo}</h2>
+                        <img src={selectedItem.image} /> <br />
+                        <ul>
+                            {selectedItem.desc && selectedItem.desc.map((descItem, index) => (
+                                <li key={index}>{descItem.li}</li>
+                            ))}
+                        </ul>  <br />
+                        <button className="closeModal" onClick={closeModal}>Fechar</button>
+                    </div>
+                </Modal>
+            )}
+
         </div>
     );
 }
+
 export default Habilidades;
