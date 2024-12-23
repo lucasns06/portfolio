@@ -9,6 +9,9 @@ import javaImg from '../../img/hab/java.png';
 import netImg from '../../img/hab/dotnet.png';
 import sqlImg from '../../img/hab/sql.png';
 import reactImg from '../../img/hab/react.png';
+import figmaImg from '../../img/hab/figma.png';
+import springImg from '../../img/hab/spring.png';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Modal from 'react-modal';
@@ -114,6 +117,18 @@ const Habilidades = () => {
         },
         {
             id: 3,
+            image: figmaImg,
+            titulo: 'Figma',
+            texto: 'Intermediário',
+            desc: [
+                { li: 'Criação de Layouts' },
+                { li: 'Componentes' },
+                { li: 'Vetores' },
+                { li: 'Prototipagem' },
+            ]           
+        },
+        {
+            id: 4,
             image: reactImg,
             titulo: 'React',
             texto: 'Básico',
@@ -133,7 +148,7 @@ const Habilidades = () => {
             ]           
         },
         {
-            id: 4,
+            id: 5,
             image: reactImg,
             titulo: 'React Native',
             texto: 'Básico',
@@ -150,7 +165,7 @@ const Habilidades = () => {
             ]           
         },
         {
-            id: 5,
+            id: 6,
             image: javaImg,
             titulo: 'Java',
             texto: 'Básico',
@@ -166,7 +181,18 @@ const Habilidades = () => {
             ]           
         },
         {
-            id: 6,
+            id: 7,
+            image: springImg,
+            titulo: 'SpringBoot',
+            texto: 'Básico',
+            desc: [
+                { li: 'APIs RESTful' },
+                { li: 'JPA/Hibernate' },
+                { li: 'Padrão MVC' },
+            ]           
+        },
+        {
+            id: 8,
             image: sqlImg,
             titulo: 'SQL',
             texto: 'Básico',
@@ -181,15 +207,16 @@ const Habilidades = () => {
             ]           
         },
         {
-            id: 7,
+            id: 9,
             image: netImg,
             titulo: 'ASP NET',
             texto: 'Básico',
             desc: [
                 { li: 'API Restful' },
+                { li: 'Entity Framework Core'},
                 { li: 'Aplicativos Web' },
             ]           
-        }
+        },
     ];
 
     const modalEstilo = {
