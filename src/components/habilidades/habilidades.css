@@ -20,7 +20,7 @@
 .habilidadesItem {
     overflow: hidden;
     position: relative;
-    background: white;
+    /* background: white; */
     border-radius: 1.5rem;
     padding: 1rem;
     height: min-content;
@@ -29,22 +29,30 @@
     z-index: 0;
 }
 
-.habilidadesItem::after {
+.habilidadesItem::before {
+    content: '';
     z-index: -1;
     top: 0px;
     left: 0;
     position: absolute;
-    content: '';
     width: 200px;
     height: 130px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     background: #19212f;
     transition: height 0.4s ease;
-    padding: 4px;
 }
-
-.habilidadesItem:hover::after {
+.habilidadesItem::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 150px;
+    background: white;
+    z-index: -2;
+}
+.habilidadesItem:hover::before {
     height: 145px;
 }
 
