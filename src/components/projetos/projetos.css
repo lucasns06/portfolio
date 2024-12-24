@@ -1,283 +1,58 @@
-.mover {
-    transform: translateX(-1280px);
-    transition: all 0.5s ease;
-}
-
-.projetos {
+.projetos{
+    min-height: 100vh;
     text-align: center;
     align-content: center;
-    min-height: 100vh;
 }
-
-.projetosLinks {
+.swiper-container{
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.projetosLinks a:hover svg {
-    transform: translateY(-5px);
-    transition: transform 100ms ease;
-}
-
-.carrossel {
-    border-radius: 24px;
-    width: 1280px;
-    overflow: hidden;
+    width: 50%;
     margin: auto;
-    opacity: 0;
-    box-sizing: border-box;
-}
-
-.carrossel .container {
-    width: 2400px;
-    display: flex;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide,
-.tccImagem,
-.tccTexto {
-    background: var(--cor-teste);
-}
-
-.slide {
-    background-size: cover;
-    width: 1280px;
-    flex-shrink: 0;
-}
-
-.tccConteudo {
-    display: flex;
-    padding: 3rem;
-}
-
-.API {
-    padding: 0px 16px;
-}
-
-.API a {
-    justify-content: center;
-    display: flex;
     align-items: center;
+    gap: 32px;
+    font-size: 24px;
 }
-
-.API img {
+.swiper-container h1{
+    font-size: 28px;
+}
+.swiper-container2{
+    width: 80%;
+}
+.swiper-button-next{
+    left: 92% !important;
+}
+.swiper-button-prev{
+    left: 5% !important; 
+}
+.telaApp{
+    max-width: 250px;
+    width: 100%;
+}
+.telaSite{
+    max-width: 768px;
+    width: 100%;
+}
+.studyImg{
     width: 100px;
 }
-
-.apiUl {
-    text-align: left;
-    font-size: 1.5rem;
+.projetosBtn{
+    background: var(--cor-preta);
+    border: 0;
+    border-radius: 4px;
+    color: var(--cor-branco);
+    cursor: pointer;
+    outline: 0;
+    padding: 6px;
+    font-size: 24px;
 }
-
-.slideTitulo {
-    text-transform: uppercase;
-    font-size: 1.5em;
-
+.versiteBtn{
+    background: var(--cor-destaque);
+    color: white;
+    width: max-content;
+    padding: 4px 12px;
 }
-
-.API p {
-    font-size: 1.5em;
-}
-.API ul {
-    list-style-type: none;
-}
-.tccTexto {
-    width: calc(50%);
-    height: 100%;
-    text-align: left;
-
-}
-
-.tccTexto p {
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.tccImagem {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.slideTcc {
+.projetos-buttons{
     display: flex;
+    gap: 16px;
     justify-content: center;
-}
-
-.appTela,
-.siteTela {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.116);
-}
-
-.appTela {
-    width: 250px;
-    display: none;
-}
-
-.siteTela {
-    display: none;
-    width: 460px
-}
-
-.appTela:hover,
-.siteTela:hover {
-    scale: 1.1;
-}
-
-.show {
-    transition: all 250ms ease;
-    display: block;
-}
-
-.TCC {
-    padding: 0px 16px;
-}
-
-.tccTextoBotoes {
-    text-align: center;
-}
-
-.tccTextoBotoes a {
-    margin-right: 10px;
-}
-
-.slideTccChange {
-    width: 80px;
-    cursor: pointer;
-    margin: auto;
-    padding: 6px;
-    outline: 0;
-    border-radius: 4px;
-    border: 0;
-    background: var(--cor-preta);
-    color: var(--cor-branco);
-}
-
-.githubBtn {
-
-    width: max-content;
-    cursor: pointer;
-    padding: 6px;
-    outline: 0;
-    border-radius: 4px;
-    border: 0;
-    background: var(--cor-preta);
-    color: var(--cor-branco);
-}
-
-.versiteBtn {
-    background: var(--cor-destaque);
-    color: white;
-}
-
-.changeSlideBtn {
-    width: max-content;
-    cursor: pointer;
-    margin: auto;
-    padding: 6px;
-    outline: 0;
-    border-radius: 4px;
-    border: 0;
-    background: var(--cor-destaque);
-    color: white;
-}
-
-.verProjetosBtn {
-    width: max-content;
-    cursor: pointer;
-    margin: auto;
-    padding: 6px;
-    outline: 0;
-    border-radius: 4px;
-    border: 0;
-    background: var(--cor-destaque);
-    color: white;
-}
-
-@media (max-width: 1400px) {
-    .carrossel {
-        width: 1000px;
-    }
-
-    .carrossel .container {
-        width: 2000px;
-    }
-
-    .slide {
-        width: 1000px;
-    }
-
-    .projetos {
-        height: max-content;
-    }
-
-    .tccTexto {
-        text-align: center;
-        width: inherit;
-    }
-
-    .tccTexto {
-        width: calc(50%);
-    }
-}
-
-@media (max-width: 1024px) {
-    .tccTexto {
-        width: 100%;
-    }
-    .tccImagem {
-        padding-bottom: 3rem;
-    }
-    .carrossel {
-        width: calc(100vw - 2rem);
-    }
-    .carrossel .container {
-        width: calc(200vw - 2rem);
-
-    }
-    .slide {
-        width: calc(100vw - 2rem);
-
-    }
-    .tccConteudo {
-        flex-direction: column;
-    }
-}
-@media (max-width: 800px) {
-    .siteTela {
-        width: 420px;
-    }
-}
-@media (max-width: 580px) {
-    
-    .API {
-        padding: 12px;
-    }
-    .slideTccTitulo {
-        font-size: 2rem;
-    }
-    .tccTexto p {
-        font-size: 1.5rem;
-    }
-    .tccConteudo {
-        padding: 1rem;
-    }
-    .appTela {
-        width: 150px;
-    }
-    .siteTela {
-        width: 260px;
-    }
-}
-@media (max-width: 435px){
-    .projetosLinks {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .changeSlideBtn {
-        transform: translateX(0);
-      }
+    align-items: center;
 }

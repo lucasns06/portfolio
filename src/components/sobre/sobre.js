@@ -50,7 +50,7 @@ const Sobre = () => {
                     <p>Desde jovem, sempre fui apaixonado por
                         desenho e tecnologia. Em 2024, iniciei
                         o curso de Técnico em Desenvolvimento de Sistemas. <br /> Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.</p>
-                    <Link to="/" state={{ scrollTo: 'projetosId' }} className="verProjetosBtn sombra">Ver Projetos</Link>
+                    <Link to="/" state={{ scrollTo: 'projetosId' }} className="projetosBtn versiteBtn sombra">Ver Projetos</Link>
                 </div>
 
                 <div className="sobreContainerImg">
