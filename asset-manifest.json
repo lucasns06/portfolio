@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2020bb3.css",
-    "main.js": "/static/js/main.da163592.js",
+    "main.css": "/static/css/main.9492497b.css",
+    "main.js": "/static/js/main.71a2ab13.js",
     "static/js/453.cb4c4840.chunk.js": "/static/js/453.cb4c4840.chunk.js",
     "static/media/User Interface.gif": "/static/media/User Interface.2dfddf22f08ac0276634.gif",
     "static/media/ComunicaTela.png": "/static/media/ComunicaTela.5153f8e3866e818482be.png",
@@ -16,12 +16,12 @@
     "static/media/light.svg": "/static/media/light.8a2b848aa8a70f1668b4ba17dc4c616a.svg",
     "static/media/dark.svg": "/static/media/dark.220ef350d692e54547e2f0eca451024b.svg",
     "index.html": "/index.html",
-    "main.e2020bb3.css.map": "/static/css/main.e2020bb3.css.map",
-    "main.da163592.js.map": "/static/js/main.da163592.js.map",
+    "main.9492497b.css.map": "/static/css/main.9492497b.css.map",
+    "main.71a2ab13.js.map": "/static/js/main.71a2ab13.js.map",
     "453.cb4c4840.chunk.js.map": "/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2020bb3.css",
-    "static/js/main.da163592.js"
+    "static/css/main.9492497b.css",
+    "static/js/main.71a2ab13.js"
   ]
 }
