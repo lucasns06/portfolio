@@ -114,14 +114,10 @@
     }
 
 }
-
-@media (max-width: 760px) {
-
+@media (max-width: 1200px) {
     .habilidades {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 96px 0px;
     }
-
 }
 
 @media (max-height: 400px) {

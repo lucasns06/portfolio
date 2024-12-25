@@ -1,41 +1,52 @@
-.projetos{
+.projetos {
     min-height: 100vh;
     text-align: center;
     align-content: center;
 }
-.swiper-container{
+
+.swiper-container {
     display: flex;
     max-width: 1024px;
-    margin: auto;
+    margin: 32px auto;
     align-items: center;
     gap: 32px;
     font-size: 24px;
-    padding: 8px;
+    padding: 32px;
+    border-radius: 64px;    
+    background: var(--cor-branco);
 }
-.swiper-container h1{
+
+.swiper-container h1 {
     font-size: 28px;
 }
-.swiper-container2{
+
+.swiper-container2 {
     width: 80%;
 }
-.swiper-button-next{
+
+.swiper-button-next {
     left: 92% !important;
 }
-.swiper-button-prev{
-    left: 5% !important; 
+
+.swiper-button-prev {
+    left: 5% !important;
 }
-.telaApp{
+
+.telaApp {
     max-width: 250px;
     width: 100%;
 }
-.telaSite{
+
+.telaSite {
     max-width: 768px;
     width: 100%;
 }
-.studyImg{
+
+.studyImg {
     width: 100px;
 }
-.projetosBtn{
+
+.projetosBtn {
     background: var(--cor-preta);
     border: 0;
     border-radius: 4px;
@@ -45,23 +56,40 @@
     padding: 6px;
     font-size: 24px;
 }
-.versiteBtn{
+
+.versiteBtn {
     background: var(--cor-destaque);
     color: white;
     width: max-content;
     padding: 4px 12px;
 }
-.projetos-buttons{
+
+.projetos-buttons {
     display: flex;
     gap: 16px;
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 690px) {
-    .swiper-container{
-        flex-direction: column;
+@media (max-width: 1080px) {
+    .swiper-slide {
+        padding: 0px 16px;
     }
-    .telaApp{
+}
+
+@media (max-width: 1024px) {
+    .projetos {
+        padding: 96px 0px;
+    }
+}
+
+@media (max-width: 690px) {
+    .swiper-container {
+        flex-direction: column;
+        padding: 18px;
+    }
+
+    .telaApp {
         max-width: 180px;
     }
+
 }

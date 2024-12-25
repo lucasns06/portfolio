@@ -26,7 +26,7 @@ const Projetos = () => {
             >
                 <SwiperSlide>
                     <h1>Comunica</h1>  <br />
-                    <div className="swiper-container">
+                    <div className="swiper-container sombra">
                         <div>
                             <p>
                                 No meu TCC, estou desenvolvendo um aplicativo voltado para facilitar a
@@ -46,7 +46,7 @@ const Projetos = () => {
                 </SwiperSlide>
                 <SwiperSlide >
                     <h1>ComuniTec</h1>  <br />
-                    <div className="swiper-container swiper-container2">
+                    <div className="swiper-container swiper-container2 sombra">
                         <div>
                             <p>Um site desenvolvido com React de uma empresa fictícia criada para o meu TCC.</p>
                             <p>Com a finalidade de mostrar melhor o meu produto, o aplicativo comunica.</p> <br />
@@ -69,10 +69,11 @@ const Projetos = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
-                    <div className="swiper-container ">
+                    <h1>EstudosAPI</h1> <br />
+                    <div className="swiper-container sombra ">
                         <img src={apiImg} className="telaApp" />
                         <div>
-                            <h1>EstudosAPI</h1> <br />
+
                             <p>RESTful API, criada para gerenciar tarefas associadas a categorias. O projeto utiliza ASP.NET Core e Entity Framework Core.</p>
 
                             <div className="projetos-buttons">

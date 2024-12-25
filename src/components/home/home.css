@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 67vw;
-  margin: auto;
 }
 
 .homeMain>p {
@@ -16,16 +14,14 @@
 .home {
   display: flex;
   align-items: center;
-  gap: 128px;
+  justify-content: space-between;
+  gap: 64px;
+  margin: 0px 8vw;
 }
 
 .homeImg {
   border-radius: 100%;
   max-width: 500px;
-  width: 100%;
-}
-
-.home-texto {
   width: 100%;
 }
 
@@ -76,20 +72,16 @@
 }
 
 @media (max-width: 1024px) {
-
-  .home {
-    height: 768px;
-    padding-top: 8rem;
+  .homeImg {
+    max-width: 300px;
   }
-
+  .homeMain{
+    padding: 96px 0px;
+  }
   .home {
     flex-direction: column;
-    gap: 16px;
-  }
-
-  .textWriting {
-    padding-right: 20px;
-    padding-left: 20px;
+    margin: 0px 2vw;
+    gap: 32px;
   }
 
   .home-texto {
@@ -101,9 +93,7 @@
     max-width: none;
   }
 
-  .homeImg {
-    max-width: 300px;
-  }
+
 }
 
 @media (max-width: 800px) {
