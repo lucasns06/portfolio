@@ -1,19 +1,22 @@
-.homeMain{
+.homeMain {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1024px;  
+  max-width: 67vw;
   margin: auto;
 }
-.homeMain > p{
+
+.homeMain>p {
   margin-top: 20px;
   text-align: center;
   font-family: sans-serif;
 }
+
 .home {
   display: flex;
   align-items: center;
+  gap: 128px;
 }
 
 .homeImg {
@@ -24,7 +27,6 @@
 
 .home-texto {
   width: 100%;
-  margin-left: 4rem;
 }
 
 .nomeHome {
@@ -32,9 +34,11 @@
   font-size: 3rem;
   max-width: max-content;
 }
-.nomeHome p{
+
+.nomeHome p {
   font-size: 24px;
 }
+
 .textWriting {
   font-weight: normal;
   color: var(--cor-cinza);
@@ -61,12 +65,18 @@
     font-size: 40px;
   }
 
-  .textWriting{
+  .textWriting {
     font-size: 1.5rem;
   }
+
+  .homeImg {
+    max-width: 350px;
+  }
+
 }
+
 @media (max-width: 1024px) {
-  
+
   .home {
     height: 768px;
     padding-top: 8rem;
@@ -74,6 +84,7 @@
 
   .home {
     flex-direction: column;
+    gap: 16px;
   }
 
   .textWriting {
@@ -94,11 +105,13 @@
     max-width: 300px;
   }
 }
-@media (max-width: 800px){
+
+@media (max-width: 800px) {
   .homeImg {
     max-width: 250px;
   }
 }
+
 @media (max-width: 690px) {
   .homeImg {
     max-width: 200px;
