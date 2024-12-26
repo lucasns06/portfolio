@@ -1,6 +1,5 @@
 header {
     align-items: center;
-    background: var(--cor-branco-secundaria);
     position: fixed;
     top: 0;
     z-index: 10;
@@ -18,7 +17,13 @@ header {
     box-shadow: var(--header-shadow);
     transition: box-shadow 250ms ease;
 }
-
+.headerSombra{
+    -webkit-box-shadow: var(--header-shadow);
+    -moz-box-shadow: var(--header-shadow);
+    box-shadow: var(--header-shadow);
+    background: var(--cor-branco-secundaria);
+    transition: box-shadow 250ms ease;
+}
 .menu {
     display: none;
     width: 32px;

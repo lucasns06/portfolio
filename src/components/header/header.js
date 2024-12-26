@@ -95,9 +95,9 @@ const Header = () => {
         const handleScroll = () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.classList.add('sombra')
+                header.classList.add('headerSombra')
             } else {
-                header.classList.remove('sombra')
+                header.classList.remove('headerSombra')
             }
         };
 
