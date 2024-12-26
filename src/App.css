@@ -13,7 +13,9 @@
   color: var(--cor-branco);
   background: var(--cor-preta);
 }
-
+body::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome, Edge e Safari */
+}
 :root {
   --cor-preta: #333333;
   --cor-branco: #ffffff;

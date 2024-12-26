@@ -3,20 +3,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative; 
 }
-
 .homeMain>p {
   margin-top: 20px;
   text-align: center;
   font-family: sans-serif;
 }
-
+#tsparticles canvas { 
+  width: 100% !important;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .home {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 64px;
-  margin: 0px 8vw;
+  margin: 0px 8vw;  
 }
 
 .homeImg {
@@ -27,12 +34,13 @@
 
 .nomeHome {
   margin-bottom: 2.5rem;
-  font-size: 3rem;
+  font: 700 max(36px, 4vw) / max(48px, 5vw) sans-serif;
   max-width: max-content;
 }
 
 .nomeHome p {
-  font-size: 24px;
+  font: 700 max(28px, 2vw) / max(24px, 1vw) sans-serif;
+  font-weight: 400;
 }
 
 .textWriting {
@@ -41,7 +49,10 @@
   font-size: 1.5rem;
 
 }
-
+.animTextHome{
+  opacity: 0;
+  transform: translateX(-20px);
+}
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -57,9 +68,9 @@
 }
 
 @media (max-width: 1600px) {
-  .nomeHome {
+  /* .nomeHome {
     font-size: 40px;
-  }
+  } */
 
   .textWriting {
     font-size: 1.5rem;
@@ -92,8 +103,6 @@
   .nomeHome {
     max-width: none;
   }
-
-
 }
 
 @media (max-width: 800px) {
