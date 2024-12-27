@@ -1,46 +1,23 @@
 .sobre {
     align-content: center;
     background: var(--cor-teste2);
-    padding: 0 16px;
+    padding: 16px;
     text-align: center;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .QuemSouP {
     text-align: center;
 }
 
-
 .sobreContainer {
-    background: var(--cor-branco-secundaria);
     display: flex;
-    padding: 2rem;
-    text-align: left;
-    max-width: 1024px;
-    margin: auto;
-    -webkit-box-shadow: var(--header-shadow);
-    -moz-box-shadow: var(--header-shadow);
-    box-shadow: var(--header-shadow);
-    border-radius: 24px;
     align-items: center;
-}
-
-.sobreContainer-texto {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    flex: 1;
-    align-items: center;
-
-    p {
-        font-weight: normal;
-    }
-}
-
-.sobreContainer-texto p:first-child {
-    text-align: center;
-    font-size: 1.3em;
+    justify-content: space-evenly;
+    gap: 16px;
 }
 
 .sobreContainer img {
@@ -50,7 +27,6 @@
 }
 
 .sobreContainerImg {
-    margin-left: 36px;
     z-index: 0;
     position: relative;
     padding: 4px;
@@ -68,8 +44,8 @@
     border-radius: 100%;
     background: linear-gradient(90deg,
             rgb(0, 38, 255) 20%,
-            var(--cor-branco) 40%,
-            var(--cor-branco) 100%);
+            rgba(0, 0, 0, 0) 40%,
+            rgba(0, 0, 0, 0) 100%);
     z-index: -1;
     animation: neon 1s infinite linear;
 }
@@ -83,30 +59,68 @@
         rotate: 0deg;
     }
 }
+.btn-mobile{
+    display: none;
+}
+.sobreContainer-meio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+
+.sobre-mobile {
+    display: none;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card {
+    max-width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background: var(--cor-branco-secundaria);
+    padding: 12px;
+    align-content: center;
+    font-size: 22px;
+
+    -webkit-box-shadow: var(--header-shadow);
+    -moz-box-shadow: var(--header-shadow);
+    box-shadow: var(--header-shadow);
+}
+
+.textWriting2 {
+    font-size: 36px;
+}
 
 @media (max-width: 1024px) {
-    .sobre {
-        padding: 96px 16px;
+    .sobreContainerImg img {
+        max-width: 250px;
+        border-radius: 100%;
     }
 
-    .sobreContainerImg {
-        margin-left: 0;
+    .card {
+        max-width: 200px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 720px) {
+    .sobreContainer-meio {
+        display: none;
     }
 
-    .sobreContainer {
+    .sobre-mobile {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .sobreContainerImg {
-        margin-top: 2.5rem;
-    }
-
-    .sobreContainer img {
-        max-width: 200px;
-    }
-
-    .sobreContainerImg {
-        margin-left: 0;
+    .btn-mobile{
+        display: block;
+        align-self: center;
     }
 }

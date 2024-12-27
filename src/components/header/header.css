@@ -16,7 +16,6 @@ header {
     -webkit-box-shadow: var(--header-shadow);
     -moz-box-shadow: var(--header-shadow);
     box-shadow: var(--header-shadow);
-    transition: box-shadow 250ms ease;
 }
 .headerSombra{
     -webkit-box-shadow: var(--header-shadow);
