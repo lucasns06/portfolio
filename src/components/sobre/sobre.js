@@ -43,7 +43,7 @@ const Sobre = () => {
 
     return (
         <div className="sobre" id="sobreId">
-            <h1 className="QuemSouP textAnim">Quem sou <span className="span">eu?</span></h1> <br /> <br />
+            <h1 className="QuemSouP textAnim">Sobre <span className="span">mim</span></h1> <br /> <br />
             <div className="sobreContainer">
                 <div className="sobreContainer-texto">
                     <p className="textWriting2"></p>

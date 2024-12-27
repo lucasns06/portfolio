@@ -9,6 +9,7 @@ header {
     display: flex;
     padding: 1.2rem 8vw;
     font-size: 18px;
+    transition: 1s, background 0s;
 }
 
 .sombra {
@@ -22,7 +23,6 @@ header {
     -moz-box-shadow: var(--header-shadow);
     box-shadow: var(--header-shadow);
     background: var(--cor-branco-secundaria);
-    transition: box-shadow 250ms ease;
 }
 .menu {
     display: none;

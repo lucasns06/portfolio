@@ -6,38 +6,69 @@ import { Link } from 'react-router-dom';
 
 import './header.css';
 import '../../App.css';
+
 const Header = () => {
     const savedTheme = localStorage.getItem("isDarkTheme") === "true";
-    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme); // Estado para controlar o tema
-    const [themeImgSrc, setThemeImgSrc] = useState(savedTheme ? lightLogo : darkLogo); // Inicializa com o tema escuro
+    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme);
+    const [themeImgSrc, setThemeImgSrc] = useState(savedTheme ? lightLogo : darkLogo);
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-    const imagem = document.querySelector('.imgTheme');
-    const closedPath = 'M4 6H20M4 12H20M4 18H20';
-    const openPath = 'M6 6L18 18M6 18L18 6';
     const menuSvgRef = useRef(null);
     const subMenuRef = useRef(null);
     const imgTheme = useRef(null);
 
+    const closedPath = 'M4 6H20M4 12H20M4 18H20';
+    const openPath = 'M6 6L18 18M6 18L18 6';
+
     const toggleMenu = () => {
-        setIsMenuVisible(!isMenuVisible)
+        setIsMenuVisible((prevState) => !prevState);
     };
 
     const toggleTheme = () => {
-        setIsDarkTheme(prevState => !prevState); // Alterna entre true/false
+        setIsDarkTheme((prevState) => !prevState);
     };
+
     useEffect(() => {
         if (imgTheme.current) {
             imgTheme.current.classList.add('themeEntry');
             const timer = setTimeout(() => {
                 imgTheme.current.classList.remove('themeEntry');
-            }, 1000); // Tempo correspondente à duração da animação no CSS
+            }, 1000);
             return () => clearTimeout(timer);
         }
     }, []);
+
     useEffect(() => {
         if (subMenuRef.current) {
-            subMenuRef.current.style.display = isMenuVisible ? 'grid' : 'none'
+            const header = document.querySelector('header');
+
+            if (isMenuVisible) {
+                subMenuRef.current.style.display = 'grid';
+
+                const height = subMenuRef.current.scrollHeight;
+                gsap.to(subMenuRef.current, {
+                    height: height,
+                    duration: 0.5,
+                    ease: "power4.inOut",
+                });
+
+                header.classList.add('headerSombra');
+            } else {
+                gsap.to(subMenuRef.current, {
+                    height: 0,
+                    duration: 0.3,
+                    ease: "power4.inOut",
+                    onComplete: () => {
+                        if (subMenuRef.current) {
+                            subMenuRef.current.style.display = 'none';
+                        }
+                    },
+                });
+
+                if (window.scrollY < 50) {
+                    header.classList.remove('headerSombra');
+                }
+            }
         }
 
         if (menuSvgRef.current) {
@@ -47,47 +78,17 @@ const Header = () => {
                 ease: "power4.inOut",
             });
         }
-        if (subMenuRef.current) {
+    }, [isMenuVisible]);
 
-            if (isMenuVisible) {
-                const height = subMenuRef.current.scrollHeight;
-                gsap.to(subMenuRef.current, {
-                    height: height,
-                    duration: 0.5,
-                    ease: "power4.inOut",
-                });
-            } else {
-                gsap.to(subMenuRef.current, {
-                    height: 0,
-                    duration: 0.3,
-                    ease: "power4.inOut",
-                });
-            }
-        }
-
-    }, [isMenuVisible])
-
-    // Efeito de alteração de tema
     useEffect(() => {
-        localStorage.setItem("isDarkTheme", isDarkTheme)
+        localStorage.setItem("isDarkTheme", isDarkTheme);
         const body = document.body;
         if (isDarkTheme) {
             body.classList.add('dark-theme');
-            setThemeImgSrc(lightLogo); // Muda para a imagem de tema claro
-            gsap.fromTo
-                (imagem,
-                    { scale: 0.5 },
-                    { scale: 1 }
-                )
+            setThemeImgSrc(lightLogo);
         } else {
             body.classList.remove('dark-theme');
-            setThemeImgSrc(darkLogo); // Muda para a imagem de tema escuro
-            gsap.fromTo
-                (imagem,
-                    { scale: 0.5 },
-                    { scale: 1 }
-                )
-
+            setThemeImgSrc(darkLogo);
         }
     }, [isDarkTheme]);
 
@@ -95,10 +96,12 @@ const Header = () => {
         const handleScroll = () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.classList.add('headerSombra')
+                header.classList.add('headerSombra');
             } else {
-                header.classList.remove('headerSombra')
+                if (!isMenuVisible) {
+                    header.classList.remove('headerSombra');
             }
+        }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -106,8 +109,7 @@ const Header = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
-
+    }, [isMenuVisible]);
 
     return (
         <header>
@@ -138,7 +140,7 @@ const Header = () => {
                             <path ref={menuSvgRef} d={closedPath} stroke="var(--cor-preta)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                     </div>
-                </div> 
+                </div>
                 <div ref={subMenuRef} className="sub-menu">
                     <Link to="/" state={{ scrollTo: 'homeId' }} >Inicio</Link>
                     <Link to="/" state={{ scrollTo: 'sobreId' }} >Sobre</Link>

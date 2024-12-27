@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 .dark-theme {
   --cor-preta: #ffffff;
-  --cor-branco: #1a1b1d;
+  --cor-branco: #0b0b0c;
   --cor-branco-secundaria: #0d0d10;
   --cor-cinza: rgb(201, 201, 201);
   --cor-gif: 0px 0px 20px #4d53ff1c;
