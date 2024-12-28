@@ -13,12 +13,12 @@
     font-size: 24px;
     padding: 32px;
     border-radius: 24px;    
-    background: var(--cor-branco);
-    border: 1px solid var(--cor-branco);
-    transition: 1s, background 0s;
+    background: var(--cor-projeto);
+    border: 2px solid transparent;
+    transition: 1s, background 0s, box-shadow 0s;
 }
 .swiper-container:hover{
-    border: 1px solid var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
 }
 .swiper-container h1 {
     font-size: 28px;

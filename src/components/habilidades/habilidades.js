@@ -56,166 +56,70 @@ const Habilidades = () => {
             image: htmlImg,
             titulo: 'HTML',
             texto: "Avançado",
-            desc: [
-                {
-                   li: 'Semântica'
-                },
-                {
-                    li: 'Formulários'
-                },
-                {
-                    li: 'Tabelas'
-                },
-                {
-                    li: 'Videos e Audios'
-                },
-                
-            ]
+            desc: 'Linguagem de marcação para estruturar páginas web.'
         },
         {
             id: 1,
             image: cssImg,
             titulo: 'CSS',
             texto: 'Avançado',
-            desc: [
-                {
-                   li: 'Seletores'
-                },
-                {
-                    li: 'Responsividade'
-                },
-                {
-                    li: 'Animações'
-                },
-                {
-                    li: 'Variáveis'
-                },
-                {
-                    li: 'Pseudo-Elementos'
-                },
-            ]
+            desc: 'Linguagem para estilizar páginas web.'
         },
         {
             id: 2,
             image: javascriptImg,
             titulo: 'JavaScript',
             texto: 'Básico',
-            desc: [
-                {
-                   li: 'Variáveis'
-                },
-                {
-                    li: 'Funções'
-                },
-                {
-                    li: 'Tipos de dados'
-                },
-                {
-                    li: 'DOM'
-                },
-            ]
+            desc: 'Linguagem de programação para interatividade web.'
         },
         {
             id: 3,
             image: figmaImg,
             titulo: 'Figma',
             texto: 'Intermediário',
-            desc: [
-                { li: 'Criação de Layouts' },
-                { li: 'Componentes' },
-                { li: 'Vetores' },
-                { li: 'Prototipagem' },
-            ]           
+            desc: 'Ferramenta para design de interfaces e prototipagem.'    
         },
         {
             id: 4,
             image: reactImg,
             titulo: 'React',
             texto: 'Básico',
-            desc: [
-                {
-                   li: 'Hooks Básicos'
-                },
-                {
-                    li: 'Componentes'
-                },
-                {
-                    li: 'Rotas'
-                },
-                {
-                    li: 'Modais'
-                },
-            ]           
+            desc: 'Biblioteca JavaScript para criar interfaces de usuário.'        
         },
         {
             id: 5,
             image: reactImg,
             titulo: 'React Native',
             texto: 'Básico',
-            desc: [
-                {
-                   li: 'StyleSheet'
-                },
-                {
-                    li: 'Componentes Nativos'
-                },
-                {
-                    li: 'React Navigation'
-                },
-            ]           
+            desc: 'Framework para desenvolvimento mobile multiplataforma.'        
         },
         {
             id: 6,
             image: javaImg,
             titulo: 'Java',
             texto: 'Básico',
-            desc: [
-                { li: 'Classe, atributo e objeto' },
-                { li: 'Enumeração' },
-                { li: 'Herança' },
-                { li: 'Construtores' },
-                { li: 'Modificadores de acesso' },
-                { li: 'Polimorfismo' },
-                { li: 'Interfaces' },
-                { li: 'Classe Abstrata e métodos abstratos' }
-            ]           
+            desc: 'Linguagem de programação orientada a objetos.'       
         },
         {
             id: 7,
             image: springImg,
             titulo: 'SpringBoot',
             texto: 'Básico',
-            desc: [
-                { li: 'APIs RESTful' },
-                { li: 'JPA/Hibernate' },
-                { li: 'Padrão MVC' },
-            ]           
+            desc: 'Framework para desenvolvimento de aplicações Java.'          
         },
         {
             id: 8,
             image: sqlImg,
             titulo: 'SQL',
             texto: 'Básico',
-            desc: [
-                { li: 'Data Manipulation Language' },
-                { li: 'Filtragem de Dados (WHERE, LIKE, BETWEEN, IN)' },
-                { li: 'Funções de Agregação (COUNT, AVG, SUM, MAX, MIN)' },
-                { li: 'Joins (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN)' },
-                { li: 'SubQuery' },
-                { li: 'Ordenação e Agrupamento de Dados (ORDER BY, GROUP BY)' },
-                { li: 'Relacionamentos entre Tabelas (Chaves Primárias e Estrangeiras)' },
-            ]           
+            desc: 'Linguagem para gerenciar bancos de dados relacionais.'        
         },
         {
             id: 9,
             image: netImg,
             titulo: 'ASP NET',
             texto: 'Básico',
-            desc: [
-                { li: 'API Restful' },
-                { li: 'Entity Framework Core'},
-                { li: 'Aplicativos Web' },
-            ]           
+            desc: 'Framework para criar aplicações web no ecossistema .NET.'       
         },
     ];
 
@@ -227,7 +131,8 @@ const Habilidades = () => {
             maxWidth: 'max-content',
             width: '90%',
             height: 'max-content',
-            bgcolor: 'black',
+            background: 0,
+            border: 0,
             borderRadius: 10,
             boxShadow: 24,
             margin: 0,
@@ -261,7 +166,6 @@ const Habilidades = () => {
                     <div className="habilidadesItem sombra" onClick={() => openModal(item)} key={item.id}>
                         <img src={item.image} alt={item.titulo} />
                         <p>{item.titulo}</p>
-                        <p>{item.texto}</p>
                     </div>
                 ))}
             </div>
@@ -275,11 +179,7 @@ const Habilidades = () => {
                     <div className="modal" >
                         <h2>{selectedItem.titulo}</h2>
                         <img src={selectedItem.image} /> <br />
-                        <ul>
-                            {selectedItem.desc && selectedItem.desc.map((descItem, index) => (
-                                <li key={index}>{descItem.li}</li>
-                            ))}
-                        </ul>  <br />
+                        <p>{selectedItem.desc}</p> <br />
                         <button className="closeModal" onClick={closeModal}>Fechar</button>
                     </div>
                 </Modal>

@@ -1,7 +1,6 @@
 .sobre {
     align-content: center;
     background: var(--cor-teste2);
-    padding: 16px;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -16,8 +15,9 @@
 .sobreContainer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 16px;
+    margin: 0 8vw;
 }
 
 .sobreContainer img {
@@ -59,9 +59,11 @@
         rotate: 0deg;
     }
 }
-.btn-mobile{
+
+.btn-mobile {
     display: none;
 }
+
 .sobreContainer-meio {
     display: flex;
     flex-direction: column;
@@ -83,7 +85,7 @@
     max-width: 250px;
     height: 250px;
     border-radius: 10px;
-    background: var(--cor-branco-secundaria);
+    background: var(--cor-card);
     padding: 12px;
     align-content: center;
     font-size: 22px;
@@ -119,7 +121,8 @@
         flex-direction: column;
         align-items: center;
     }
-    .btn-mobile{
+
+    .btn-mobile {
         display: block;
         align-self: center;
     }
