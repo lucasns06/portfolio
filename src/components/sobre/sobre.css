@@ -125,5 +125,6 @@
     .btn-mobile {
         display: block;
         align-self: center;
+        margin-bottom: 32px;
     }
 }

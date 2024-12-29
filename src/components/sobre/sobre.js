@@ -107,24 +107,24 @@ const Sobre = () => {
                 </div>
                 <div className="cards">
                     <div className="card">
-                    <p>
+                        <p>
                             Tenho hobbies como desenhar e tocar violão.
                         </p>
                     </div>
                     <div className="card">
                         <p>
-                        Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.
+                            Atualmente, estou em busca de novas oportunidades para aplicar meus conhecimentos e continuar evoluindo na área.
                         </p>
                     </div>
                     <div className="card">
-                    <p>
-                           Veja os meus projetos! :D
+                        <p>
+                            Veja os meus projetos! :D
                         </p>
-                    </div>
+                    </div> 
                 </div>
             </div> <br />
-            <Link to="/" state={{ scrollTo: 'projetosId' }} className="projetosBtn versiteBtn sombra btn-mobile">Ver Projetos</Link>
-        </div>
+            <Link to="/" state={{ scrollTo: 'projetosId' }} className="projetosBtn versiteBtn sombra btn-mobile">Ver Projetos</Link> 
+        </div> 
     );
 }
 
