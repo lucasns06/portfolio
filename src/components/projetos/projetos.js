@@ -44,7 +44,7 @@ const Projetos = () => {
                                 <p>Uma prévia do aplicativo está em um video no site do proximo slide.</p>
                                 <p style={{ color: 'green' }}>O aplicativo está sendo desenvolvido com React Native</p>
                             </div>
-                            <img src={telaApp} className="telaApp sombra" />
+                            <img src={telaApp} className="telaApp sombra" alt="telaAplicativo" />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -57,7 +57,7 @@ const Projetos = () => {
                                 <p>Com a finalidade de mostrar melhor o meu produto, o aplicativo comunica.</p> <br />
                             </div>
                             <a href="https://lucasns06.github.io/ComuniTec/" target="_blank" rel="noopener noreferrer">
-                                <img src={telaSite} className="telaSite sombra" />
+                                <img src={telaSite} className="telaSite sombra" alt="telaSite" />
                             </a>
                         </div>
                         <div className="projetos-buttons">
@@ -78,7 +78,7 @@ const Projetos = () => {
                     <div className="swiper-container swiper-container3 sombra ">
                         <h1>EstudosAPI</h1> <br />
                         <div className="d-flex">
-                            <img src={apiImg} className="telaApp sombra" />
+                            <img src={apiImg} className="telaApp sombra" alt="telaApi" />
                             <div>
                                 <p>RESTful API, criada para gerenciar tarefas associadas a categorias. <br></br>
                                     O projeto utiliza ASP.NET Core e Entity Framework Core.</p>
