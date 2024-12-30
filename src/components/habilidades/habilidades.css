@@ -5,9 +5,7 @@
     background: var(--cor-teste2);
 }
 
-
 .habilidadesContainer {
-    opacity: 0;
     margin-left: 10rem;
     margin-right: 10rem;
     display: grid;
@@ -15,7 +13,9 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
     justify-content: center;
 }
+
 .habilidadesItem {
+    opacity: 0;
     border-radius: 1.5rem;
     position: relative;
     display: inline-block;
@@ -27,10 +27,12 @@
     overflow: hidden;
     border: 2px solid transparent;
     transition: 1s, background 0s, box-shadow 0s;
-  }
-  .habilidadesItem:hover{
+}
+
+.habilidadesItem:hover {
     border: 2px solid var(--cor-destaque);
-  }
+}
+
 .habilidadesItem img {
     max-width: 64px;
 }

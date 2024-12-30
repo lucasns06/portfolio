@@ -106,5 +106,7 @@
     .telaApp {
         max-width: 180px;
     }
-
+    .swiper-container p{
+        font-size: 18px;
+    }
 }

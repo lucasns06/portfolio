@@ -36,21 +36,27 @@ const Habilidades = () => {
                 }
             );
         });
-
-        const habilidadesContainer = document.querySelector('.habilidadesContainer');
-        if (habilidadesContainer) {
-            gsap.to(habilidadesContainer, {
-                scrollTrigger: {
-                    trigger: habilidadesContainer,
-                    toggleActions: "restart none none none"
+        const habilidadesItem = document.querySelectorAll('.habilidadesItem');
+        if (habilidadesItem) {
+            gsap.fromTo(
+                habilidadesItem,
+                { y: 80, },
+                {
+                    scrollTrigger: {
+                        trigger: habilidadesItem,
+                        toggleActions: "play none none none"
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'expo.out',
+                    stagger: 0.2
                 },
-                opacity: 1,
-                duration: 2
-            });
+            );
         }
-    }, []);
 
-    const habItem = [
+    }, []);
+    const habFront = [
         {
             id: 0,
             image: htmlImg,
@@ -77,49 +83,51 @@ const Habilidades = () => {
             image: figmaImg,
             titulo: 'Figma',
             texto: 'Intermediário',
-            desc: 'Ferramenta para design de interfaces e prototipagem.'    
+            desc: 'Ferramenta para design de interfaces e prototipagem.'
         },
         {
             id: 4,
             image: reactImg,
             titulo: 'React',
             texto: 'Básico',
-            desc: 'Biblioteca JavaScript para criar interfaces de usuário.'        
+            desc: 'Biblioteca JavaScript para criar interfaces de usuário.'
         },
         {
             id: 5,
             image: reactImg,
             titulo: 'React Native',
             texto: 'Básico',
-            desc: 'Framework para desenvolvimento mobile multiplataforma.'        
+            desc: 'Framework para desenvolvimento mobile multiplataforma.'
         },
+    ]
+    const habBack = [
         {
-            id: 6,
+            id: 0,
             image: javaImg,
             titulo: 'Java',
             texto: 'Básico',
-            desc: 'Linguagem de programação orientada a objetos.'       
+            desc: 'Linguagem de programação orientada a objetos.'
         },
         {
-            id: 7,
+            id: 1,
             image: springImg,
             titulo: 'SpringBoot',
             texto: 'Básico',
-            desc: 'Framework para desenvolvimento de aplicações Java.'          
+            desc: 'Framework para desenvolvimento de aplicações Java.'
         },
         {
-            id: 8,
+            id: 2,
             image: sqlImg,
             titulo: 'SQL',
             texto: 'Básico',
-            desc: 'Linguagem para gerenciar bancos de dados relacionais.'        
+            desc: 'Linguagem para gerenciar bancos de dados relacionais.'
         },
         {
-            id: 9,
+            id: 3,
             image: netImg,
             titulo: 'ASP NET',
             texto: 'Básico',
-            desc: 'Framework para criar aplicações web no ecossistema .NET.'       
+            desc: 'Framework para criar aplicações web no ecossistema .NET.'
         },
     ];
 
@@ -160,18 +168,26 @@ const Habilidades = () => {
         <div className="habilidades" id="habilidadesId">
             <h1 className="MinhasHab textAnim">Minhas <span className="span">habilidades</span></h1><br />
             <h2>Clique nos modais para saber mais.</h2> <br /><br />
-
+            <h2>Front End</h2> <br /><br />
             <div className="habilidadesContainer">
-                {habItem.map((item) => (
+                {habFront.map((item) => (
+                    <div className="habilidadesItem sombra" onClick={() => openModal(item)} key={item.id}>
+                        <img src={item.image} alt={item.titulo} />
+                        <p>{item.titulo}</p>
+                    </div>
+                ))}
+            </div> <br /><br />
+            <h2>Back End</h2><br /><br />
+            <div className="habilidadesContainer">
+                {habBack.map((item) => (
                     <div className="habilidadesItem sombra" onClick={() => openModal(item)} key={item.id}>
                         <img src={item.image} alt={item.titulo} />
                         <p>{item.titulo}</p>
                     </div>
                 ))}
             </div>
-
-            {selectedItem &&  (
-                <Modal  
+            {selectedItem && (
+                <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
                     style={modalEstilo}
