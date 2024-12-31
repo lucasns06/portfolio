@@ -50,14 +50,13 @@ const Sobre = () => {
             '.textWriting2',
             {
                 text: "Lucas Nascimento",
-                duration: 2,
+                duration: 1,
             },
         );
         timeline.fromTo(
             firstThreeCards,
             { y: 100, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.5, stagger: 0.2 },
-            "+=0.5"
         );
 
         timeline.fromTo(

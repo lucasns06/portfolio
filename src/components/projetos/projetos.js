@@ -65,7 +65,10 @@ const Projetos = () => {
                 navigation
                 breakpoints={{
                     1080: {
-                        slidesPerView: 2, // 1 slide por vez em telas com largura até 1080px
+                        slidesPerView: 2, 
+                    },
+                    1700: {
+                        slidesPerView: 3, 
                     },
                 }}
                 pagination={{ clickable: true }} >

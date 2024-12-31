@@ -85,7 +85,7 @@ const Home = () => {
                         <p className="animTextHome">
                             <ReactTyped
                                 strings={[
-                                    "Programador Full Stack",
+                                    "Desenvolvedor Full Stack",
                                     "Designer",
                                     "Estudante"
                                 ]}
