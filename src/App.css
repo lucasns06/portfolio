@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
   --cor-destaque: #4D54FF;
   --cor-footer: #d8d9e1;
   --cor-teste: rgb(255, 255, 255);
-  --cor-teste2: rgb(232, 234, 241);
+  --cor-teste2: rgba(0, 19, 65, 0.039);
   --tamanho-secao: 1024px;
   --header-shadow: 0px 2px 20px 0px rgba(122, 175, 255, 0.40);
   --cor-projeto: white;

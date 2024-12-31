@@ -13,9 +13,8 @@ const Projetos = () => {
     useLayoutEffect(() => {
         const swiper = document.querySelectorAll('.swiper-container');
         if (swiper) {
-            gsap.fromTo(
-                swiper,
-                { y: 80, },
+            gsap.fromTo(swiper,
+                { y: 150, },
                 {
                     scrollTrigger: {
                         trigger: swiper,
