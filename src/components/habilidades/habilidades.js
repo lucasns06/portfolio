@@ -11,6 +11,10 @@ import sqlImg from '../../img/hab/sql.png';
 import reactImg from '../../img/hab/react.png';
 import figmaImg from '../../img/hab/figma.png';
 import springImg from '../../img/hab/spring.png';
+import nextimg from '../../img/hab/nextjs.svg';
+import gsapImg from '../../img/hab/gsap.webp';
+import TailwindImg from '../../img/hab/tailwind.png';
+
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -61,43 +65,55 @@ const Habilidades = () => {
             id: 0,
             image: htmlImg,
             titulo: 'HTML',
-            texto: "Avançado",
             desc: 'Linguagem de marcação para estruturar páginas web.'
         },
         {
             id: 1,
             image: cssImg,
             titulo: 'CSS',
-            texto: 'Avançado',
             desc: 'Linguagem para estilizar páginas web.'
         },
         {
             id: 2,
             image: javascriptImg,
             titulo: 'JavaScript',
-            texto: 'Básico',
             desc: 'Linguagem de programação para interatividade web.'
         },
         {
             id: 3,
             image: figmaImg,
             titulo: 'Figma',
-            texto: 'Intermediário',
             desc: 'Ferramenta para design de interfaces e prototipagem.'
         },
         {
             id: 4,
-            image: reactImg,
-            titulo: 'React',
-            texto: 'Básico',
-            desc: 'Biblioteca JavaScript para criar interfaces de usuário.'
+            image: nextimg,
+            titulo: 'Next.js',
+            desc: 'Next.js é uma estrutura da web de desenvolvimento front-end React de código aberto criada por Vercel que permite funcionalidades como renderização do lado do servidor'
         },
         {
             id: 5,
             image: reactImg,
+            titulo: 'React',
+            desc: 'Biblioteca JavaScript para criar interfaces de usuário.'
+        },
+        {
+            id: 6,
+            image: reactImg,
             titulo: 'React Native',
-            texto: 'Básico',
             desc: 'Framework para desenvolvimento mobile multiplataforma.'
+        },
+        {
+            id: 7,
+            image: gsapImg,
+            titulo: 'GSAP',
+            desc: 'GSAP é uma biblioteca de animação JavaScript da GreenSock que permite criar animações de alto desempenho.'
+        },
+        {
+            id: 8,
+            image: TailwindImg,
+            titulo: 'Tailwind',
+            desc: 'Tailwind CSS é um conjunto de classes prontas para estilização de elementos.'
         },
     ]
     const habBack = [
@@ -105,28 +121,24 @@ const Habilidades = () => {
             id: 0,
             image: javaImg,
             titulo: 'Java',
-            texto: 'Básico',
             desc: 'Linguagem de programação orientada a objetos.'
         },
         {
             id: 1,
             image: springImg,
             titulo: 'SpringBoot',
-            texto: 'Básico',
             desc: 'Framework para desenvolvimento de aplicações Java.'
         },
         {
             id: 2,
             image: sqlImg,
             titulo: 'SQL',
-            texto: 'Básico',
             desc: 'Linguagem para gerenciar bancos de dados relacionais.'
         },
         {
             id: 3,
             image: netImg,
             titulo: 'ASP NET',
-            texto: 'Básico',
             desc: 'Framework para criar aplicações web no ecossistema .NET.'
         },
     ];
