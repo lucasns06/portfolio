@@ -1,93 +1,83 @@
 .sobre {
-    align-content: center;
-    background: var(--cor-teste2);
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  align-content: center;
+  background: var(--cor-teste2);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .QuemSouP {
-    text-align: center;
-    margin-bottom: 64px;
+  text-align: center;
+  margin-bottom: 64px;
 }
 
 .sobreContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 64px;
-    padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 0 16px;
 }
-.sobre-texto{
-    max-width: 512px;
-    text-align: left;
+.sobre-texto {
+  max-width: 512px;
+  text-align: left;
 }
-.sobre-texto p{
-    font-size: 22px;
-    opacity: 0;
+.sobre-texto p {
+  font-size: 22px;
+  opacity: 0;
 }
 .sobreContainer img {
-    border-radius: 100%;
-    max-width: 384px;
-    height: 100%;
+  border-radius: 100%;
+  max-width: 384px;
+  height: 100%;
 }
 
 .sobreContainerImg {
-    z-index: 0;
-    position: relative;
-    padding: 4px;
-    border-radius: 100%;
-    overflow: hidden;
-    opacity: 0;
+  z-index: 0;
+  position: relative;
+  padding: 4px;
+  border-radius: 100%;
+  overflow: hidden;
+  opacity: 0;
 }
 
 .sobreContainerImg::before {
-    top: 0px;
-    left: 0px;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 99%;
-    border-radius: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 154, 0, 1) 10%,
-        rgba(208, 222, 33, 1) 20%,
-        rgba(79, 220, 74, 1) 30%,
-        rgba(63, 218, 216, 1) 40%,
-        rgba(47, 201, 226, 1) 50%,
-        rgba(28, 127, 238, 1) 60%,
-        rgba(95, 21, 242, 1) 70%,
-        rgba(186, 12, 248, 1) 80%,
-        rgba(251, 7, 217, 1) 90%,
-        rgba(255, 0, 0, 1) 100%
-    );
-    z-index: -1;
-    animation: neon 1s infinite linear;
+  top: 0px;
+  left: 0px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  border-radius: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(77, 84, 255, 1) 0%,
+    rgba(155, 197, 255, 1) 100%
+  );
+  z-index: -1;
+  animation: neon 1s infinite linear;
 }
-
 @keyframes neon {
-    from {
-        rotate: 360deg
-    }
+  from {
+    rotate: 360deg;
+  }
 
-    to {
-        rotate: 0deg;
-    }
+  to {
+    rotate: 0deg;
+  }
 }
 
 @media (max-width: 1024px) {
-    .sobreContainerImg img {
-        max-width: 250px;
-        border-radius: 100%;
-    }
+  .sobreContainerImg img {
+    max-width: 250px;
+    border-radius: 100%;
+  }
 }
 @media (max-width: 720px) {
-    .sobreContainer{
-        flex-direction: column;
-        gap: 16px;
-    }
+  .sobreContainer {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
