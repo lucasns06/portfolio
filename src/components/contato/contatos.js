@@ -49,8 +49,6 @@ const Contatos = () => {
 
             <div className="contatosContainer">
                 <div className="links">
-                    <img src={perfilFoto} alt="Perfil" />
-                    <p className="hiddenHello">Olá!</p>
                     <div className="contatosLinks">
                         <a className="github" href="https://github.com/lucasns06" target="_blank" rel="noopener noreferrer">
                             <svg width="100" height="100" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

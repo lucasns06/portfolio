@@ -1,11 +1,12 @@
 .sobre {
   align-content: center;
-  background: var(--cor-teste2);
+  /* background: var(--cor-teste2); */
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .QuemSouP {
@@ -53,8 +54,8 @@
   border-radius: 100%;
   background: linear-gradient(
     90deg,
-    rgba(77, 84, 255, 1) 0%,
-    rgba(155, 197, 255, 1) 100%
+    #03afe9 0%,
+    #9ce6ff 100%
   );
   z-index: -1;
   animation: neon 1s infinite linear;

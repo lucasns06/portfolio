@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import perfilFoto from '../../img/perfil.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ParticlesComponent from '../particles'
 import './sobre.css';
 import '../../App.css';
 
@@ -43,7 +44,7 @@ const Sobre = () => {
                     {
                         scrollTrigger: {
                             trigger: sobreTextos,
-                            toggleActions: "play none none none"
+                            toggleActions: "restart none none none"
                         },
                         y: 0,
                         opacity: 1,
@@ -61,7 +62,7 @@ const Sobre = () => {
 
     return (
         <div className="sobre" id="sobreId">
-            <h1 className="QuemSouP textAnim">Sobre <span className="span">mim</span></h1>
+            <h1 className="QuemSouP textAnim">Explorando o Mundo da  <span className="span">Tecnologia</span></h1>
             <div className="sobreContainer">
                 <div>
                     <div className="sobreContainerImg">
@@ -69,9 +70,9 @@ const Sobre = () => {
                     </div>
                 </div>
                 <div className="sobre-texto">
-                    <p>Me chamo Lucas Nascimento, e eu sempre gostei de tecnologia.</p> <br />
-                    <p>Entrei no mundo da programação com técnico em desenvolvimento de sistemas.</p> <br />
-                    <p>Atualmente sou Full Stack e estou procurando oportunidade na área.</p>
+                    <p>👨‍💻 Me chamo Lucas Nascimento, e eu sempre gostei de tecnologia.</p> <br />
+                    <p>💻 Entrei no mundo da programação com técnico em desenvolvimento de sistemas.</p> <br />
+                    <p>🚀 Atualmente sou Full Stack e estou procurando oportunidade na área.</p>
                 </div>
             </div>
         </div>

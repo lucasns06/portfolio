@@ -3,6 +3,7 @@
     min-height: 100vh;
     text-align: center;
     align-content: center;
+    background: var(--cor-teste2);
   }
   .contatos h1{
     margin: auto;
@@ -10,6 +11,8 @@
   }
   .contatos p{
     padding: 0 16px;
+    font-family: sans-serif;
+    font-size: 20px;
   }
   .links{
     position: relative;
@@ -36,19 +39,6 @@
     display: flex;
     justify-content: center;
     top: 0;
-  }
-  .github, .instagram{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .linkedin{
-    position: absolute;
-  }
-  .github{
-    left: -30%;
-  }.instagram{
-    right: -30%;
   }
   .instagram::after, .linkedin::after, .github::after{
     content: '';
@@ -129,7 +119,7 @@
     font-family: sans-serif;
   }
   form input:focus, textarea:focus{
-    outline-color: #7378fc;
+    outline-color: var(--cor-destaque);
     transition: all 250ms ease;
   }
   label{
@@ -151,7 +141,7 @@
     flex-direction: column-reverse;
   }
   .links{
-    margin: 28px 0px 128px 0px;
+    margin-top: 28px;
   }
   .contatos {
     padding: 96px 0px;

@@ -5,8 +5,8 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer>
-                <p>© 2024 Lucas Nascimento. Todos os direitos reservados.</p> <br />
             <div className="footerContainer">
+                <h1>Lucas Nascimento</h1>
                 <div className="footerNav">
                     <h1>Links</h1>
                     <a href="https://www.linkedin.com/in/lucasns06/" target="_blank" rel="noopener noreferrer">Linkedin</a> <br /> <br />
@@ -18,7 +18,8 @@ const Footer = () => {
                     <a href="https://help.iconscout.com/hc/en-gb" target="_blank">Iconscout</a> <br /><br />
                     <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>
                 </div>
-            </div>
+            </div> <br /><br />
+            <p>© 2024 Lucas Nascimento. Todos os direitos reservados.</p> <br />
         </footer>
     );
 }

@@ -11,7 +11,7 @@ import './home.css'
 import '../../App.css';
 const Home = () => {
     const saberBtn = useRef();
-    const homeImg = useRef();
+    // const homeImg = useRef();
     useLayoutEffect(() => {
         const animTextHome = document.querySelector('.animTextHome')
         const textHome = document.querySelector('.textAnim2')
@@ -22,7 +22,7 @@ const Home = () => {
         setTimeout(() => {
             gsap.to(".textWriting", {
                 duration: 4,
-                text: "Sou um estudante de Desenvolvimento de Sistemas e <br/> estou procurando uma oportunidade de trabalho e aprendizado."
+                text: "Sou um Desenvolvedor FullStack Júnior. <br/> Estou procurando uma oportunidade de trabalho e aprendizado."
             });
         }, 1500)
 
@@ -43,7 +43,7 @@ const Home = () => {
                 opacity: 1,
                 duration: 4
             });
-        }, 7000)
+        }, 5000)
 
         gsap.fromTo(homeP, {
             opacity: 0,
@@ -66,28 +66,27 @@ const Home = () => {
                 })
         }, 5500)
 
-        const homeImage = homeImg.current;
-        homeImage.style.opacity = 0;
-        setTimeout(() => {
-            gsap.to(homeImage,
-                {
-                    opacity: 1,
-                    duration: 2,
-                })
-        }, 6000)
+        // const homeImage = homeImg.current;
+        // homeImage.style.opacity = 0;
+        // setTimeout(() => {
+        //     gsap.to(homeImage,
+        //         {
+        //             opacity: 1,
+        //             duration: 2,
+        //         })
+        // }, 6000)
     }, []);
 
     return (
         <div className="homeMain" id="homeId">
             <div className="home">
                 <div className="home-texto">
-                    <h1 className="nomeHome textAnim2">Olá &#128075;, eu sou <span className="span">Lucas</span> <br />
+                    <h1 className="nomeHome textAnim2">Olá, eu sou <span className="span">Lucas</span> <br />
                         <p className="animTextHome">
                             <ReactTyped
                                 strings={[
                                     "Desenvolvedor Full Stack",
-                                    "Designer",
-                                    "Estudante"
+                                    "Desenvolvedor Júnior"
                                 ]}
                                 typeSpeed={40}
                                 backSpeed={50}
@@ -98,10 +97,10 @@ const Home = () => {
                     <p className="textWriting"></p>  <br /> <br />
                     <Link to="/" state={{ scrollTo: 'sobreId' }} ><button className='projetosBtn versiteBtn sombra' ref={saberBtn}>Saber Mais</button></Link>
                 </div>
-                <img src={homeImage} className="homeImg sombra" alt="HomeImg" ref={homeImg} />
+                {/* <img src={homeImage} className="homeImg sombra" alt="HomeImg" ref={homeImg} /> */}
             </div>
             <ParticlesComponent id="tsparticles" />
-            <p>“A persistência é o caminho do êxito” <strong>--Charles Chaplin</strong></p>
+            {/* <p>“A persistência é o caminho do êxito” <strong>--Charles Chaplin</strong></p> */}
         </div>
     );
 }

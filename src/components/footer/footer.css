@@ -1,17 +1,19 @@
 footer {
     padding: 64px 16px;
-    background: var(--cor-footer);
+    background: var(--cor-destaque);
     text-align: center;
+    color: white;
 }
 .footerContainer{
     display: flex;
     justify-content: space-around;
 }
 footer p {
-    color: var(--cor-preta);
     font-weight: bold;
 }
-
+footer p, footer h1,footer a{
+    color: white;
+}
 .footerImg {
     border-radius: 100%;
     width: 42px;
@@ -29,3 +31,9 @@ footer p {
 }
 
 
+@media (max-width: 660px) {
+    .footerContainer{
+        flex-direction: column;
+        gap: 16px;
+    }
+}

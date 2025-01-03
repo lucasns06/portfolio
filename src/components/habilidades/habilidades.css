@@ -2,7 +2,7 @@
     min-height: 100vh;
     align-content: center;
     text-align: center;
-    background: var(--cor-teste2);
+    /* background: var(--cor-teste2); */
 }
 
 .habilidadesContainer {

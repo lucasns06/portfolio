@@ -2,6 +2,7 @@
     min-height: 100vh;
     text-align: center;
     align-content: center;
+    background: var(--cor-teste2);
 }
 .swiper-wrapper{
     align-items: center;
@@ -58,24 +59,6 @@
     width: 100px;
 }
 
-.projetosBtn {
-    background: var(--cor-preta);
-    border: 0;
-    border-radius: 4px;
-    color: var(--cor-branco);
-    cursor: pointer;
-    outline: 0;
-    padding: 6px;
-    font-size: 24px;
-}
-
-.versiteBtn {
-    background: var(--cor-destaque);
-    color: white;
-    width: max-content;
-    padding: 4px 12px;
-}
-
 .projetos-buttons {
     display: flex;
     gap: 16px;
@@ -102,6 +85,7 @@
     }
     .swiper-container{
         min-height: 392px;
+        padding: 16px;
     }
 }
 

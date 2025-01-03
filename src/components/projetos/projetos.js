@@ -18,7 +18,7 @@ const Projetos = () => {
                 {
                     scrollTrigger: {
                         trigger: swiper,
-                        toggleActions: "play none none none"
+                        toggleActions: "restart none none none"
                     },
                     y: 0,
                     opacity: 1,

@@ -113,13 +113,13 @@ const Header = () => {
 
     return (
         <header>
-            <a href="#" className='logo-name'>LucasDev</a>
+            <a href="/" className='logo-name'>LucasDev</a>
             <nav>
                 <Link to="/" state={{ scrollTo: 'homeId' }} className='aHeader'>Inicio</Link>
                 <Link to="/" state={{ scrollTo: 'sobreId' }} className='aHeader'>Sobre</Link>
                 <Link to="/" state={{ scrollTo: 'projetosId' }} className='aHeader'>Projetos</Link>
                 <Link to="/" state={{ scrollTo: 'habilidadesId' }} className='aHeader'>Habilidades</Link>
-                <Link to="/" state={{ scrollTo: 'contatosId' }} className='contactBtn'>Contato</Link>
+                <Link to="/" state={{ scrollTo: 'contatosId' }} ><button className='projetosBtn contBtn sombra'>Contato</button></Link>
             </nav>
             <img ref={imgTheme}
                 src={themeImgSrc}
@@ -146,7 +146,7 @@ const Header = () => {
                     <Link to="/" state={{ scrollTo: 'sobreId' }} >Sobre</Link>
                     <Link to="/" state={{ scrollTo: 'projetosId' }} >Projetos</Link>
                     <Link to="/" state={{ scrollTo: 'habilidadesId' }} >Habilidades</Link>
-                    <Link to="/" state={{ scrollTo: 'contatosId' }} className='contactBtn'>Contato</Link>
+                    <Link to="/" state={{ scrollTo: 'contatosId' }} ><button className='projetosBtn sombra'>Contato</button></Link>
                 </div>
             </div>
         </header>
