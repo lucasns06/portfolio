@@ -1,6 +1,6 @@
 header {
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 10;
     right: 0;
@@ -20,7 +20,7 @@ header {
     -webkit-box-shadow: var(--header-shadow);
     -moz-box-shadow: var(--header-shadow);
     box-shadow: var(--header-shadow);
-    background: var(--cor-branco-secundaria);
+    background: var(  --cor-branco-secundaria);
 }
 .menu {
     display: none;
@@ -43,7 +43,9 @@ header {
     display: none;
     overflow: hidden;
 }
-
+.teste{
+    position: relative;
+}
 .sub-menu.show {
     display: grid;
 }
@@ -152,6 +154,7 @@ nav a:hover {
         display: flex;
         align-items: center;
         gap: 16px;
+        justify-content: center;
     }
 
     .imgTheme {
