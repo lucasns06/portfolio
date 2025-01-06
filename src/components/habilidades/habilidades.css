@@ -41,7 +41,8 @@
     text-align: center;
     background: var(--cor-branco);
     padding: 32px;
-
+    max-width: 512px;
+    width: 100%;
 }
 
 .modal img {

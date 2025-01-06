@@ -206,7 +206,7 @@ const Habilidades = () => {
                     ariaHideApp={false} >
                     <div className="modal" >
                         <h2>{selectedItem.titulo}</h2>
-                        <img src={selectedItem.image} /> <br />
+                        <img src={selectedItem.image} alt={selectedItem.titulo} /> <br />
                         <p>{selectedItem.desc}</p> <br />
                         <button className="closeModal" onClick={closeModal}>Fechar</button>
                     </div>
