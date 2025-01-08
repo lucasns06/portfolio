@@ -78,7 +78,7 @@ const Contatos = () => {
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/5b254861ce71b39762bbb42459cb54f1" method="POST">
+                <form className="sombra" action="https://formsubmit.co/5b254861ce71b39762bbb42459cb54f1" method="POST">
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_next" value="https://lucasns06.github.io/#/obrigado" />
                     

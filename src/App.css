@@ -30,7 +30,8 @@ body::-webkit-scrollbar {
   --cor-teste: rgb(255, 255, 255);
   --cor-teste2: rgba(0, 19, 65, 0.039);
   --tamanho-secao: 1024px;
-  --header-shadow: 0px 2px 20px 0px rgba(122, 175, 255, 0.40);
+  --header-shadow: -10px 20px 20px 0px rgba(122, 175, 255, 0.40);
+  --item-shadow: 0px 10px 20px 0px rgba(122, 175, 255, 0.40);
   --cor-projeto: white;
   --cor-card: linear-gradient(271deg, #ffffff 0%, #f1eef9 100%);
   --cor-span: linear-gradient(-90deg, #5dd6ff 0%, #09a1cf 100%);
@@ -47,7 +48,8 @@ body::-webkit-scrollbar {
   --cor-footer: #060608;
   --cor-teste: #09090b;
   --cor-teste2: rgba(255, 255, 255, 0.03);
-  --header-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.45);
+  --header-shadow: -10px 20px 25px 0px rgba(0, 0, 0, 0.45);
+  --item-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.45);
   --cor-projeto: rgb(255 255 255 / 5%);
   --cor-card: rgb(255 255 255 / 5%);
   --cor-span: linear-gradient(-90deg, #7edcfc 0%, #03afe9 100%);

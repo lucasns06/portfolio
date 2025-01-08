@@ -40,21 +40,26 @@ const Header = () => {
 
     useEffect(() => {
         if (subMenuRef.current) {
-            const header = document.querySelector('header');
+            const header = document.querySelectorAll('header');
 
             if (isMenuVisible) {
                 subMenuRef.current.style.display = 'grid';
 
-                const height = subMenuRef.current.scrollHeight;
+                // const height = subMenuRef.current.scrollWidth;
                 gsap.to(subMenuRef.current, {
-                    height: height,
+                    width: '100%',
+                    height: 'max-content',
                     duration: 0.5,
                     ease: "power4.inOut",
                 });
 
-                header.classList.add('headerSombra');
+                header.forEach(item => {
+                    
+                    item.classList.add('headerSombra');
+                });
             } else {
                 gsap.to(subMenuRef.current, {
+                    width: 0,
                     height: 0,
                     duration: 0.3,
                     ease: "power4.inOut",
@@ -66,7 +71,10 @@ const Header = () => {
                 });
 
                 if (window.scrollY < 50) {
-                    header.classList.remove('headerSombra');
+                    header.forEach(item => {
+                        
+                        item.classList.remove('headerSombra');
+                    });
                 }
             }
         }
@@ -128,20 +136,23 @@ const Header = () => {
                 onClick={toggleTheme}
             />
             <div className='headerMobile'>
-                <div className='headerMobileIcons'>
-                    <img ref={imgTheme}
-                        src={themeImgSrc}
-                        className="imgTheme imgThemeMobile"
-                        alt={isDarkTheme ? 'Tema Claro' : 'Tema Escuro'}
-                        onClick={toggleTheme}
-                    />
-                    <div className="menu" onClick={toggleMenu}>
-                        <svg viewBox="4 4 16 16" fill="var(--cor-preta)" xmlns="http://www.w3.org/2000/svg" className='menuSvg'>
-                            <path ref={menuSvgRef} d={closedPath} stroke="var(--cor-preta)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                <div className='headerMobile-top'>
+                    <a href="/" className='logo-name logo-mobile'>LucasDev</a>
+                    <div className='headerMobileIcons'>
+                        <img ref={imgTheme}
+                            src={themeImgSrc}
+                            className="imgTheme imgThemeMobile"
+                            alt={isDarkTheme ? 'Tema Claro' : 'Tema Escuro'}
+                            onClick={toggleTheme}
+                        />
+                        <div className="menu" onClick={toggleMenu}>
+                            <svg viewBox="4 4 16 16" fill="var(--cor-preta)" xmlns="http://www.w3.org/2000/svg" className='menuSvg'>
+                                <path ref={menuSvgRef} d={closedPath} stroke="var(--cor-preta)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-                <div ref={subMenuRef} className="sub-menu">
+                <div ref={subMenuRef} className="sub-menu headerSombra">
                     <Link to="/" state={{ scrollTo: 'homeId' }} >Inicio</Link>
                     <Link to="/" state={{ scrollTo: 'sobreId' }} >Sobre</Link>
                     <Link to="/" state={{ scrollTo: 'projetosId' }} >Projetos</Link>
