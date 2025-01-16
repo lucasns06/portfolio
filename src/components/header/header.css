@@ -104,16 +104,7 @@ nav a:hover {
     transition: transform 250ms ease;
 }
 
-.imgTheme {
-    width: 38px;
-    position: fixed;
-    cursor: pointer;
-    top: 50%;
-    right: 5%;
-    padding: 4px;
-    border-radius: 8px;
-    transition: background 200ms ease;
-}
+
 
 @keyframes themeEntry {
     from {

@@ -4,7 +4,37 @@
   flex-direction: column;
   justify-content: center;
   position: relative; 
+  z-index: 1;
 }
+.backgroundBlack{
+  background: url(../../img/blackBack.jpg);
+  background-position: center 70%;
+}
+.backgroundWhite{
+  background: url(../../img/whiteBack.jpg);
+  background-position: center 70%;
+}
+.backgroundBlack::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.748);
+  z-index: -10;
+}
+.backgroundWhite::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.748);
+  z-index: -10;
+}
+
 .homeMain>p {
   margin-top: 20px;
   text-align: center;
@@ -13,7 +43,7 @@
 #tsparticles canvas { 
   width: 50% !important;
   height: 100%;
-  z-index: -1;
+  z-index: 2;
   position: absolute;
   right: 0;
   top: 0; 

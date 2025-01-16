@@ -1,6 +1,5 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import React from "react";
-import homeImage from '../../img/perfil.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TextPlugin } from "gsap/TextPlugin";
@@ -10,8 +9,11 @@ import { ReactTyped } from "react-typed";
 import './home.css'
 import '../../App.css';
 const Home = () => {
+    const savedTheme = localStorage.getItem("isDarkTheme") === "true";
+    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme);
+
     const saberBtn = useRef();
-    // const homeImg = useRef();
+
     useLayoutEffect(() => {
         const animTextHome = document.querySelector('.animTextHome')
         const textHome = document.querySelector('.textAnim2')
@@ -66,19 +68,10 @@ const Home = () => {
                 })
         }, 5500)
 
-        // const homeImage = homeImg.current;
-        // homeImage.style.opacity = 0;
-        // setTimeout(() => {
-        //     gsap.to(homeImage,
-        //         {
-        //             opacity: 1,
-        //             duration: 2,
-        //         })
-        // }, 6000)
     }, []);
 
     return (
-        <div className="homeMain" id="homeId">
+        <div className={`homeMain ${isDarkTheme ? "backgroundBlack" : "backgroundWhite"}`} id="homeId">
             <div className="home">
                 <div className="home-texto">
                     <h1 className="nomeHome textAnim2">Olá, eu sou <span className="span">Lucas</span> <br />
@@ -97,10 +90,8 @@ const Home = () => {
                     <p className="textWriting"></p>  <br /> <br />
                     <Link to="/" state={{ scrollTo: 'sobreId' }} ><button className='projetosBtn versiteBtn sombra' ref={saberBtn}>Saber Mais</button></Link>
                 </div>
-                {/* <img src={homeImage} className="homeImg sombra" alt="HomeImg" ref={homeImg} /> */}
             </div>
             <ParticlesComponent id="tsparticles" />
-            {/* <p>“A persistência é o caminho do êxito” <strong>--Charles Chaplin</strong></p> */}
         </div>
     );
 }
