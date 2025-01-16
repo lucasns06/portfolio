@@ -68,8 +68,8 @@ export default function App() {
         path="/"
         element={
           <div className="App">
-            <Header />
-            <Home />
+            <Header isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} themeImgSrc={themeImgSrc} />
+            <Home isDarkTheme={isDarkTheme}  />
             <Sobre />
             <Projetos />
             <Habilidades />

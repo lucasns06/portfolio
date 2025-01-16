@@ -8,10 +8,7 @@ import ParticlesComponent from '../particles'
 import { ReactTyped } from "react-typed";
 import './home.css'
 import '../../App.css';
-const Home = () => {
-    const savedTheme = localStorage.getItem("isDarkTheme") === "true";
-    const [isDarkTheme, setIsDarkTheme] = useState(savedTheme);
-
+const Home = ({isDarkTheme}) => {
     const saberBtn = useRef();
 
     useLayoutEffect(() => {

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import '../../App.css';
 
-const Header = () => {
+const Header = ({ isDarkTheme, toggleTheme, themeImgSrc }) => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
 
     const menuSvgRef = useRef(null);
@@ -103,12 +103,12 @@ const Header = () => {
                 <div className='headerMobile-top'>
                     <a href="/" className='logo-name logo-mobile'>LucasDev</a>
                     <div className='headerMobileIcons'>
-                        {/* <img ref={imgTheme}
+                        <img 
                             src={themeImgSrc}
                             className="imgTheme imgThemeMobile"
                             alt={isDarkTheme ? 'Tema Claro' : 'Tema Escuro'}
                             onClick={toggleTheme}
-                        /> */}
+                        />
                         <div className="menu" onClick={toggleMenu}>
                             <svg viewBox="4 4 16 16" fill="var(--cor-preta)" xmlns="http://www.w3.org/2000/svg" className='menuSvg'>
                                 <path ref={menuSvgRef} d={closedPath} stroke="var(--cor-preta)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
