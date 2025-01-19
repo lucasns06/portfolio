@@ -11,9 +11,16 @@
     display: flex !important;
     flex-direction: column !important;
 }
+.slideH1{
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .swiper-container {
   position: relative;
   opacity: 0;
+  transform: translateY(150px);
   align-self: center;
   width: 768px; 
   aspect-ratio: 1.8;  
@@ -21,7 +28,7 @@
   font-size: 24px;
   background: var(--cor-projeto);
   border: 2px solid transparent;
-  transition: 1s, background 0s, box-shadow 0s;
+  transition: 0.5s, background 0s, box-shadow 0s;
 }
 .cardImage {
   position: absolute;
@@ -39,11 +46,11 @@
   top: 0;
   z-index: -1;
   background: rgba(0, 0, 0, 0.769);
-  display: none;
-  transition: 1s;
+  opacity: 0;
+  transition: 0.5s;
 }
 .swiper-container:hover .back2 {
-  display: block;
+  opacity: 1;
 }
 .swiper-container p {
   text-align: justify;
@@ -120,4 +127,9 @@
     padding: 96px 0px;
   }
 }
-
+@media (max-width: 512px) {
+  .cardGithub svg{
+    width: 32px;
+    height: 32px;
+  }
+}

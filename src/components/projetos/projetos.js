@@ -15,17 +15,16 @@ const Projetos = () => {
     useLayoutEffect(() => {
         const swiper = document.querySelectorAll('.swiper-container');
         if (swiper) {
-            gsap.fromTo(swiper,
-                { y: 150, },
+            gsap.to(swiper,
                 {
                     scrollTrigger: {
                         trigger: swiper,
-                        toggleActions: "restart none none none"
+                        toggleActions: "play none none none"
                     },
                     y: 0,
                     opacity: 1,
                     duration: 1,
-                    ease: 'expo.out',
+                    ease: 'none',
                     stagger: 0.2
                 },
             );
@@ -77,8 +76,8 @@ const Projetos = () => {
 
                 {slide.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <h1>{item.titulo}</h1>
                         <a href={item.link} className="swiper-container sombra">
+                            <h1 className="slideH1">{item.titulo}</h1>
                             <img className="cardImage" src={item.imagem} alt="back"/>
                             <div className="back2">
                                 <div className="swiper-texto">
