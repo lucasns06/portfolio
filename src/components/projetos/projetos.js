@@ -33,6 +33,7 @@ const Projetos = () => {
     const slide = [
         {
             id: 0,
+            classificacao: 'Front-End',
             imagem: telaComunitec,
             titulo: 'ComuniTec',
             texto: 'Como parte do Trabalho de Conclusão de Curso (TCC), desenvolvi um site utilizando React.',
@@ -42,15 +43,17 @@ const Projetos = () => {
         },
         {
             id: 1,
+            classificacao: 'Mobile',
             imagem: telaComunica,
             titulo: 'Comunica',
             texto: 'No meu TCC, estou desenvolvendo um aplicativo voltado para facilitar a comunicação de pessoas neurodivergentes não verbais, com React Native.',
-            texto2: 'O aplicativo consiste em usar a comunicação por troca de imagens. Além disso, inclui funcionalidades como a verbalização de texto em voz, ampliando seu alcance para outros públicos com necessidades comunicativas diversas.  ',
+            texto2: 'O aplicativo consiste em usar a comunicação por troca de imagens, com mais algumas funcionalidades.',
             github: 'https://github.com/lucasns06/Comunica',
             link: '',
         },
         {
             id: 2,
+            classificacao: 'Full-Stack',
             imagem: telaEstudosApi,
             titulo: 'EstudosApi',
             texto: 'A EstudosApi é uma RESTful API, criada para gerenciar tarefas associadas a categorias.',
@@ -79,6 +82,9 @@ const Projetos = () => {
                         <a href={item.link} className="swiper-container sombra">
                             <h1 className="slideH1">{item.titulo}</h1>
                             <img className="cardImage" src={item.imagem} alt="back"/>
+                            <div className="cardClass">
+                                <p>{item.classificacao}</p>
+                            </div>
                             <div className="back2">
                                 <div className="swiper-texto">
                                     <p>{item.texto}</p>
