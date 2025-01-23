@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.6abe2615.css",
-    "main.js": "/static/js/main.5631bd64.js",
+    "main.css": "/static/css/main.340e4840.css",
+    "main.js": "/static/js/main.7d97bb5e.js",
     "static/js/453.cb4c4840.chunk.js": "/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/static/media/perfil.6465345fa5edef1db45d.png",
     "static/media/whiteBack.jpg": "/static/media/whiteBack.9deb70293e10d50aab45.jpg",
-    "static/media/blackBack.jpg": "/static/media/blackBack.9143cdfc3be11d52a9bf.jpg",
     "static/media/telaComunitec.jpg": "/static/media/telaComunitec.82ad33bbeba3f6492a98.jpg",
+    "static/media/blackBack.jpg": "/static/media/blackBack.34869b289901ecbaf87c.jpg",
     "static/media/telaComunica.png": "/static/media/telaComunica.da3f3d8e8574080fb570.png",
     "static/media/telaEstudosApi.jpg": "/static/media/telaEstudosApi.a5dd83703a4aeae301b4.jpg",
     "static/media/spring.png": "/static/media/spring.363579581adb8a6215bb.png",
@@ -19,12 +19,12 @@
     "static/media/light.svg": "/static/media/light.8a2b848aa8a70f1668b4ba17dc4c616a.svg",
     "static/media/dark.svg": "/static/media/dark.220ef350d692e54547e2f0eca451024b.svg",
     "index.html": "/index.html",
-    "main.6abe2615.css.map": "/static/css/main.6abe2615.css.map",
-    "main.5631bd64.js.map": "/static/js/main.5631bd64.js.map",
+    "main.340e4840.css.map": "/static/css/main.340e4840.css.map",
+    "main.7d97bb5e.js.map": "/static/js/main.7d97bb5e.js.map",
     "453.cb4c4840.chunk.js.map": "/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6abe2615.css",
-    "static/js/main.5631bd64.js"
+    "static/css/main.340e4840.css",
+    "static/js/main.7d97bb5e.js"
   ]
 }
