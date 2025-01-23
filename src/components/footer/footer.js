@@ -15,8 +15,7 @@ const Footer = () => {
                 </div>
                 <div className="footerCredits">
                     <h1>Creditos</h1>
-                    <a href="https://help.iconscout.com/hc/en-gb" target="_blank">Iconscout</a> <br /><br />
-                    <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>
+                    <a href="https://www.svgrepo.com" target="_blank" rel="noopener noreferrer">SVG Repo</a>
                 </div>
             </div> <br /><br />
             <p>© 2024 Lucas Nascimento. Todos os direitos reservados.</p> <br />
