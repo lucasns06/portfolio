@@ -70,9 +70,9 @@ const Sobre = () => {
                     </div>
                 </div>
                 <div className="sobre-texto">
-                    <p>👨‍💻 Me chamo Lucas Nascimento, e eu sempre gostei de tecnologia.</p> <br />
-                    <p>💻 Entrei no mundo da programação com técnico em desenvolvimento de sistemas.</p> <br />
-                    <p>🚀 Pretendo ser Full Stack e estou procurando oportunidade na área.</p>
+                    <p>👨‍💻 Me chamo Lucas Nascimento Santana, e eu sempre gostei de tecnologia.</p> <br />
+                    <p>💻 Minha jornada no mundo da programação começou com o curso técnico em desenvolvimento de sistemas.</p> <br />
+                    <p>🚀 Tenho um grande interesse em desenvolvimento web, criando interfaces intuitivas e experiências envolventes. Além disso, também sou back-end.</p>
                 </div>
             </div>
         </div>
