@@ -1,19 +1,33 @@
 .sobre {
   align-content: center;
-  /* background: var(--cor-teste2); */
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  align-items: center;
 }
 
 .QuemSouP {
   text-align: center;
   margin-bottom: 64px;
 }
-
+.mouse{
+  opacity: 1;
+  transition: 0.5s;
+}
+.mouse:hover{
+  scale: 1.1;
+}
+.mouse_red{
+  animation: blinking 2s infinite ;
+}
+@keyframes blinking {
+    0%{fill: var(--cor-branco);}
+    50%{fill: red;}
+    100%{fill: var(--cor-branco);}
+}
 .sobreContainer {
   display: flex;
   align-items: center;
@@ -27,7 +41,7 @@
 }
 .sobre-texto p {
   font-size: 22px;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .sobreContainer img {
   border-radius: 100%;
