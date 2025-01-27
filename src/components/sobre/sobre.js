@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import perfilFoto from "../../img/perfil.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ParticlesComponent from "../particles";
 import "./sobre.css";
 import "../../App.css";
 
@@ -29,7 +28,7 @@ const Sobre = () => {
       );
     });
     const sobreTextos = document.querySelectorAll(".sobre-texto p");
-    const sobreContainerImg = document.querySelectorAll(".sobreContainerImg");
+    const sobreContainerImg = document.querySelectorAll(".sobreContainerImgContainer");
     setTimeout(() => {
       gsap.to(sobreContainerImg, {
         opacity: 1,
@@ -47,11 +46,26 @@ const Sobre = () => {
             y: 0,
             opacity: 1,
             duration: 1,
-            stagger: 0.8,
+            stagger: 0.2,
           }
         );
       }
     }, 1000);
+
+    const tech = document.querySelector('.tech')
+    const techBefore = document.querySelector('.techAnima')
+
+    setTimeout(()=>{
+      gsap.to(techBefore, {
+        scrollTrigger:{
+          trigger: tech,
+          toggleActions: "play none none none",
+        },
+        ease: "power4.inOut",
+        width: '100%',
+        duration: 2.5,
+      })
+    }, 1500)
 
     const mouses = document.querySelectorAll(".mouse");
   
@@ -76,19 +90,21 @@ const Sobre = () => {
   return (
     <div className="sobre" id="sobreId">
       <h1 className="QuemSouP textAnim">
-        Explorando o Mundo da <span className="span">Tecnologia</span>
+        Explorando o Mundo da <span className="span tech">Tecnologia<span className="techAnima"></span></span>
       </h1>
       <div className="sobreContainer">
-        <div>
-          <div className="sobreContainerImg">
+        <div className="starContainer">
+          <div className="sobreContainerImgContainer">
             <img src={perfilFoto} alt="Perfil" className="sombra" />
           </div>
+          <img className="stars star1" src="https://i.gifer.com/XiPv.gif" alt="starsGif" />
+          <img className="stars star2" src="https://i.gifer.com/XiPv.gif" alt="starsGif" />
         </div>
         <div className="sobre-texto">
           <p>
-            👨‍💻 Me chamo Lucas Nascimento Santana, e eu sempre gostei de
+            👨‍💻 Me chamo <span className="span">Lucas Nascimento Santana</span>, e eu sempre gostei de
             tecnologia.
-          </p>{" "}
+          </p>
           <br />
           <p>
             💻 Minha jornada no mundo da programação começou com o curso técnico

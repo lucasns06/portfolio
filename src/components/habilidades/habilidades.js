@@ -40,6 +40,7 @@ const Habilidades = () => {
         }
       );
     });
+
     const habilidadesItem = document.querySelectorAll(".habilidadesItem");
     if (habilidadesItem) {
       gsap.fromTo(
@@ -52,13 +53,14 @@ const Habilidades = () => {
           },
           y: 0,
           opacity: 1,
-          duration: 1,
-          ease: "expo.out",
+          duration: 0.5,
+          ease: "power4.inOut",
           stagger: 0.2,
         }
       );
     }
   }, []);
+
   const habFront = [
     {
       id: 0,
