@@ -2,15 +2,13 @@
     min-height: 100vh;
     align-content: center;
     text-align: center;
-    /* background: var(--cor-teste2); */
 }
 
 .habilidadesContainer {
-    margin-left: 10rem;
-    margin-right: 10rem;
-    display: grid;
+    margin: 0 10%;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
     justify-content: center;
 }
 
@@ -20,6 +18,7 @@
     position: relative;
     display: inline-block;
     padding: 20px;
+    width: 140px;
     background: var(--cor-projeto);
     cursor: pointer;
     color: var(--cor-preta);
@@ -89,6 +88,13 @@
     }
 }
 
+@media (max-width: 570px) {
+    .habilidadesContainer{
+        margin: 0;
+        padding: 0 16px;
+    }
+}
+
 @media (max-height: 400px) {
     .modal p {
         font-size: 0.5rem;
@@ -96,12 +102,5 @@
 
     .modal {
         top: 0;
-    }
-}
-
-@media (max-width: 435px) {
-    .habilidadesContainer {
-        margin-left: 0;
-        margin-right: 0;
     }
 }

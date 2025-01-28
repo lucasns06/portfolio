@@ -9,14 +9,9 @@
 }
 .swiper-slide{
     display: flex !important;
-    flex-direction: column !important;
-}
-.slideH1{
-  position: absolute;
-  top: -36px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+    flex-direction: column !important;  
+    padding: 18px;
+  }
 .swiper-container {
   position: relative;
   opacity: 0;
@@ -28,7 +23,22 @@
   font-size: 24px;
   background: var(--cor-projeto);
   border: 2px solid transparent;
+  border-radius: 18px;
   transition: 0.5s, background 0s, box-shadow 0s;
+  overflow: hidden;
+}
+.slide_buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 8%;
+}
+.slideH1, .card_github{
+  transform: translateY(150px);
+  opacity: 0;
+}
+.card_github:hover{
+  scale: 1.1;
 }
 .cardImage {
   position: absolute;
@@ -36,6 +46,7 @@
   height: 100%;
   left: 0;
   top: 0;
+  border-radius: 18px;
   z-index: -2;
 }
 .cardClass{
@@ -49,7 +60,6 @@
   height: 40px;
   background: var(--cor-destaque);
   z-index: -2;
-
   box-shadow: 0px 0px 6px -2px var(--cor-destaque);;
 }
 .cardClass p{
@@ -86,16 +96,6 @@
   font-size: 28px;
   color: white;
 }
-.cardGithub {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  transition: 250ms;
-}
-.cardGithub:hover{
-    scale: 1.1;
-}
 .swiper-container:hover {
   border: 2px solid var(--cor-destaque);
 }
@@ -122,7 +122,7 @@
 
 @media (max-width: 1625px) {
   .swiper-container  {
-    width: 600px !important;
+    width: 660px !important;
   }
   .swiper-texto p {
     font-size: 20px;
@@ -137,22 +137,16 @@
         font-size: 3vw;
     }
   }
-@media (max-width: 1080px) {
-  .swiper-slide {
-    padding: 0px 16px;
-    
-  }
-}
+
 @media (max-width: 1024px) {
   .projetos {
     padding: 96px 0px;
   }
+  .swiper-texto p {
+      font-size: 4vw;
+  }
 }
 @media (max-width: 512px) {
-  .cardGithub svg{
-    width: 32px;
-    height: 32px;
-  }
   .swiper-texto{
     padding: 8px;
   }
