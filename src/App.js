@@ -12,7 +12,6 @@ import lightLogo from './img/light.svg';
 import { Routes, Route } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import React, { useEffect, useState, useRef } from "react";
-import Blog from "./components/blog/blog";
 export default function App() {
   const savedTheme = localStorage.getItem("isDarkTheme") === "true";
 
@@ -87,7 +86,6 @@ export default function App() {
         }
       ></Route>
       <Route path="obrigado" element={<Obrigado />} />
-      <Route path="blog" element={<Blog />} />
     </Routes>
   );
 }

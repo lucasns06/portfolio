@@ -18,7 +18,7 @@
     position: relative;
     display: inline-block;
     padding: 20px;
-    width: 140px;
+    width: 200px;
     background: var(--cor-projeto);
     cursor: pointer;
     color: var(--cor-preta);
@@ -92,6 +92,10 @@
     .habilidadesContainer{
         margin: 0;
         padding: 0 16px;
+    }
+    .habilidadesItem{
+        width: 140px;
+        padding: 12px;
     }
 }
 
