@@ -1,175 +1,180 @@
-
 .contatos {
-    min-height: 100vh;
-    text-align: center;
-    align-content: center;
-    background: var(--cor-teste2);
-  }
-  .contatos h1{
-    margin: auto;
-    width: max-content;
-  }
-  .contatos p{
-    padding: 0 16px;
-    font-family: sans-serif;
-    font-size: 20px;
-  }
-  .links{
-    position: relative;
-  }
-  .links img{
-    max-width: 400px;
-    width: 90%;
-    box-shadow: var(--header-shadow);
-    border-radius: 100%;
-    cursor: pointer;
-  }
-  .hiddenHello{    
-    font-size: 32px;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    opacity: 0;
-  }
-  .opacidade{
-    opacity: 1;
-  }
-  .contatosLinks {
-    gap: 2rem;
-    display: flex;
-    justify-content: center;
-    top: 0;
-  }
-  .instagram::after, .linkedin::after, .github::after{
-    content: '';
-    position: absolute;
-    bottom: -14%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-  }
-  .instagram::after{
-    content: 'Instagram';
-    color: #E1306C;
-  }
-  .linkedin::after{
-    content: 'Linkedin';
-    color: #0077B5;
-  }
-  .github::after{
-    content: 'Github';
-  }
-  .instagram:hover::after, .linkedin:hover::after, .github:hover::after{
-    transition: all 0.2s;
-    opacity: 1;
-  }
-  .instagram:hover path {
-    fill: #E1306C;
-  }
-  .linkedin:hover path {
-    fill: #0077B5;
-  }
-  .contatosContainer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  .contatosContainer p {
-    padding: 10px 10px;
-  }
-  
-  .contatosContainer svg:hover {
-    transition: all 0.2s;
-    transform: scale(1.05);
-  }
+  min-height: 100vh;
+  text-align: center;
+  align-content: center;
+  background: var(--cor-teste2);
+  position: relative;
+  overflow: hidden;
+}
+.clouds {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: -10;
+  overflow: hidden;
+}
+.clouds > svg {
+  width: 512px;
+  height: auto;
+  position: relative;
+  top: 11%;
+}
+.svgBack{
+  transform: translateX(128px);
+}
+.svgBack2 {
+  transform: scaleX(-1) translateX(128px);
+}
+.contatos h1 {
+  margin: auto;
+  width: max-content;
+}
+.contatos p {
+  padding: 0 16px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.links {
+  position: relative;
+}
+.hiddenHello {
+  font-size: 32px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 0;
+}
+.opacidade {
+  opacity: 1;
+}
+.contatosLinks {
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  top: 0;
+}
+.instagram::after,
+.linkedin::after,
+.github::after {
+  content: "";
+  position: absolute;
+  bottom: -16%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.instagram::after {
+  content: "Instagram";
+  color: #e1306c;
+}
+.linkedin::after {
+  content: "Linkedin";
+  color: #0077b5;
+}
+.github::after {
+  content: "Github";
+}
+.instagram:hover::after,
+.linkedin:hover::after,
+.github:hover::after {
+  transition: all 0.2s;
+  opacity: 1;
+}
+.linkedin svg,
+.github svg,
+.instagram svg {
+  width: 128px;
+}
+.instagram:hover path {
+  fill: #e1306c;
+}
+.linkedin:hover path {
+  fill: #0077b5;
+}
+.contatosContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.contatosContainer p {
+  padding: 10px 10px;
+}
 
-  form {
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
-    border-radius: 12px;
-    font-family: sans-serif;
-    color: var(--cor-preta);
-    border-top: 4px solid var(--cor-destaque);
-    padding: 2rem;
-    background: var(--cor-projeto);
-  }
-  form label {
-    text-align: left;
-    display: block;
-  }
-  
-  form input,
-  .submitBtn,
-  textarea {
-    width: 100%;
-    border: 0;
-    outline: 2px solid rgb(182, 182, 182);
-    border-radius: 4px;
-    padding: 0.5rem;
-  }
-  .formMessage {
-    line-height: 50px;
-    padding-top: 10px;
-    padding-bottom: 0;
-    box-sizing: border-box;
-    height: 100px;
-  }
-  form input::placeholder, textarea::placeholder{
-    font-family: sans-serif;
-  }
-  form input:focus, textarea:focus{
-    outline-color: var(--cor-destaque);
-    transition: all 250ms ease;
-  }
-  label{
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-  .submitBtn {
-    cursor: pointer;
-    background: var(--cor-destaque);
-    color: white;
-    outline: 0;
-    box-shadow: 0px 4px 7px 0px #00000052;
-  }
-  .submitBtn:hover{
-    background: #7378fc;
-  }
-@media (max-width: 1320px) {
-  .contatosContainer{
-    flex-direction: column-reverse;
-  }
-  .links{
-    margin-top: 28px;
-  }
-  .contatos {
-    padding: 96px 0px;
+.contatosContainer svg:hover {
+  transition: all 0.2s;
+  transform: scale(1.05);
 }
+
+form {
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
+  border-radius: 12px;
+  font-family: sans-serif;
+  color: var(--cor-preta);
+  border-top: 4px solid var(--cor-destaque);
+  padding: 2rem;
+  background: var(--cor-projeto);
 }
-@media (max-width: 710px) {
-  .links img{
-    max-width: 250px;
-  }
-  .linkedin svg, .github svg, .instagram svg{
-    width: 50px;
-  }
-  .hiddenHello{
-    transform: translateX(40px);
+form label {
+  text-align: left;
+  display: block;
+}
+
+form input,
+.submitBtn,
+textarea {
+  width: 100%;
+  border: 0;
+  outline: 2px solid rgb(182, 182, 182);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.formMessage {
+  line-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  height: 100px;
+}
+form input::placeholder,
+textarea::placeholder {
+  font-family: sans-serif;
+}
+form input:focus,
+textarea:focus {
+  outline-color: var(--cor-destaque);
+  transition: all 250ms ease;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.submitBtn {
+  cursor: pointer;
+  background: var(--cor-destaque);
+  color: white;
+  outline: 0;
+  box-shadow: 0px 4px 7px 0px #00000052;
+}
+.submitBtn:hover {
+  background: #7378fc;
+}
+@media (max-width: 570px) {
+  .linkedin svg,
+  .github svg,
+  .instagram svg {
+    width: 64px;
   }
 }
-@media (max-width: 445px) {
-  .links img{
-    max-width: 250px;
-  }
-  .github, .instagram{
-   top: 100%;
-   transform: translateY(0);
-  }
-  .github{
-    left: 0%;
-  }
-  .instagram{
-    right: 0%;
+@media (max-width: 1280px) {
+  .clouds > svg {
+    width: 256px;
   }
 }

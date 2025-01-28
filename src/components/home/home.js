@@ -55,12 +55,11 @@ const Home = ({isDarkTheme}) => {
             }
         })
         const saberBotao = saberBtn.current;
-        saberBotao.style.opacity = 0;
-
         setTimeout(() => {
             gsap.to(saberBotao,
                 {
                     opacity: 1,
+                    display: 'inline',
                     duration: 2,
                 })
         }, 5500)
@@ -85,7 +84,7 @@ const Home = ({isDarkTheme}) => {
                         </p>
                     </h1>
                     <p className="textWriting"></p>  <br /> <br />
-                    <Link to="/" state={{ scrollTo: 'sobreId' }} ><button className='projetosBtn versiteBtn sombra' ref={saberBtn}>Saber Mais</button></Link>
+                    <Link to="/" state={{ scrollTo: 'sobreId' }} ><button className='projetosBtn versiteBtn sombra saberBtn' ref={saberBtn}>Saber Mais</button></Link>
                 </div>
             </div>
             <ParticlesComponent id="tsparticles" />

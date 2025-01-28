@@ -75,6 +75,10 @@
   opacity: 0;
   transform: translateX(-20px);
 }
+.saberBtn{
+  opacity: 0;
+  display: none;  
+}
 @keyframes floating {
   0% {
     transform: translateY(0);

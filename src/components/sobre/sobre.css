@@ -33,7 +33,17 @@
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding: 0 16px;
+  padding: 2%;
+  border-radius: 16px;
+  background: var(--cor-projeto);
+}
+.sobre_h1{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
 }
 .sobre-texto {
   max-width: 512px;
@@ -41,7 +51,6 @@
 }
 .sobre-texto p {
   font-size: 22px;
-  /* opacity: 0; */
 }
 .sobreContainerImgContainer img{
   border-radius: 100%;
@@ -117,9 +126,10 @@
     border-radius: 100%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .sobreContainer {
     flex-direction: column;
     gap: 16px;
+    padding: 4%;
   }
 }

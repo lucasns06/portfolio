@@ -27,6 +27,23 @@ const Sobre = () => {
         }
       );
     });
+    const sobreH1 = document.querySelectorAll('.sobre_h1 > h1')
+    gsap.fromTo(
+      sobreH1,
+      { opacity: 0, x: 80 },
+      {
+        scrollTrigger: {
+          trigger: sobreH1,
+          toggleActions: "restart none none none",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: 'power4.out',
+        stagger: 0.3,
+      }
+    );
+
     const sobreTextos = document.querySelectorAll(".sobre-texto p");
     const sobreContainerImg = document.querySelectorAll(".sobreContainerImgContainer");
     setTimeout(() => {
@@ -101,10 +118,11 @@ const Sobre = () => {
           <img className="stars star2" src="https://i.gifer.com/XiPv.gif" alt="starsGif" />
         </div>
         <div className="sobre-texto">
-          <p>
-            👨‍💻 Me chamo <span className="span">Lucas Nascimento Santana</span>, e eu sempre gostei de
-            tecnologia.
-          </p>
+          <div className="sobre_h1"> 
+            <h1 className="span">Lucas</h1>
+            <h1 className="span">Nascimento</h1> 
+            <h1 className="span">Santana</h1>
+          </div>
           <br />
           <p>
             💻 Minha jornada no mundo da programação começou com o curso técnico
@@ -115,6 +133,9 @@ const Sobre = () => {
             🚀 Tenho um grande interesse em desenvolvimento web, criando
             interfaces intuitivas e experiências envolventes. Além disso, também
             sou back-end.
+          </p>
+          <br />
+          <p>🌟 Estou sempre em busca de novos desafios e oportunidades para aprender e crescer. 
           </p>
         </div>
       </div>
