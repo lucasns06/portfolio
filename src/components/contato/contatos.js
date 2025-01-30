@@ -1,6 +1,5 @@
 import React, { useLayoutEffect } from "react";
 import "./contatos.css";
-import perfilFoto from "../../img/perfil.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Paper from "../paper";

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,12 +8,14 @@ import ParticlesComponent from "../particles";
 import { ReactTyped } from "react-typed";
 import "./home.css";
 import "../../App.css";
+import { useGSAP } from '@gsap/react';
 const Home = ({ isDarkTheme }) => {
+  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(ScrollTrigger);
   const saberBtn = useRef();
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(TextPlugin);
-    gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
 
     const animTextHome = document.querySelector(".animTextHome");
     const textHome = document.querySelector(".textAnim2");
@@ -40,12 +42,12 @@ const Home = ({ isDarkTheme }) => {
       .to(saberBotao, {
         opacity: 1,
         display: "inline",
-        duration: 2,
+        duration: 1,
       })
       .to(animTextHome, {
         x: 0,
         opacity: 1,
-        duration: 4,
+        duration: 2,
       });
   }, []);
 

@@ -1,5 +1,4 @@
 import React from "react";
-import perfilFoto from '../../img/perfil.png'
 import './footer.css';
 
 const Footer = () => {

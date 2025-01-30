@@ -1,5 +1,5 @@
 import './obrigado.css'
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 export default function Obrigado() {
     const savedTheme = localStorage.getItem("isDarkTheme") === "true";
     const [isDarkTheme, setIsDarkTheme] = useState(savedTheme);

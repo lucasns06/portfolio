@@ -39,7 +39,19 @@
   padding: 2%;
   border-radius: 16px;
   background: var(--cor-projeto);
-  overflow: hidden;
+  position: relative;
+  border: 2px solid  transparent;
+}
+.linhas{
+  position: absolute;
+  content: '';
+  width: 10vw;
+  right: 0;
+  transform: translateX(100%);
+}
+.linha1{
+  left: 0;
+  transform: scaleX(-1) translateX(100%);
 }
 .sobre_h1{
   text-align: center;
@@ -51,7 +63,9 @@
 }
 .sobre-texto {
   max-width: 512px;
-  text-align: left;
+  text-align: left;    
+  overflow: hidden;
+
 }
 .sobre-texto p {
   font-size: 22px;
@@ -68,7 +82,6 @@
   padding: 4px;
   border-radius: 100%;
   overflow: hidden;
-  opacity: 0;
 }
 .starContainer{
   position: relative;

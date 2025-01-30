@@ -61,7 +61,7 @@ const Habilidades = () => {
         }
       );
     }
-  }, []);
+  }, [texts]);
 
   const habFront = [
     {
