@@ -16,17 +16,19 @@ import nextimg from "../../img/hab/nextjs.svg";
 import gsapImg from "../../img/hab/gsap.webp";
 import TailwindImg from "../../img/hab/tailwind.png";
 
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Modal from "react-modal";
 import Scroll from "../scroll";
 
 const Habilidades = () => {
+  gsap.registerPlugin(useGSAP);
   const texts = document.querySelectorAll(".textAnim");
   gsap.registerPlugin(ScrollTrigger);
   const backEndH2 = useRef();
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
     texts.forEach((Anima) => {
       gsap.fromTo(
         Anima,
@@ -61,7 +63,7 @@ const Habilidades = () => {
         }
       );
     }
-  }, [texts]);
+  },[]);
 
   const habFront = [
     {
