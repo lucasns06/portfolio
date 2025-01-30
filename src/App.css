@@ -124,5 +124,10 @@ a {
   transition: background 200ms ease;
   z-index: 10;
 }
+.mouse__container{
+  display: block;
+  margin: 0 auto;
+  width: max-content;
+}
 
 

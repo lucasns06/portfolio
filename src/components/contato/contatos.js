@@ -3,7 +3,6 @@ import "./contatos.css";
 import perfilFoto from "../../img/perfil.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 const Contatos = () => {
   useLayoutEffect(() => {
     const contatos = document.querySelector(".links img");
@@ -44,26 +43,26 @@ const Contatos = () => {
     }
 
     const contatos = document.querySelectorAll(".contatosLinks a");
-
-    contatos.forEach((animaContato) => {
       gsap.fromTo(
-        animaContato,
+        contatos,
         {
+          opacity: 0,
           scale: 0,
         },
         {
+          opacity: 2,
           scale: 1,
           duration: 1,
           scrollTrigger: {
-            trigger: animaContato,
+            trigger: contatos,
             start: "bottom bottom",
-            toggleActions: "restart none none none",
+            toggleActions: "play none none none",
           },
+          stagger: 0.4
         }
       );
-    });
-  }, []);
 
+  }, []);
   return (
     <div className="contatos" id="contatosId">
          <div className="clouds">
@@ -140,7 +139,7 @@ const Contatos = () => {
             value="https://lucasns06.github.io/#/obrigado"
           />
           <label style={{ textAlign: "center" }}>
-            <strong>Me mande um email</strong>
+            <strong>Me conte sobre o seu projeto</strong>
           </label>{" "}
           <br />
           <br />

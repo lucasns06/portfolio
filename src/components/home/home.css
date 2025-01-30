@@ -14,6 +14,7 @@
 .backgroundWhite{
   background: url(../../img/whiteBack.jpg);
   background-position: center 25%;
+  background-size: cover;
 }
 .backgroundBlack::before{
   content: '';

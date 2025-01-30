@@ -13,6 +13,9 @@
   text-align: center;
   margin-bottom: 64px;
 }
+.scroll-active svg g path{
+  stroke: red;
+}
 .mouse{
   opacity: 1;
   transition: 0.5s;
@@ -36,6 +39,7 @@
   padding: 2%;
   border-radius: 16px;
   background: var(--cor-projeto);
+  overflow: hidden;
 }
 .sobre_h1{
   text-align: center;
@@ -130,6 +134,8 @@
   .sobreContainer {
     flex-direction: column;
     gap: 16px;
-    padding: 4%;
+  }
+  .sobre{
+    padding: 64px 4%;
   }
 }
