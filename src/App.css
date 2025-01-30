@@ -108,10 +108,6 @@ a {
 .textAnim {
   font: 700 max(36px,3vw) /max(48px,5vw) sans-serif;
 }
-
-.textAnim2 {
-  transform: translateY(40px);
-}
 .imgTheme {
   width: 38px;
   position: fixed;
