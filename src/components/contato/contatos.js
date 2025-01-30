@@ -3,6 +3,7 @@ import "./contatos.css";
 import perfilFoto from "../../img/perfil.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Paper from "../paper";
 const Contatos = () => {
   useLayoutEffect(() => {
     const contatos = document.querySelector(".links img");
@@ -27,7 +28,7 @@ const Contatos = () => {
     if (clouds) {
       gsap.fromTo(
         clouds,
-        {opacity: 0, y: 200 },
+        { opacity: 0, y: 200 },
         {
           scrollTrigger: {
             trigger: clouds,
@@ -43,31 +44,31 @@ const Contatos = () => {
     }
 
     const contatos = document.querySelectorAll(".contatosLinks a");
-      gsap.fromTo(
-        contatos,
-        {
-          opacity: 0,
-          scale: 0,
+    gsap.fromTo(
+      contatos,
+      {
+        opacity: 0,
+        scale: 0,
+      },
+      {
+        opacity: 2,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: contatos,
+          start: "bottom bottom",
+          toggleActions: "play none none none",
         },
-        {
-          opacity: 2,
-          scale: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: contatos,
-            start: "bottom bottom",
-            toggleActions: "play none none none",
-          },
-          stagger: 0.4
-        }
-      );
-
+        stagger: 0.4,
+      }
+    );
   }, []);
   return (
     <div className="contatos" id="contatosId">
-         <div className="clouds">
+      <Paper />
+      <div className="clouds">
         <svg
-             className="svgBack svgBack2"
+          className="svgBack svgBack2"
           fill="var(--cor-destaque)"
           height="200px"
           width="200px"
@@ -94,7 +95,7 @@ const Contatos = () => {
           </g>
         </svg>
         <svg
-             className="svgBack "
+          className="svgBack "
           fill="var(--cor-destaque)"
           height="200px"
           width="200px"
@@ -120,7 +121,7 @@ const Contatos = () => {
             </g>{" "}
           </g>
         </svg>
-       </div>
+      </div>
       <h1 className="span textAnim">Contato</h1> <br />
       <p>
         Caso tenha interesse no meu trabalho, pode entrar em contato :)
