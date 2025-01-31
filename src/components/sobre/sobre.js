@@ -64,12 +64,12 @@ const Sobre = () => {
         ease: "power4.inOut",
         width: "100%",
         duration: 2.5,
+      }).to('.sobreContainer',{
+        borderColor: 'var(--cor-destaque)'
       }).fromTo('.linhas',{
         width: 0
       },{
         width:'10vw'
-      }).to('.sobreContainer',{
-        borderColor: 'var(--cor-destaque)'
       })
   }, []);
   return (
