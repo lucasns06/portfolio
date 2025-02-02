@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.8a3b84f3.css",
-    "main.js": "/static/js/main.2629ff4b.js",
+    "main.js": "/static/js/main.befc33b7.js",
     "static/js/453.cb4c4840.chunk.js": "/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/static/media/perfil.6465345fa5edef1db45d.png",
+    "static/media/telaSpotify.jpg": "/static/media/telaSpotify.a82a6e2effb0fc32e5a7.jpg",
     "static/media/whiteBack.jpg": "/static/media/whiteBack.71bd615ca32e1a5df439.jpg",
     "static/media/telaComunitec.jpg": "/static/media/telaComunitec.82ad33bbeba3f6492a98.jpg",
     "static/media/blackBack.jpg": "/static/media/blackBack.34869b289901ecbaf87c.jpg",
-    "static/media/telaComunica.png": "/static/media/telaComunica.da3f3d8e8574080fb570.png",
     "static/media/telaEstudosApi.jpg": "/static/media/telaEstudosApi.a5dd83703a4aeae301b4.jpg",
     "static/media/spring.png": "/static/media/spring.363579581adb8a6215bb.png",
     "static/media/dotnet.png": "/static/media/dotnet.a9e841cd0cf6dcf9a76d.png",
@@ -18,11 +18,11 @@
     "static/media/nextjs.svg": "/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/index.html",
     "main.8a3b84f3.css.map": "/static/css/main.8a3b84f3.css.map",
-    "main.2629ff4b.js.map": "/static/js/main.2629ff4b.js.map",
+    "main.befc33b7.js.map": "/static/js/main.befc33b7.js.map",
     "453.cb4c4840.chunk.js.map": "/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8a3b84f3.css",
-    "static/js/main.2629ff4b.js"
+    "static/js/main.befc33b7.js"
   ]
 }
