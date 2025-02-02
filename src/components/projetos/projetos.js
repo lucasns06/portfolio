@@ -9,9 +9,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import telaComunica from "../../img/telaComunica.png";
 import telaComunitec from "../../img/telaComunitec.jpg";
 import telaEstudosApi from "../../img/telaEstudosApi.jpg";
+import telaSpotify from "../../img/telaSpotify.jpg";
 import Scroll from "../scroll";
 const Projetos = () => {
   useLayoutEffect(() => {
@@ -45,15 +45,15 @@ const Projetos = () => {
     },
     {
       id: 1,
-      classificacao: "Mobile",
-      imagem: telaComunica,
-      titulo: "Comunica",
+      classificacao: "Front End",
+      imagem: telaSpotify,
+      titulo: "Spotify",
       texto:
-        "No meu TCC, estou desenvolvendo um aplicativo voltado para facilitar a comunicação de pessoas neurodivergentes não verbais, com React Native.",
+        "Este projeto é uma recriação da pagina de buscar do spotify, contendo uma funcionalidade de buscar artistas.",
       texto2:
-        "O aplicativo consiste em usar a comunicação por troca de imagens, com mais algumas funcionalidades.",
-      github: "https://github.com/lucasns06/Comunica",
-      link: "",
+        "Feito na imersão alura 2º edição.",
+      github: "https://github.com/lucasns06/spotify-imersao-alura",
+      link: "https://spotify-imersao-alura-sigma.vercel.app",
     },
     {
       id: 2,
