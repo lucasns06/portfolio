@@ -12,6 +12,7 @@ import "swiper/css/scrollbar";
 import telaComunitec from "../../img/telaComunitec.jpg";
 import telaEstudosApi from "../../img/telaEstudosApi.jpg";
 import telaSpotify from "../../img/telaSpotify.jpg";
+import telaLucasTube from "../../img/telaLucasTube.jpg";
 import Scroll from "../scroll";
 const Projetos = () => {
   useLayoutEffect(() => {
@@ -46,6 +47,18 @@ const Projetos = () => {
     {
       id: 1,
       classificacao: "Front End",
+      imagem: telaLucasTube,
+      titulo: "LucasTube",
+      texto:
+        "Este projeto é uma recriação do youtube, responsivo com pagina de videos dinâmicas, feito com nextjs.",
+      texto2:
+        "",
+      github: "https://github.com/lucasns06/lucastube",
+      link: "https://lucastube.vercel.app",
+    },
+    {
+      id: 2,
+      classificacao: "Front End",
       imagem: telaSpotify,
       titulo: "Spotify",
       texto:
@@ -56,7 +69,7 @@ const Projetos = () => {
       link: "https://spotify-imersao-alura-sigma.vercel.app",
     },
     {
-      id: 2,
+      id: 3,
       classificacao: "Full-Stack",
       imagem: telaEstudosApi,
       titulo: "EstudosApi",
