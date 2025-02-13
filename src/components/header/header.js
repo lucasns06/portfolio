@@ -17,7 +17,19 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
   const toggleMenu = () => {
     setIsMenuVisible((prevState) => !prevState);
   };
-
+  useEffect(() => {
+    const headerLinks = document.querySelectorAll('.aHeader, .headerAnimation');
+    gsap.fromTo(headerLinks, {
+      opacity: 0,
+      x: 30
+    },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.2,
+        duration: 2
+      })
+  }, [])
   useEffect(() => {
     if (subMenuRef.current) {
       const header = document.querySelectorAll("header");
@@ -103,7 +115,7 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
         <Link to="/" state={{ scrollTo: "habilidadesId" }} className="aHeader">
           Habilidades
         </Link>
-        <Link to="/" state={{ scrollTo: "contatosId" }}>
+        <Link to="/" state={{ scrollTo: "contatosId" }} className="headerAnimation">
           <button className="projetosBtn contBtn sombra">Contato</button>
         </Link>
       </nav>
@@ -118,8 +130,8 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
               <svg
                 onClick={toggleTheme}
                 className="imgTheme imgThemeMobile"
-                width="42"
-                height="42"
+                width="32"
+                height="32"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

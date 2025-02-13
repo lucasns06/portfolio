@@ -113,7 +113,6 @@ a {
   cursor: pointer;
   top: 50%;
   right: 5%;
-  padding: 4px;
   border-radius: 8px;
   transition: background 200ms ease;
   z-index: 10;
