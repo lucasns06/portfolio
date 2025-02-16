@@ -134,13 +134,16 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.166);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 880px) {
     .logo-name {
         display: none;
     }
 
     header {
         justify-content: center;
+    }
+    .headerSombra{
+        width: 100%;
     }
 }
 
