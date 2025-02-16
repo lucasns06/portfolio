@@ -39,7 +39,7 @@
   gap: 64px;
   padding: 2%;
   border-radius: 16px;
-  background: var(--cor-projeto);
+  /* background: var(--cor-projeto); */
   position: relative;
   border: 2px solid  transparent;
 }

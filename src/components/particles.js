@@ -65,7 +65,7 @@ const ParticlesComponent = (props) => {
           color:'#00BFFF',
           distance: 150,
           enable: true,
-          opacity: 0.3,
+          opacity: 0.8,
           width: 1,
         },
         move: {

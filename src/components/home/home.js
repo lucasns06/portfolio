@@ -9,6 +9,7 @@ import { ReactTyped } from "react-typed";
 import "./home.css";
 import "../../App.css";
 import { useGSAP } from '@gsap/react';
+
 const Home = ({ isDarkTheme }) => {
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(TextPlugin);
@@ -20,7 +21,7 @@ const Home = ({ isDarkTheme }) => {
     const animTextHome = document.querySelector(".animTextHome");
     const textHome = document.querySelector(".textAnim2");
     const saberBotao = saberBtn.current;
-
+    const particulas = document.getElementById('tsparticles')
     var tl = gsap.timeline();
 
     tl.fromTo(
@@ -48,14 +49,15 @@ const Home = ({ isDarkTheme }) => {
         x: 0,
         opacity: 1,
         duration: 2,
+      }).to(particulas, {
+        opacity: 1,
       });
   }, []);
 
   return (
     <div
-      className={`homeMain ${
-        isDarkTheme ? "backgroundBlack" : "backgroundWhite"
-      }`}
+      className={`homeMain ${isDarkTheme ? "backgroundBlack" : "backgroundWhite"
+        }`}
       id="homeId"
     >
       <div className="home">

@@ -7,9 +7,11 @@ import "../../App.css";
 
 const Header = ({ isDarkTheme, toggleTheme }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-
+  const [headerAtivo, setHeaderAtivo] = useState(false);
   const menuSvgRef = useRef(null);
   const subMenuRef = useRef(null);
+  const logoDev = document.querySelector('.logo-name');
+  const header = document.querySelector("header");
 
   const closedPath = "M4 6H20M4 12H20M4 18H20";
   const openPath = "M6 6L18 18M6 18L18 6";
@@ -83,10 +85,12 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
       const header = document.querySelector("header");
       if (window.scrollY > 50) {
         header.classList.add("headerSombra");
+        setHeaderAtivo(true)
       } else {
         if (!isMenuVisible) {
           header.classList.remove("headerSombra");
-        }
+          setHeaderAtivo(false)
+        };
       }
     };
 
@@ -96,6 +100,26 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isMenuVisible]);
+
+  useEffect(() => {
+    if (headerAtivo) {
+      if (logoDev) {
+        logoDev.classList.add('blockeins')
+      }
+      gsap.to(header, {
+        left: 10,
+        top: 10
+      });
+    } else {
+      if (logoDev) {
+        logoDev.classList.remove("blockeins");
+      }
+      gsap.to(header, {
+        left: 0,
+        top: 0
+      });
+    }
+  }, [headerAtivo])
 
   return (
     <header>
