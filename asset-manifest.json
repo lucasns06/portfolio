@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e45750d8.css",
-    "main.js": "/static/js/main.9a7ba3ce.js",
+    "main.css": "/static/css/main.fab449b7.css",
+    "main.js": "/static/js/main.63ba5808.js",
     "static/js/453.cb4c4840.chunk.js": "/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/static/media/perfil.6465345fa5edef1db45d.png",
     "static/media/telaLucasTube.jpg": "/static/media/telaLucasTube.35e28c328e5b867c6292.jpg",
@@ -17,12 +17,12 @@
     "static/media/gsap.webp": "/static/media/gsap.e828d47f5774f74d3012.webp",
     "static/media/nextjs.svg": "/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/index.html",
-    "main.e45750d8.css.map": "/static/css/main.e45750d8.css.map",
-    "main.9a7ba3ce.js.map": "/static/js/main.9a7ba3ce.js.map",
+    "main.fab449b7.css.map": "/static/css/main.fab449b7.css.map",
+    "main.63ba5808.js.map": "/static/js/main.63ba5808.js.map",
     "453.cb4c4840.chunk.js.map": "/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e45750d8.css",
-    "static/js/main.9a7ba3ce.js"
+    "static/css/main.fab449b7.css",
+    "static/js/main.63ba5808.js"
   ]
 }
