@@ -106,18 +106,10 @@ const Header = ({ isDarkTheme, toggleTheme }) => {
       if (logoDev) {
         logoDev.classList.add('blockeins')
       }
-      gsap.to(header, {
-        left: 10,
-        top: 10
-      });
     } else {
       if (logoDev) {
         logoDev.classList.remove("blockeins");
       }
-      gsap.to(header, {
-        left: 0,
-        top: 0
-      });
     }
   }, [headerAtivo])
 

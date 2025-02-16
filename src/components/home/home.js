@@ -37,8 +37,8 @@ const Home = ({ isDarkTheme }) => {
       }
     )
       .to(".textWriting", {
-        duration: 4,
-        text: "Sou um Desenvolvedor FullStack Júnior. <br/> Estou procurando uma oportunidade de trabalho e aprendizado.",
+        duration: 2,
+        text: "React - TailwindCSS - ASPNET",
       })
       .to(saberBotao, {
         opacity: 1,
@@ -49,9 +49,18 @@ const Home = ({ isDarkTheme }) => {
         x: 0,
         opacity: 1,
         duration: 2,
-      }).to(particulas, {
-        opacity: 1,
-      });
+      }).fromTo("span",
+        { filter: "brightness(1)" },
+        {
+          filter: "brightness(2)",
+          duration: 1,
+          yoyo: true,
+          repeat: 1,
+          ease: "power4.inOut",
+          onComplete: () => gsap.set(".span", { clearProps: "filter" })
+        }).to(particulas, {
+          opacity: 1,
+        })
   }, []);
 
   return (

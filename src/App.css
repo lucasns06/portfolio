@@ -62,7 +62,9 @@ body::-webkit-scrollbar {
   -webkit-text-fill-color: transparent;
   color: var(--cor-destaque);
 }
-
+.span:hover{
+  filter: brightness(2);
+}
 .span::selection {
   -webkit-text-fill-color: var(--cor-branco);
   background: var(--cor-preta);
