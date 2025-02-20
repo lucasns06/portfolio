@@ -1,7 +1,7 @@
 {
   "name": "lucasns06",
   "version": "0.1.0",
-  "homepage": "https://lucasns06.github.io",
+  "homepage": "https://lucasns06.github.io/portfolio",
   "private": true,
   "dependencies": {
     "@gsap/react": "^2.1.2",
