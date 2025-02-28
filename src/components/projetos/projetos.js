@@ -74,11 +74,11 @@ const Projetos = () => {
       imagem: telaEstudosApi,
       titulo: "EstudosApi",
       texto:
-        "A EstudosApi é uma RESTful API, criada para gerenciar tarefas associadas a categorias.",
+        "A EstudosApi é um site que consome minha API de estudos restful",
       texto2:
-        "O projeto utiliza ASP.NET Core e Entity Framework Core, conta com um banco de dados e autenticação de usuarios.",
-      github: "https://github.com/lucasns06/EstudosAPI",
-      link: "https://estudosapifront.azurewebsites.net",
+        "O projeto utiliza Reactjs, Axios e Gsap",
+      github: "https://github.com/lucasns06/EstudosAPI-FrontV2",
+      link: "https://estudosapi-lucasns06.vercel.app",
     },
   ];
   return (
