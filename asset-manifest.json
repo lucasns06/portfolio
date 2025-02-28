@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d4f44b12.css",
-    "main.js": "/portfolio/static/js/main.939934f6.js",
+    "main.js": "/portfolio/static/js/main.d7238faa.js",
     "static/js/453.cb4c4840.chunk.js": "/portfolio/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/portfolio/static/media/perfil.6465345fa5edef1db45d.png",
     "static/media/telaLucasTube.jpg": "/portfolio/static/media/telaLucasTube.35e28c328e5b867c6292.jpg",
     "static/media/telaSpotify.jpg": "/portfolio/static/media/telaSpotify.a82a6e2effb0fc32e5a7.jpg",
     "static/media/telaComunitec.jpg": "/portfolio/static/media/telaComunitec.82ad33bbeba3f6492a98.jpg",
     "static/media/blackBack.jpg": "/portfolio/static/media/blackBack.34869b289901ecbaf87c.jpg",
-    "static/media/telaEstudosApi.jpg": "/portfolio/static/media/telaEstudosApi.a5dd83703a4aeae301b4.jpg",
+    "static/media/telaEstudosApi.jpg": "/portfolio/static/media/telaEstudosApi.2f689e839a7ca26087bd.jpg",
     "static/media/spring.png": "/portfolio/static/media/spring.363579581adb8a6215bb.png",
     "static/media/dotnet.png": "/portfolio/static/media/dotnet.a9e841cd0cf6dcf9a76d.png",
     "static/media/java.png": "/portfolio/static/media/java.9bbaa816917277d64872.png",
@@ -18,11 +18,11 @@
     "static/media/nextjs.svg": "/portfolio/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/portfolio/index.html",
     "main.d4f44b12.css.map": "/portfolio/static/css/main.d4f44b12.css.map",
-    "main.939934f6.js.map": "/portfolio/static/js/main.939934f6.js.map",
+    "main.d7238faa.js.map": "/portfolio/static/js/main.d7238faa.js.map",
     "453.cb4c4840.chunk.js.map": "/portfolio/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d4f44b12.css",
-    "static/js/main.939934f6.js"
+    "static/js/main.d7238faa.js"
   ]
 }
