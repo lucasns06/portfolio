@@ -4,100 +4,8 @@
   align-content: center;
   background: var(--cor-teste2);
 }
-.swiper-wrapper {
-  align-items: center;
-}
-.swiper-slide{
-    display: flex !important;
-    flex-direction: column !important;  
-    padding: 18px;
-  }
-.swiper-container {
-  position: relative;
-  opacity: 0;
-  transform: translateY(150px);
-  align-self: center;
-  width: 768px; 
-  aspect-ratio: 1.8;  
-  margin: 32px 0;
-  font-size: 24px;
-  background: var(--cor-projeto);
-  border: 2px solid transparent;
-  border-radius: 18px;
-  transition: 0.5s, background 0s, box-shadow 0s;
-  overflow: hidden;
-}
-.slide_buttons{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 8%;
-}
-.slideH1, .card_github{
-  transform: translateY(150px);
-  opacity: 0;
-}
-.card_github:hover{
-  scale: 1.1;
-}
-.cardImage {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  border-radius: 18px;
-  z-index: -2;
-}
-.cardClass{
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 40px;
-  background: var(--cor-destaque);
-  z-index: -2;
-  box-shadow: 0px 0px 6px -2px var(--cor-destaque);;
-}
-.cardClass p{
-  color: white;
-}
-.back2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  background: rgba(0, 0, 0, 0.769);
-  display: none;
-  opacity: 0;
-  transition: 0.5s;
-}
-.swiper-container:hover .back2 {
-  opacity: 1;
-  display: block;
-}
-.swiper-container p {
-  text-align: justify;
-}
-.swiper-container h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-.swiper-texto {
-  padding: 16px;
-  overflow: hidden;
-}
-.swiper-texto p {
-  font-size: 28px;
-  color: white;
-}
-.swiper-container:hover {
-  border: 2px solid var(--cor-destaque);
+.swiper{
+  width: 90%;
 }
 .swiper-button-next {
   color: var(--cor-destaque) !important;
@@ -110,7 +18,56 @@
   width: 100%;
   border-radius: 14px;
 }
-
+.card{
+  /* position: relative; */
+  border-radius: 12px;
+  background: var(--cor-projeto);
+  border: 2px solid transparent;
+  transition: 0.25s border ease-in-out;
+  /* box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);  */
+  padding-bottom: 16px;
+  margin-right: 8%;
+  margin-left: 8%;
+}
+.class{
+  position: absolute;
+  top: 80%;
+  left: 16px;
+  background: var(--cor-destaque);
+  color: white;
+  width: max-content;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+.card:hover{
+  border: 2px solid var(--cor-destaque);
+}
+.card img{
+  border-radius: 12px;
+  width: 100%;
+}
+.cardTexto{
+  padding: 0px 16px;
+}
+.cardTexto p{
+  font-size: 20px;
+  text-align: left;
+}
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+.swiper-container{
+  opacity: 0;
+  transform: translateY(150px);
+}
+.buttonsContainer{
+  display: flex;
+  justify-content: space-between;
+}
+.githubBtn{
+  background: rgb(46, 47, 48);
+}
 .telaSite {
   max-width: 768px;
   width: 100%;
@@ -149,5 +106,10 @@
 @media (max-width: 512px) {
   .swiper-texto{
     padding: 8px;
+  }
+}
+@media (max-width: 425px) {
+  .swiper{
+    width: 100%;
   }
 }

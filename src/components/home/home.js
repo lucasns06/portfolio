@@ -9,8 +9,10 @@ import { ReactTyped } from "react-typed";
 import "./home.css";
 import "../../App.css";
 import { useGSAP } from '@gsap/react';
+import { useTheme } from "../themeContext";
 
-const Home = ({ isDarkTheme }) => {
+const Home = () => {
+  const { isDarkTheme } = useTheme();
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(TextPlugin);
   gsap.registerPlugin(ScrollTrigger);
