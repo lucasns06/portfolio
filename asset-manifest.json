@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d4f44b12.css",
-    "main.js": "/portfolio/static/js/main.d7238faa.js",
+    "main.css": "/portfolio/static/css/main.ad976da7.css",
+    "main.js": "/portfolio/static/js/main.cb0a8822.js",
     "static/js/453.cb4c4840.chunk.js": "/portfolio/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/portfolio/static/media/perfil.6465345fa5edef1db45d.png",
     "static/media/telaLucasTube.jpg": "/portfolio/static/media/telaLucasTube.35e28c328e5b867c6292.jpg",
     "static/media/telaSpotify.jpg": "/portfolio/static/media/telaSpotify.a82a6e2effb0fc32e5a7.jpg",
-    "static/media/telaComunitec.jpg": "/portfolio/static/media/telaComunitec.82ad33bbeba3f6492a98.jpg",
+    "static/media/telaComunitec.jpg": "/portfolio/static/media/telaComunitec.fa337a956848e888859d.jpg",
     "static/media/blackBack.jpg": "/portfolio/static/media/blackBack.34869b289901ecbaf87c.jpg",
     "static/media/telaEstudosApi.jpg": "/portfolio/static/media/telaEstudosApi.2f689e839a7ca26087bd.jpg",
     "static/media/spring.png": "/portfolio/static/media/spring.363579581adb8a6215bb.png",
@@ -17,12 +17,12 @@
     "static/media/gsap.webp": "/portfolio/static/media/gsap.e828d47f5774f74d3012.webp",
     "static/media/nextjs.svg": "/portfolio/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/portfolio/index.html",
-    "main.d4f44b12.css.map": "/portfolio/static/css/main.d4f44b12.css.map",
-    "main.d7238faa.js.map": "/portfolio/static/js/main.d7238faa.js.map",
+    "main.ad976da7.css.map": "/portfolio/static/css/main.ad976da7.css.map",
+    "main.cb0a8822.js.map": "/portfolio/static/js/main.cb0a8822.js.map",
     "453.cb4c4840.chunk.js.map": "/portfolio/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4f44b12.css",
-    "static/js/main.d7238faa.js"
+    "static/css/main.ad976da7.css",
+    "static/js/main.cb0a8822.js"
   ]
 }
