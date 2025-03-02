@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ad976da7.css",
-    "main.js": "/portfolio/static/js/main.cb0a8822.js",
+    "main.css": "/portfolio/static/css/main.d5005ec2.css",
+    "main.js": "/portfolio/static/js/main.09dc6277.js",
     "static/js/453.cb4c4840.chunk.js": "/portfolio/static/js/453.cb4c4840.chunk.js",
     "static/media/perfil.png": "/portfolio/static/media/perfil.6465345fa5edef1db45d.png",
     "static/media/telaLucasTube.jpg": "/portfolio/static/media/telaLucasTube.35e28c328e5b867c6292.jpg",
@@ -17,12 +17,12 @@
     "static/media/gsap.webp": "/portfolio/static/media/gsap.e828d47f5774f74d3012.webp",
     "static/media/nextjs.svg": "/portfolio/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/portfolio/index.html",
-    "main.ad976da7.css.map": "/portfolio/static/css/main.ad976da7.css.map",
-    "main.cb0a8822.js.map": "/portfolio/static/js/main.cb0a8822.js.map",
+    "main.d5005ec2.css.map": "/portfolio/static/css/main.d5005ec2.css.map",
+    "main.09dc6277.js.map": "/portfolio/static/js/main.09dc6277.js.map",
     "453.cb4c4840.chunk.js.map": "/portfolio/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad976da7.css",
-    "static/js/main.cb0a8822.js"
+    "static/css/main.d5005ec2.css",
+    "static/js/main.09dc6277.js"
   ]
 }
