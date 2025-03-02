@@ -16,7 +16,7 @@ Recriação do youtube, com videos mostrando meus projetos
 ### [Spotify](https://spotify-imersao-alura-sigma.vercel.app/) 
 Recriação do spotify
 
-### [EstudosApi](https://estudosapifront.azurewebsites.net) 
+### [EstudosApi](https://estudosapi-lucasns06.vercel.app/) 
 Projeto FullStack de gerenciamento de estudos
 
 ### [ComuniTec](https://lucasns06.github.io/ComuniTec/) 
