@@ -1,6 +1,6 @@
 footer {
     padding: 64px 16px;
-    background: var(--cor-destaque);
+    background: #19191a;
     text-align: center;
     color: white;
 }
@@ -18,7 +18,10 @@ footer p, footer h1,footer a{
     border-radius: 100%;
     width: 42px;
 }
-
+.footerNav{
+    display: flex;
+    gap: 32px;
+}
 .footerNav a,
 .footerCredits a {
     font-weight: 400;
