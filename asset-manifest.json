@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d5005ec2.css",
-    "main.js": "/portfolio/static/js/main.09dc6277.js",
+    "main.js": "/portfolio/static/js/main.92c3c8d0.js",
     "static/js/453.cb4c4840.chunk.js": "/portfolio/static/js/453.cb4c4840.chunk.js",
-    "static/media/perfil.png": "/portfolio/static/media/perfil.6465345fa5edef1db45d.png",
+    "static/media/perfil.jpg": "/portfolio/static/media/perfil.1136f89778e62becfec5.jpg",
     "static/media/telaLucasTube.jpg": "/portfolio/static/media/telaLucasTube.35e28c328e5b867c6292.jpg",
     "static/media/telaSpotify.jpg": "/portfolio/static/media/telaSpotify.a82a6e2effb0fc32e5a7.jpg",
     "static/media/telaComunitec.jpg": "/portfolio/static/media/telaComunitec.fa337a956848e888859d.jpg",
@@ -18,11 +18,11 @@
     "static/media/nextjs.svg": "/portfolio/static/media/nextjs.d0a97ee055f6134d12c7079019e8b90a.svg",
     "index.html": "/portfolio/index.html",
     "main.d5005ec2.css.map": "/portfolio/static/css/main.d5005ec2.css.map",
-    "main.09dc6277.js.map": "/portfolio/static/js/main.09dc6277.js.map",
+    "main.92c3c8d0.js.map": "/portfolio/static/js/main.92c3c8d0.js.map",
     "453.cb4c4840.chunk.js.map": "/portfolio/static/js/453.cb4c4840.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5005ec2.css",
-    "static/js/main.09dc6277.js"
+    "static/js/main.92c3c8d0.js"
   ]
 }
