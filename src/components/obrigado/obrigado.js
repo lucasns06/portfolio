@@ -24,7 +24,7 @@ export default function Obrigado() {
                 </svg>
                 <h1 className='obrigado-h1'>Obrigado!</h1> 
                 <p className='obrigado-p'>Seu email foi enviado.</p><br />
-                <a href='/'>
+                <a href='/portfolio'>
                     <button className='backBtn'>Voltar</button>
                 </a>
             </div>

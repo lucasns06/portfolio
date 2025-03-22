@@ -137,9 +137,9 @@ const Header = () => {
 
   return (
     <header>
-      <Link href="/" className="logo-name">
+      <a href="/portfolio" className="logo-name">
         LucasDev
-      </Link>
+      </a>
       <nav>
         <Link to="/" state={{ scrollTo: "homeId" }} className="aHeader">
           Inicio
@@ -235,7 +235,7 @@ const Header = () => {
 
       <div className="headerMobile">
         <div className="headerMobile-top">
-          <a href="/" className="logo-name logo-mobile">
+          <a href="/portfolio" className="logo-name logo-mobile">
             LucasDev
           </a>
           <div className="headerMobileIcons">
