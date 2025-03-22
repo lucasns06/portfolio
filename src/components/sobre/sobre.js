@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import perfilFoto from "../../img/perfil.png";
+import perfilFoto from "../../img/perfil.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./sobre.css";
