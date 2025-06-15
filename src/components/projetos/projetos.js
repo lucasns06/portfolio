@@ -93,7 +93,7 @@ const Projetos = () => {
         // spaceBetween={50}
         navigation
         breakpoints={{
-          1600: {
+          1580: {
             slidesPerView: 2,
           },
           1800: {
